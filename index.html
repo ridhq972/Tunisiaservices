@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Tunis Services</title>
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -65,6 +67,7 @@
       border-radius: 8px;
       font-size: 16px;
       font-weight: bold;
+      cursor: pointer;
     }
 
     .container {
@@ -113,6 +116,7 @@
       color: white;
       padding: 10px 20px;
       border-radius: 7px;
+      cursor: pointer;
     }
 
     footer {
@@ -122,205 +126,411 @@
       text-align: center;
       padding: 25px;
     }
+
+    /* نافذة الطلب */
+
+    #orderBox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.6);
+      z-index: 999;
+      padding: 20px;
+    }
+
+    .order-content {
+      background: white;
+      max-width: 450px;
+      margin: 60px auto;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+    .order-content h2 {
+      margin-bottom: 20px;
+    }
+
+    .order-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .order-input {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    .price-box {
+      background: #f3f4f6;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .confirm-button {
+      width: 100%;
+      padding: 13px;
+      background: #2563eb;
+      color: white;
+      border: 0;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .close-button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background: #eee;
+      border: 0;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #orderMessage {
+      margin-top: 15px;
+      text-align: center;
+      font-weight: bold;
+    }
+
   </style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">⭐ Tunis Services</div>
-  <a class="login" href="#">تسجيل الدخول</a>
+
+  <div class="logo">
+    ⭐ Tunis Services
+  </div>
+
+  <a class="login" href="#">
+    تسجيل الدخول
+  </a>
+
 </header>
 
+
 <section class="hero">
-  <h1>خدمات رقمية بكل سهولة</h1>
-  <p>اختر الخدمة التي تحتاجها وأنشئ طلبك في دقائق</p>
+
+  <h1>
+    خدمات رقمية بكل سهولة
+  </h1>
+
+  <p>
+    اختر الخدمة التي تحتاجها وأنشئ طلبك في دقائق
+  </p>
+
   <button onclick="document.getElementById('services').scrollIntoView()">
     اكتشف الخدمات
   </button>
+
 </section>
+
 
 <div class="container" id="services">
 
-  <h2 class="title">خدماتنا</h2>
+  <h2 class="title">
+    خدماتنا
+  </h2>
+
 
   <div class="services">
 
-<div class="service">
-  <div class="icon">🎵</div>
-  <h3>TikTok Coins</h3>
-  <p dir="ltr">1000 Coins - 38 TND</p>
-  <button onclick="openOrder()">اطلب الآن</button>
-</div>
+
+    <!-- TikTok Coins -->
 
     <div class="service">
-      <div class="icon">🎮</div>
-      <h3>شحن الألعاب</h3>
-      <p>شحن مختلف الألعاب والخدمات</p>
-      <button>اطلب الآن</button>
+
+      <div class="icon">
+        🎵
+      </div>
+
+      <h3>
+        TikTok Coins
+      </h3>
+
+      <p dir="ltr">
+        1000 Coins - 38 TND
+      </p>
+
+      <button onclick="openOrder()">
+        اطلب الآن
+      </button>
+
     </div>
 
-    <div class="service">
-      <div class="icon">💳</div>
-      <h3>الخدمات الرقمية</h3>
-      <p>خدمات رقمية متنوعة وسريعة</p>
-      <button>اطلب الآن</button>
-    </div>
+
+    <!-- خدمة أخرى -->
 
     <div class="service">
-      <div class="icon">⚡</div>
-      <h3>خدمات سريعة</h3>
-      <p>معالجة الطلبات بأسرع وقت ممكن</p>
-      <button>اطلب الآن</button>
+
+      <div class="icon">
+        🎮
+      </div>
+
+      <h3>
+        شحن الألعاب
+      </h3>
+
+      <p>
+        شحن مختلف الألعاب والخدمات
+      </p>
+
+      <button>
+        اطلب الآن
+      </button>
+
     </div>
+
+
+    <!-- خدمة أخرى -->
+
+    <div class="service">
+
+      <div class="icon">
+        💳
+      </div>
+
+      <h3>
+        الخدمات الرقمية
+      </h3>
+
+      <p>
+        خدمات رقمية متنوعة وسريعة
+      </p>
+
+      <button>
+        اطلب الآن
+      </button>
+
+    </div>
+
+
+    <!-- خدمة أخرى -->
+
+    <div class="service">
+
+      <div class="icon">
+        ⚡
+      </div>
+
+      <h3>
+        خدمات سريعة
+      </h3>
+
+      <p>
+        معالجة الطلبات بأسرع وقت ممكن
+      </p>
+
+      <button>
+        اطلب الآن
+      </button>
+
+    </div>
+
 
   </div>
+
 </div>
 
+
 <footer>
-  <p>© 2026 Tunis Services - جميع الحقوق محفوظة</p>
+
+  <p>
+    © 2026 Tunis Services - جميع الحقوق محفوظة
+  </p>
+
 </footer>
-<div id="orderBox" style="
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.6);
-  z-index:999;
-  padding:20px;
-">
 
-  <div style="
-    background:white;
-    max-width:450px;
-    margin:70px auto;
-    padding:25px;
-    border-radius:15px;
-  ">
 
-    <h2 style="margin-bottom:20px;">طلب TikTok Coins</h2>
 
-    <label for="coinAmount">عدد Coins:</label>
+<!-- نافذة طلب TikTok -->
 
-<input
-  id="coinAmount"
-  type="number"
-  min="1000"
-  step="1000"
-  value="1000"
-  oninput="calculatePrice()"
-  style="
-    width:100%;
-    padding:13px;
-    border:1px solid #ddd;
-    border-radius:8px;
-    margin:10px 0 15px;
-  "
->
+<div id="orderBox">
 
-<p style="margin-bottom:20px;">
-  السعر:
-  <b id="coinPrice">38 د.ت</b>
-</p>
+  <div class="order-content">
 
-  
+    <h2>
+      طلب TikTok Coins
+    </h2>
+
+
+    <label class="order-label">
+      عدد Coins
+    </label>
+
+
+    <input
+      id="coinAmount"
+      class="order-input"
+      type="number"
+      min="1000"
+      step="1000"
+      value="1000"
+      oninput="calculatePrice()"
+    >
+
+
+    <div class="price-box">
+
+      السعر:
+
+      <strong id="coinPrice">
+        38.00 د.ت
+      </strong>
+
+    </div>
+
+
+    <label class="order-label">
+      رابط حساب TikTok
+    </label>
+
 
     <input
       id="tiktokLink"
+      class="order-input"
       type="text"
-      placeholder="رابط حساب TikTok"
-      style="
-        width:100%;
-        padding:13px;
-        border:1px solid #ddd;
-        border-radius:8px;
-        margin-bottom:15px;
-      "
+      placeholder="https://www.tiktok.com/@username"
     >
 
+
     <button
+      class="confirm-button"
       onclick="confirmOrder()"
-      style="
-        width:100%;
-        padding:13px;
-        background:#2563eb;
-        color:white;
-        border:0;
-        border-radius:8px;
-        font-size:16px;
-      "
     >
       تأكيد الطلب
     </button>
 
+
     <button
+      class="close-button"
       onclick="closeOrder()"
-      style="
-        width:100%;
-        padding:10px;
-        margin-top:10px;
-        background:#eee;
-        border:0;
-        border-radius:8px;
-      "
     >
       إلغاء
     </button>
 
-    <p id="orderMessage" style="margin-top:15px;"></p>
+
+    <p id="orderMessage"></p>
 
   </div>
+
 </div>
+
+
 
 <script>
 
+
+/* فتح نافذة الطلب */
+
 function openOrder() {
+
   document.getElementById("orderBox").style.display = "block";
+
+  document.getElementById("orderMessage").innerText = "";
+
+  calculatePrice();
+
 }
+
+
+/* إغلاق نافذة الطلب */
 
 function closeOrder() {
+
   document.getElementById("orderBox").style.display = "none";
+
 }
+
+
+/* حساب السعر */
+
 function calculatePrice() {
 
-  const amount = Number(document.getElementById("coinAmount").value);
+  const amount =
+    Number(document.getElementById("coinAmount").value);
 
-  const price = (amount / 1000) * 38;
+  if (!amount || amount < 1000) {
+
+    document.getElementById("coinPrice").innerText =
+      "38.00 د.ت";
+
+    return;
+
+  }
+
+
+  const price =
+    (amount / 1000) * 38;
+
 
   document.getElementById("coinPrice").innerText =
     price.toFixed(2) + " د.ت";
+
 }
+
+
+/* تأكيد الطلب */
 
 function confirmOrder() {
 
-  const amount = Number(document.getElementById("coinAmount").value);
-  const link = document.getElementById("tiktokLink").value;
+  const amount =
+    Number(document.getElementById("coinAmount").value);
 
-  if (amount < 1000 || amount % 1000 !== 0) {
+  const link =
+    document.getElementById("tiktokLink").value.trim();
+
+
+  if (
+    !amount ||
+    amount < 1000 ||
+    amount % 1000 !== 0
+  ) {
+
     document.getElementById("orderMessage").innerText =
       "الكمية يجب أن تكون 1000 Coins أو مضاعفاتها.";
+
     return;
+
   }
 
-  if (link.trim() === "") {
+
+  if (link === "") {
+
     document.getElementById("orderMessage").innerText =
-      "الرجاء إدخال رابط حساب TikTok";
+      "الرجاء إدخال رابط حساب TikTok.";
+
     return;
+
   }
 
-  const price = (amount / 1000) * 38;
+
+  const price =
+    (amount / 1000) * 38;
+
 
   document.getElementById("orderMessage").innerText =
     "تم تسجيل الطلب تجريبيًا: " +
     amount.toLocaleString() +
-    " Coins — " +
+    " Coins - " +
     price.toFixed(2) +
     " د.ت";
-  }
 
-  document.getElementById("orderMessage").innerText =
-    "تم تسجيل طلبك تجريبيًا بنجاح.";
 }
 
+
 </script>
+
+
 </body>
-        </html>
+  </html>
