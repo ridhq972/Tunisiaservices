@@ -180,6 +180,100 @@
 <footer>
   <p>© 2026 Tunis Services - جميع الحقوق محفوظة</p>
 </footer>
+<div id="orderBox" style="
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  z-index:999;
+  padding:20px;
+">
 
+  <div style="
+    background:white;
+    max-width:450px;
+    margin:70px auto;
+    padding:25px;
+    border-radius:15px;
+  ">
+
+    <h2 style="margin-bottom:20px;">طلب TikTok Coins</h2>
+
+    <p>الخدمة: <b>TikTok Coins</b></p>
+    <p>الكمية: <b>1000 Coins</b></p>
+    <p style="margin-bottom:20px;">السعر: <b>38 د.ت</b></p>
+
+    <input
+      id="tiktokLink"
+      type="text"
+      placeholder="رابط حساب TikTok"
+      style="
+        width:100%;
+        padding:13px;
+        border:1px solid #ddd;
+        border-radius:8px;
+        margin-bottom:15px;
+      "
+    >
+
+    <button
+      onclick="confirmOrder()"
+      style="
+        width:100%;
+        padding:13px;
+        background:#2563eb;
+        color:white;
+        border:0;
+        border-radius:8px;
+        font-size:16px;
+      "
+    >
+      تأكيد الطلب
+    </button>
+
+    <button
+      onclick="closeOrder()"
+      style="
+        width:100%;
+        padding:10px;
+        margin-top:10px;
+        background:#eee;
+        border:0;
+        border-radius:8px;
+      "
+    >
+      إلغاء
+    </button>
+
+    <p id="orderMessage" style="margin-top:15px;"></p>
+
+  </div>
+</div>
+
+<script>
+
+function openOrder() {
+  document.getElementById("orderBox").style.display = "block";
+}
+
+function closeOrder() {
+  document.getElementById("orderBox").style.display = "none";
+}
+
+function confirmOrder() {
+
+  const link = document.getElementById("tiktokLink").value;
+
+  if (link.trim() === "") {
+    document.getElementById("orderMessage").innerText =
+      "الرجاء إدخال رابط حساب TikTok";
+    return;
+  }
+
+  document.getElementById("orderMessage").innerText =
+    "تم تسجيل طلبك تجريبيًا بنجاح.";
+}
+
+</script>
 </body>
         </html>
