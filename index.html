@@ -280,15 +280,41 @@ function openOrder() {
 function closeOrder() {
   document.getElementById("orderBox").style.display = "none";
 }
+function calculatePrice() {
+
+  const amount = Number(document.getElementById("coinAmount").value);
+
+  const price = (amount / 1000) * 38;
+
+  document.getElementById("coinPrice").innerText =
+    price.toFixed(2) + " د.ت";
+}
 
 function confirmOrder() {
 
+  const amount = Number(document.getElementById("coinAmount").value);
   const link = document.getElementById("tiktokLink").value;
+
+  if (amount < 1000 || amount % 1000 !== 0) {
+    document.getElementById("orderMessage").innerText =
+      "الكمية يجب أن تكون 1000 Coins أو مضاعفاتها.";
+    return;
+  }
 
   if (link.trim() === "") {
     document.getElementById("orderMessage").innerText =
       "الرجاء إدخال رابط حساب TikTok";
     return;
+  }
+
+  const price = (amount / 1000) * 38;
+
+  document.getElementById("orderMessage").innerText =
+    "تم تسجيل الطلب تجريبيًا: " +
+    amount.toLocaleString() +
+    " Coins — " +
+    price.toFixed(2) +
+    " د.ت";
   }
 
   document.getElementById("orderMessage").innerText =
