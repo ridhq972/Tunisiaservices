@@ -199,9 +199,30 @@
 
     <h2 style="margin-bottom:20px;">طلب TikTok Coins</h2>
 
-    <p>الخدمة: <b>TikTok Coins</b></p>
-    <p>الكمية: <b>1000 Coins</b></p>
-    <p style="margin-bottom:20px;">السعر: <b>38 د.ت</b></p>
+    <label for="coinAmount">عدد Coins:</label>
+
+<input
+  id="coinAmount"
+  type="number"
+  min="1000"
+  step="1000"
+  value="1000"
+  oninput="calculatePrice()"
+  style="
+    width:100%;
+    padding:13px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    margin:10px 0 15px;
+  "
+>
+
+<p style="margin-bottom:20px;">
+  السعر:
+  <b id="coinPrice">38 د.ت</b>
+</p>
+
+  
 
     <input
       id="tiktokLink"
