@@ -78,4 +78,2033 @@ header{
 
 .hero h1{
     font-size:38px;
-    margin-bottom:15
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:28px;
+}
+
+.hero button{
+    background:white;
+    color:#2563eb;
+    border:0;
+    padding:14px 25px;
+    border-radius:9px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width:1100px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+/* SEARCH */
+
+.search-box{
+    margin-bottom:30px;
+}
+
+.search-box input{
+    width:100%;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    background:white;
+    outline:none;
+    font-size:15px;
+}
+
+/* CATEGORY */
+
+.category{
+    margin-bottom:45px;
+}
+
+.category-title{
+    background:#111827;
+    color:white;
+    padding:15px 20px;
+    border-radius:10px;
+    margin-bottom:18px;
+    font-size:21px;
+}
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+}
+
+.service{
+    background:white;
+    border-radius:15px;
+    padding:23px;
+    text-align:center;
+    box-shadow:0 4px 18px rgba(0,0,0,.07);
+    transition:.2s;
+}
+
+.service:hover{
+    transform:translateY(-3px);
+}
+
+.icon{
+    font-size:40px;
+    margin-bottom:12px;
+}
+
+.service h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.service p{
+    color:#667085;
+    line-height:1.6;
+    margin-bottom:14px;
+}
+
+.price{
+    color:#2563eb;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.service button{
+    width:100%;
+    background:#2563eb;
+    color:white;
+    border:0;
+    padding:11px;
+    border-radius:8px;
+}
+
+.service button:hover{
+    background:#1d4ed8;
+}
+
+/* INFO */
+
+.info-section{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:55px;
+}
+
+.info-card{
+    background:white;
+    padding:25px;
+    border-radius:14px;
+    text-align:center;
+    box-shadow:0 3px 15px rgba(0,0,0,.06);
+}
+
+.info-card .big{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.info-card p{
+    color:#667085;
+    margin-top:8px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    margin-top:60px;
+}
+
+footer p{
+    color:#cbd5e1;
+    margin-top:8px;
+}
+
+/* MODAL */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    z-index:1000;
+    padding:20px;
+    overflow:auto;
+}
+
+.modal-box{
+    background:white;
+    max-width:480px;
+    margin:50px auto;
+    padding:25px;
+    border-radius:16px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    left:15px;
+    top:12px;
+    border:0;
+    background:#eee;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    font-size:20px;
+}
+
+.modal h2{
+    margin-bottom:20px;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:7px;
+    font-weight:bold;
+}
+
+.form-group input,
+.form-group select{
+    width:100%;
+    padding:13px;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    outline:none;
+    background:white;
+}
+
+.price-box{
+    background:#eff6ff;
+    padding:15px;
+    border-radius:10px;
+    margin:15px 0;
+    text-align:center;
+}
+
+.price-box span{
+    display:block;
+    font-size:25px;
+    font-weight:bold;
+    color:#2563eb;
+    margin-top:5px;
+}
+
+.primary{
+    width:100%;
+    background:#2563eb;
+    color:white;
+    border:0;
+    padding:13px;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.secondary{
+    width:100%;
+    background:#e5e7eb;
+    border:0;
+    padding:12px;
+    border-radius:8px;
+    margin-top:10px;
+}
+
+.message{
+    text-align:center;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+/* ORDERS */
+
+.orders-panel{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    z-index:1000;
+    padding:20px;
+    overflow:auto;
+}
+
+.orders-box{
+    background:white;
+    max-width:600px;
+    margin:50px auto;
+    padding:25px;
+    border-radius:16px;
+    position:relative;
+}
+
+.order{
+    border:1px solid #e5e7eb;
+    border-radius:10px;
+    padding:15px;
+    margin-top:10px;
+    line-height:1.8;
+}
+
+.order strong{
+    color:#2563eb;
+}
+
+.empty{
+    text-align:center;
+    color:#777;
+    padding:25px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    header{
+        padding:13px 12px;
+    }
+
+    .logo{
+        font-size:16px;
+    }
+
+    .nav button{
+        font-size:11px;
+        padding:7px 6px;
+    }
+
+    .hero{
+        padding:55px 18px;
+    }
+
+    .hero h1{
+        font-size:29px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .services{
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .service{
+        padding:17px 12px;
+    }
+
+    .service h3{
+        font-size:15px;
+    }
+
+    .service p{
+        font-size:13px;
+    }
+
+    .icon{
+        font-size:34px;
+    }
+
+    .info-section{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:420px){
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        ⭐ Tunis Services
+    </div>
+
+    <div class="nav">
+
+        <button onclick="scrollToServices()">
+            الخدمات
+        </button>
+
+        <button onclick="openOrders()">
+            طلباتي
+        </button>
+
+        <button
+            class="login-btn"
+            onclick="openLogin()">
+            حسابي
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h1>
+        خدمات رقمية بكل سهولة
+    </h1>
+
+    <p>
+        اختر الخدمة التي تحتاجها وأنشئ طلبك في دقائق
+    </p>
+
+    <button onclick="scrollToServices()">
+        اكتشف الخدمات
+    </button>
+
+</section>
+
+
+<!-- MAIN -->
+
+<div class="container" id="services">
+
+    <h2 class="section-title">
+        خدماتنا
+    </h2>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <input
+            id="search"
+            type="text"
+            placeholder="🔎 ابحث عن خدمة..."
+            oninput="searchServices()"
+        >
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- GAMES -->
+    <!-- ========================= -->
+
+    <div class="category">
+
+        <div class="category-title">
+            🎮 الألعاب
+        </div>
+
+        <div class="services">
+
+
+            <div
+                class="service"
+                data-name="free fire فري فاير">
+
+                <div class="icon">
+                    🔥
+                </div>
+
+                <h3>
+                    Free Fire
+                </h3>
+
+                <p>
+                    شحن Free Fire
+                </p>
+
+                <div class="price">
+                    قريبًا
+                </div>
+
+                <button onclick="comingSoon()">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+
+            <div
+                class="service"
+                data-name="fifa فيفا">
+
+                <div class="icon">
+                    ⚽
+                </div>
+
+                <h3>
+                    FIFA
+                </h3>
+
+                <p>
+                    خدمات وشحن FIFA
+                </p>
+
+                <div class="price">
+                    قريبًا
+                </div>
+
+                <button onclick="comingSoon()">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+
+            <div
+                class="service"
+                data-name="pes بيس">
+
+                <div class="icon">
+                    ⚽
+                </div>
+
+                <h3>
+                    PES
+                </h3>
+
+                <p>
+                    خدمات وشحن PES
+                </p>
+
+                <div class="price">
+                    قريبًا
+                </div>
+
+                <button onclick="comingSoon()">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+
+            <div
+                class="service"
+                data-name="fortnite فورتنايت">
+
+                <div class="icon">
+                    🎯
+                </div>
+
+                <h3>
+                    Fortnite
+                </h3>
+
+                <p>
+                    خدمات Fortnite
+                </p>
+
+                <div class="price">
+                    قريبًا
+                </div>
+
+                <button onclick="comingSoon()">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- DIGITAL SERVICES -->
+    <!-- ========================= -->
+
+    <div class="category">
+
+        <div class="category-title">
+            📱 الخدمات الرقمية
+        </div>
+
+        <div class="services">
+
+
+            <!-- TIKTOK COINS -->
+
+            <div
+                class="service"
+                data-name="tiktok coins تيكتوك عملات">
+
+                <div class="icon">
+                    🎵
+                </div>
+
+                <h3>
+                    TikTok Coins
+                </h3>
+
+                <p>
+                    شحن TikTok Coins
+                </p>
+
+                <div class="price">
+                    1000 Coins = 38 د.ت
+                </div>
+
+                <button onclick="openTikTokOrder()">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+
+            <!-- FOLLOWERS -->
+
+            <div
+                class="service"
+                data-name="متابعين tiktok تيكتوك">
+
+                <div class="icon">
+                    👥
+                </div>
+
+                <h3>
+                    متابعين TikTok
+                </h3>
+
+                <p>
+                    زيادة المتابعين
+                </p>
+
+                <div class="price">
+                    متوفر
+                </div>
+
+                <button onclick="openGenericOrder('متابعين TikTok')">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+
+            <div
+                class="service"
+                data-name="متابعين facebook فايسبوك">
+
+                <div class="icon">
+                    👥
+                </div>
+
+                <h3>
+                    متابعين Facebook
+                </h3>
+
+                <p>
+                    زيادة المتابعين
+                </p>
+
+                <div class="price">
+                    متوفر
+                </div>
+
+                <button onclick="openGenericOrder('متابعين Facebook')">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+
+            <div
+                class="service"
+                data-name="متابعين instagram انستغرام">
+
+                <div class="icon">
+                    👥
+                </div>
+
+                <h3>
+                    متابعين Instagram
+                </h3>
+
+                <p>
+                    زيادة المتابعين
+                </p>
+
+                <div class="price">
+                    متوفر
+                </div>
+
+                <button onclick="openGenericOrder('متابعين Instagram')">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+
+            <div
+                class="service"
+                data-name="متابعين youtube يوتيوب">
+
+                <div class="icon">
+                    👥
+                </div>
+
+                <h3>
+                    متابعين YouTube
+                </h3>
+
+                <p>
+                    زيادة المشتركين
+                </p>
+
+                <div class="price">
+                    متوفر
+                </div>
+
+                <button onclick="openGenericOrder('متابعين YouTube')">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+
+            <!-- TIKTOK LIKES -->
+
+            <div
+                class="service"
+                data-name="لايكات tiktok تيكتوك">
+
+                <div class="icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    لايكات TikTok
+                </h3>
+
+                <p>
+                    زيادة الإعجابات
+                </p>
+
+                <div class="price">
+                    متوفر
+                </div>
+
+                <button onclick="openGenericOrder('لايكات TikTok')">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+
+            <div
+                class="service"
+                data-name="تعليقات tiktok تيكتوك">
+
+                <div class="icon">
+                    💬
+                </div>
+
+                <h3>
+                    تعليقات TikTok
+                </h3>
+
+                <p>
+                    زيادة التعليقات
+                </p>
+
+                <div class="price">
+                    متوفر
+                </div>
+
+                <button onclick="openGenericOrder('تعليقات TikTok')">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+
+            <div
+                class="service"
+                data-name="مشاهدات tiktok تيكتوك">
+
+                <div class="icon">
+                    👁️
+                </div>
+
+                <h3>
+                    مشاهدات TikTok
+                </h3>
+
+                <p>
+                    زيادة المشاهدات
+                </p>
+
+                <div class="price">
+                    متوفر
+                </div>
+
+                <button onclick="openGenericOrder('مشاهدات TikTok')">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+
+            <!-- FACEBOOK -->
+
+            <div
+                class="service"
+                data-name="لايكات facebook فايسبوك">
+
+                <div class="icon">
+                    👍
+                </div>
+
+                <h3>
+                    لايكات Facebook
+                </h3>
+
+                <p>
+                    زيادة الإعجابات
+                </p>
+
+                <div class="price">
+                    متوفر
+                </div>
+
+                <button onclick="openGenericOrder('لايكات Facebook')">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+
+            <div
+                class="service"
+                data-name="تعليقات facebook فايسبوك">
+
+                <div class="icon">
+                    💬
+                </div>
+
+                <h3>
+                    تعليقات Facebook
+                </h3>
+
+                <p>
+                    زيادة التعليقات
+                </p>
+
+                <div class="price">
+                    متوفر
+                </div>
+
+                <button onclick="openGenericOrder('تعليقات Facebook')">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+
+            <div
+                class="service"
+                data-name="مشاهدات facebook فايسبوك">
+
+                <div class="icon">
+                    👁️
+                </div>
+
+                <h3>
+                    مشاهدات Facebook
+                </h3>
+
+                <p>
+                    زيادة المشاهدات
+                </p>
+
+                <div class="price">
+                    متوفر
+                </div>
+
+                <button onclick="openGenericOrder('مشاهدات Facebook')">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+
+            <!-- INSTAGRAM -->
+
+            <div
+                class="service"
+                data-name="لايكات instagram انستغرام">
+
+                <div class="icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    لايكات Instagram
+                </h3>
+
+                <p>
+                    زيادة الإعجابات
+                </p>
+
+                <div class="price">
+                    متوفر
+                </div>
+
+                <button onclick="openGenericOrder('لايكات Instagram')">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+
+            <div
+                class="service"
+                data-name="تعليقات instagram انستغرام">
+
+                <div class="icon">
+                    💬
+                </div>
+
+                <h3>
+                    تعليقات Instagram
+                </h3>
+
+                <p>
+                    زيادة التعليقات
+                </p>
+
+                <div class="price">
+                    متوفر
+                </div>
+
+                <button onclick="openGenericOrder('تعليقات Instagram')">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+
+            <div
+                class="service"
+                data-name="مشاهدات instagram انستغرام">
+
+                <div class="icon">
+                    👁️
+                </div>
+
+                <h3>
+                    مشاهدات Instagram
+                </h3>
+
+                <p>
+                    زيادة المشاهدات
+                </p>
+
+                <div class="price">
+                    متوفر
+                </div>
+
+                <button onclick="openGenericOrder('مشاهدات Instagram')">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+
+            <!-- YOUTUBE -->
+
+            <div
+                class="service"
+                data-name="لايكات youtube يوتيوب">
+
+                <div class="icon">
+                    👍
+                </div>
+
+                <h3>
+                    لايكات YouTube
+                </h3>
+
+                <p>
+                    زيادة الإعجابات
+                </p>
+
+                <div class="price">
+                    متوفر
+                </div>
+
+                <button onclick="openGenericOrder('لايكات YouTube')">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+
+            <div
+                class="service"
+                data-name="تعليقات youtube يوتيوب">
+
+                <div class="icon">
+                    💬
+                </div>
+
+                <h3>
+                    تعليقات YouTube
+                </h3>
+
+                <p>
+                    زيادة التعليقات
+                </p>
+
+                <div class="price">
+                    متوفر
+                </div>
+
+                <button onclick="openGenericOrder('تعليقات YouTube')">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+
+            <div
+                class="service"
+                data-name="مشاهدات youtube يوتيوب">
+
+                <div class="icon">
+                    👁️
+                </div>
+
+                <h3>
+                    مشاهدات YouTube
+                </h3>
+
+                <p>
+                    زيادة المشاهدات
+                </p>
+
+                <div class="price">
+                    متوفر
+                </div>
+
+                <button onclick="openGenericOrder('مشاهدات YouTube')">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- BUSINESS SERVICES -->
+    <!-- ========================= -->
+
+    <div class="category">
+
+        <div class="category-title">
+            💼 خدمات الأعمال والتسويق
+        </div>
+
+        <div class="services">
+
+
+            <div
+                class="service"
+                data-name="انشاء موقع الكتروني website">
+
+                <div class="icon">
+                    🌐
+                </div>
+
+                <h3>
+                    إنشاء موقع إلكتروني
+                </h3>
+
+                <p>
+                    تصميم وإنشاء مواقع إلكترونية
+                </p>
+
+                <div class="price">
+                    اطلب عرض سعر
+                </div>
+
+                <button onclick="openGenericOrder('إنشاء موقع إلكتروني')">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+
+            <div
+                class="service"
+                data-name="التسويق لمنتج marketing">
+
+                <div class="icon">
+                    📢
+                </div>
+
+                <h3>
+                    التسويق لمنتج
+                </h3>
+
+                <p>
+                    خدمات التسويق والترويج للمنتجات
+                </p>
+
+                <div class="price">
+                    اطلب عرض سعر
+                </div>
+
+                <button onclick="openGenericOrder('التسويق لمنتج')">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- INFO -->
+
+    <div class="info-section">
+
+        <div class="info-card">
+
+            <div class="big">
+                ⚡
+            </div>
+
+            <h3>
+                سرعة
+            </h3>
+
+            <p>
+                معالجة الطلبات بسرعة
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="big">
+                🔒
+            </div>
+
+            <h3>
+                أمان
+            </h3>
+
+            <p>
+                حماية معلومات العملاء
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="big">
+                📞
+            </div>
+
+            <h3>
+                دعم
+            </h3>
+
+            <p>
+                دعم العملاء عند الحاجة
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ========================= -->
+<!-- TIKTOK ORDER -->
+<!-- ========================= -->
+
+<div class="modal" id="tiktokModal">
+
+    <div class="modal-box">
+
+        <button class="close" onclick="closeTikTok()">
+            ×
+        </button>
+
+        <h2>
+            🎵 طلب TikTok Coins
+        </h2>
+
+
+        <div class="form-group">
+
+            <label>
+                عدد Coins
+            </label>
+
+            <input
+                id="coinAmount"
+                type="number"
+                min="1000"
+                step="1000"
+                value="1000"
+                oninput="calculatePrice()"
+            >
+
+        </div>
+
+
+        <div class="price-box">
+
+            السعر
+
+            <span id="coinPrice">
+                38.00 د.ت
+            </span>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                رابط حساب TikTok
+            </label>
+
+            <input
+                id="tiktokLink"
+                type="text"
+                placeholder="https://www.tiktok.com/@username"
+            >
+
+        </div>
+
+
+        <button
+            class="primary"
+            onclick="confirmTikTok()">
+
+            تأكيد الطلب
+
+        </button>
+
+
+        <button
+            class="secondary"
+            onclick="closeTikTok()">
+
+            إلغاء
+
+        </button>
+
+
+        <div
+            class="message"
+            id="tiktokMessage">
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ========================= -->
+<!-- GENERIC ORDER -->
+<!-- ========================= -->
+
+<div class="modal" id="genericModal">
+
+    <div class="modal-box">
+
+        <button class="close" onclick="closeGeneric()">
+            ×
+        </button>
+
+        <h2 id="genericTitle">
+            طلب خدمة
+        </h2>
+
+
+        <div class="form-group">
+
+            <label>
+                الخدمة
+            </label>
+
+            <input
+                id="genericService"
+                type="text"
+                readonly
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                الكمية المطلوبة
+            </label>
+
+            <input
+                id="genericAmount"
+                type="number"
+                min="1"
+                value="1000"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                الرابط / الحساب
+            </label>
+
+            <input
+                id="genericLink"
+                type="text"
+                placeholder="ضع الرابط هنا"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                ملاحظات
+            </label>
+
+            <input
+                id="genericNote"
+                type="text"
+                placeholder="ملاحظات إضافية"
+            >
+
+        </div>
+
+
+        <button
+            class="primary"
+            onclick="confirmGeneric()">
+
+            إرسال الطلب
+
+        </button>
+
+
+        <button
+            class="secondary"
+            onclick="closeGeneric()">
+
+            إلغاء
+
+        </button>
+
+
+        <div
+            class="message"
+            id="genericMessage">
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ========================= -->
+<!-- LOGIN -->
+<!-- ========================= -->
+
+<div class="modal" id="loginModal">
+
+    <div class="modal-box">
+
+        <button class="close" onclick="closeLogin()">
+            ×
+        </button>
+
+        <h2>
+            👤 حسابي
+        </h2>
+
+
+        <div class="form-group">
+
+            <label>
+                البريد الإلكتروني
+            </label>
+
+            <input
+                id="email"
+                type="email"
+                placeholder="example@email.com"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                كلمة المرور
+            </label>
+
+            <input
+                id="password"
+                type="password"
+                placeholder="كلمة المرور"
+            >
+
+        </div>
+
+
+        <button
+            class="primary"
+            onclick="loginDemo()">
+
+            تسجيل الدخول
+
+        </button>
+
+
+        <div
+            class="message"
+            id="loginMessage">
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ========================= -->
+<!-- ORDERS -->
+<!-- ========================= -->
+
+<div class="orders-panel" id="ordersPanel">
+
+    <div class="orders-box">
+
+        <button class="close" onclick="closeOrders()">
+            ×
+        </button>
+
+        <h2>
+            📋 طلباتي
+        </h2>
+
+        <br>
+
+        <div id="ordersList">
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>
+        ⭐ Tunis Services
+    </h3>
+
+    <p>
+        خدمات رقمية بكل سهولة
+    </p>
+
+    <p>
+        © 2026 Tunis Services
+    </p>
+
+</footer>
+
+
+<script>
+
+/* =========================
+   SCROLL
+========================= */
+
+function scrollToServices(){
+
+    document
+    .getElementById("services")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+function searchServices(){
+
+    const value =
+        document
+        .getElementById("search")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const cards =
+        document.querySelectorAll(".service");
+
+    cards.forEach(card => {
+
+        const name =
+            card
+            .getAttribute("data-name")
+            .toLowerCase();
+
+        if(name.includes(value)){
+
+            card.style.display="";
+
+        }else{
+
+            card.style.display="none";
+
+        }
+
+    });
+
+}
+
+
+/* =========================
+   TIKTOK
+========================= */
+
+function openTikTokOrder(){
+
+    document
+    .getElementById("tiktokModal")
+    .style.display="block";
+
+    calculatePrice();
+
+}
+
+
+function closeTikTok(){
+
+    document
+    .getElementById("tiktokModal")
+    .style.display="none";
+
+}
+
+
+function calculatePrice(){
+
+    let amount =
+        Number(
+            document
+            .getElementById("coinAmount")
+            .value
+        );
+
+    if(!amount || amount < 1000){
+
+        amount=1000;
+
+    }
+
+    const price =
+        (amount / 1000) * 38;
+
+    document
+    .getElementById("coinPrice")
+    .innerText =
+        price.toFixed(2) + " د.ت";
+
+}
+
+
+function confirmTikTok(){
+
+    const amount =
+        Number(
+            document
+            .getElementById("coinAmount")
+            .value
+        );
+
+    const link =
+        document
+        .getElementById("tiktokLink")
+        .value
+        .trim();
+
+    const message =
+        document
+        .getElementById("tiktokMessage");
+
+
+    if(
+        amount < 1000 ||
+        amount % 1000 !== 0
+    ){
+
+        message.style.color="#dc2626";
+
+        message.innerText =
+            "الكمية يجب أن تكون 1000 أو مضاعفاتها.";
+
+        return;
+
+    }
+
+
+    if(link === ""){
+
+        message.style.color="#dc2626";
+
+        message.innerText =
+            "الرجاء إدخال رابط الحساب.";
+
+        return;
+
+    }
+
+
+    const price =
+        (amount / 1000) * 38;
+
+
+    saveOrder({
+
+        service:"TikTok Coins",
+
+        amount:
+            amount + " Coins",
+
+        price:
+            price.toFixed(2) + " د.ت",
+
+        link:link
+
+    });
+
+
+    message.style.color="#16a34a";
+
+    message.innerText =
+        "✅ تم تسجيل الطلب تجريبيًا بنجاح.";
+
+}
+
+
+/* =========================
+   GENERIC SERVICES
+========================= */
+
+function openGenericOrder(service){
+
+    document
+    .getElementById("genericModal")
+    .style.display="block";
+
+    document
+    .getElementById("genericTitle")
+    .innerText =
+        "طلب " + service;
+
+    document
+    .getElementById("genericService")
+    .value =
+        service;
+
+    document
+    .getElementById("genericMessage")
+    .innerText="";
+
+}
+
+
+function closeGeneric(){
+
+    document
+    .getElementById("genericModal")
+    .style.display="none";
+
+}
+
+
+function confirmGeneric(){
+
+    const service =
+        document
+        .getElementById("genericService")
+        .value;
+
+    const amount =
+        document
+        .getElementById("genericAmount")
+        .value;
+
+    const link =
+        document
+        .getElementById("genericLink")
+        .value
+        .trim();
+
+    const note =
+        document
+        .getElementById("genericNote")
+        .value
+        .trim();
+
+
+    const message =
+        document
+        .getElementById("genericMessage");
+
+
+    if(link === ""){
+
+        message.style.color="#dc2626";
+
+        message.innerText =
+            "الرجاء إدخال الرابط أو الحساب.";
+
+        return;
+
+    }
+
+
+    saveOrder({
+
+        service:service,
+
+        amount:amount,
+
+        price:"يحدد لاحقًا",
+
+        link:link,
+
+        note:note
+
+    });
+
+
+    message.style.color="#16a34a";
+
+    message.innerText =
+        "✅ تم تسجيل الطلب تجريبيًا.";
+
+}
+
+
+/* =========================
+   SAVE ORDER
+========================= */
+
+function saveOrder(data){
+
+    let orders =
+        JSON.parse(
+            localStorage.getItem("tunisOrders")
+        ) || [];
+
+
+    data.id =
+        "TS" + Date.now();
+
+    data.status =
+        "قيد المراجعة";
+
+    data.date =
+        new Date().toLocaleString("ar-TN");
+
+
+    orders.unshift(data);
+
+
+    localStorage.setItem(
+        "tunisOrders",
+        JSON.stringify(orders)
+    );
+
+}
+
+
+/* =========================
+   ORDERS
+========================= */
+
+function openOrders(){
+
+    loadOrders();
+
+    document
+    .getElementById("ordersPanel")
+    .style.display="block";
+
+}
+
+
+function closeOrders(){
+
+    document
+    .getElementById("ordersPanel")
+    .style.display="none";
+
+}
+
+
+function loadOrders(){
+
+    const container =
+        document
+        .getElementById("ordersList");
+
+    const orders =
+        JSON.parse(
+            localStorage.getItem("tunisOrders")
+        ) || [];
+
+
+    if(orders.length === 0){
+
+        container.innerHTML =
+            '<div class="empty">لا توجد طلبات حتى الآن.</div>';
+
+        return;
+
+    }
+
+
+    container.innerHTML="";
+
+
+    orders.forEach(order => {
+
+        const div =
+            document.createElement("div");
+
+        div.className="order";
+
+
+        div.innerHTML = `
+
+            <strong>
+                ${order.service}
+            </strong>
+
+            <br>
+
+            الكمية:
+            ${order.amount}
+
+            <br>
+
+            السعر:
+            ${order.price}
+
+            <br>
+
+            الحالة:
+            ${order.status}
+
+            <br>
+
+            <small>
+                ${order.date}
+            </small>
+
+        `;
+
+
+        container.appendChild(div);
+
+    });
+
+}
+
+
+/* =========================
+   LOGIN
+========================= */
+
+function openLogin(){
+
+    document
+    .getElementById("loginModal")
+    .style.display="block";
+
+}
+
+
+function closeLogin(){
+
+    document
+    .getElementById("loginModal")
+    .style.display="none";
+
+}
+
+
+function loginDemo(){
+
+    const email =
+        document
+        .getElementById("email")
+        .value
+        .trim();
+
+    const password =
+        document
+        .getElementById("password")
+        .value
+        .trim();
+
+    const message =
+        document
+        .getElementById("loginMessage");
+
+
+    if(email === "" || password === ""){
+
+        message.style.color="#dc2626";
+
+        message.innerText =
+            "أدخل البريد الإلكتروني وكلمة المرور.";
+
+        return;
+
+    }
+
+
+    message.style.color="#16a34a";
+
+    message.innerText =
+        "تم تسجيل الدخول تجريبيًا.";
+
+}
+
+
+/* =========================
+   COMING SOON
+========================= */
+
+function comingSoon(){
+
+    alert(
+        "هذه الخدمة ستكون متاحة قريبًا."
+    );
+
+}
+
+
+/* =========================
+   OUTSIDE CLICK
+========================= */
+
+window.addEventListener(
+    "click",
+    function(event){
+
+        if(
+            event.target ===
+            document.getElementById("tiktokModal")
+        ){
+
+            closeTikTok();
+
+        }
+
+
+        if(
+            event.target ===
+            document.getElementById("genericModal")
+        ){
+
+            closeGeneric();
+
+        }
+
+
+        if(
+            event.target ===
+            document.getElementById("loginModal")
+        ){
+
+            closeLogin();
+
+        }
+
+
+        if(
+            event.target ===
+            document.getElementById("ordersPanel")
+        ){
+
+            closeOrders();
+
+        }
+
+    }
+);
+
+
+/* =========================
+   START
+========================= */
+
+calculatePrice();
+
+loadOrders();
+
+</script>
+
+</body>
+    </html>
