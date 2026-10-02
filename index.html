@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-
-<head>
-
+<!DOCTYPE html><html lang="ar" dir="rtl"><head>
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
-<title>Tunis Services</title>
-
-<style>
-
-/* =========================
-   GENERAL
-========================= */
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tunis Services</title><style>
 
 *{
     box-sizing:border-box;
@@ -28,9 +14,7 @@ body{
     color:#172033;
 }
 
-button,
-input,
-select{
+button,input,select{
     font-family:inherit;
 }
 
@@ -38,10 +22,7 @@ button{
     cursor:pointer;
 }
 
-
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header{
     background:#111827;
@@ -63,7 +44,6 @@ header{
 .nav{
     display:flex;
     gap:6px;
-    align-items:center;
 }
 
 .nav button{
@@ -79,24 +59,16 @@ header{
 }
 
 .login-btn{
-    background:#2563eb !important;
+    background:#2563eb!important;
 }
 
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
-    background:linear-gradient(
-        135deg,
-        #2563eb,
-        #4f46e5
-    );
-
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
     color:white;
     text-align:center;
-    padding:75px 20px;
+    padding:70px 20px;
 }
 
 .hero h1{
@@ -110,19 +82,16 @@ header{
 }
 
 .hero button{
-    border:0;
     background:white;
     color:#2563eb;
+    border:0;
     padding:14px 26px;
     border-radius:9px;
     font-size:16px;
     font-weight:bold;
 }
 
-
-/* =========================
-   CONTAINER
-========================= */
+/* CONTAINER */
 
 .container{
     max-width:1100px;
@@ -136,10 +105,7 @@ header{
     margin-bottom:25px;
 }
 
-
-/* =========================
-   SEARCH
-========================= */
+/* SEARCH */
 
 .search-box{
     margin-bottom:35px;
@@ -155,10 +121,7 @@ header{
     font-size:15px;
 }
 
-
-/* =========================
-   CATEGORY
-========================= */
+/* CATEGORY */
 
 .category{
     margin-bottom:50px;
@@ -173,16 +136,11 @@ header{
     font-size:21px;
 }
 
-
-/* =========================
-   SERVICES
-========================= */
+/* SERVICES */
 
 .services{
     display:grid;
-    grid-template-columns:
-        repeat(auto-fit,minmax(220px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:18px;
 }
 
@@ -191,9 +149,7 @@ header{
     border-radius:15px;
     padding:23px;
     text-align:center;
-    box-shadow:
-        0 4px 18px rgba(0,0,0,.07);
-
+    box-shadow:0 4px 18px rgba(0,0,0,.07);
     transition:.2s;
 }
 
@@ -237,16 +193,29 @@ header{
     background:#1d4ed8;
 }
 
+/* PRICE LIST */
 
-/* =========================
-   INFO
-========================= */
+.price-list{
+    text-align:right;
+    margin:12px 0;
+    line-height:1.9;
+    font-size:14px;
+}
+
+.price-list div{
+    border-bottom:1px solid #eee;
+    padding:3px 0;
+}
+
+.price-list strong{
+    color:#2563eb;
+}
+
+/* INFO */
 
 .info-section{
     display:grid;
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns:repeat(3,1fr);
     gap:18px;
     margin-top:55px;
 }
@@ -256,9 +225,7 @@ header{
     padding:25px;
     border-radius:14px;
     text-align:center;
-
-    box-shadow:
-        0 3px 15px rgba(0,0,0,.06);
+    box-shadow:0 3px 15px rgba(0,0,0,.06);
 }
 
 .info-card .big{
@@ -271,10 +238,7 @@ header{
     margin-top:8px;
 }
 
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
     background:#111827;
@@ -289,56 +253,36 @@ footer p{
     margin-top:8px;
 }
 
-
-/* =========================
-   MODALS
-========================= */
+/* MODAL */
 
 .modal{
     display:none;
-
     position:fixed;
     inset:0;
-
-    background:
-        rgba(0,0,0,.65);
-
+    background:rgba(0,0,0,.65);
     z-index:1000;
-
     padding:20px;
-
     overflow:auto;
 }
 
 .modal-box{
     background:white;
-
-    max-width:520px;
-
+    max-width:540px;
     margin:35px auto;
-
     padding:25px;
-
     border-radius:16px;
-
     position:relative;
 }
 
 .close{
     position:absolute;
-
     left:15px;
     top:12px;
-
     border:0;
-
     background:#eee;
-
     width:35px;
     height:35px;
-
     border-radius:50%;
-
     font-size:20px;
 }
 
@@ -352,2109 +296,1947 @@ footer p{
 
 .form-group label{
     display:block;
-
     margin-bottom:7px;
-
     font-weight:bold;
 }
 
 .form-group input,
 .form-group select{
-
     width:100%;
-
     padding:13px;
-
     border:1px solid #d1d5db;
-
     border-radius:8px;
-
     outline:none;
-
     background:white;
 }
 
-
-/* =========================
-   PRICE
-========================= */
+/* PRICE BOX */
 
 .price-box{
-
     background:#eff6ff;
-
     padding:16px;
-
     border-radius:10px;
-
     margin:15px 0;
-
     text-align:center;
 }
 
 .price-box span{
-
     display:block;
-
     font-size:27px;
-
     font-weight:bold;
-
     color:#2563eb;
-
     margin-top:6px;
 }
 
-
-/* =========================
-   PAYMENT
-========================= */
+/* PAYMENT */
 
 .payment-section{
-
     margin-top:25px;
-
     border-top:1px solid #eee;
-
     padding-top:20px;
 }
 
 .payment-title{
-
     font-size:19px;
-
     margin-bottom:13px;
 }
 
 .payment-methods{
-
     display:grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
+    grid-template-columns:1fr 1fr;
     gap:10px;
 }
 
 .payment-option{
-
     background:#f8fafc;
-
     border:1px solid #dbe2ea;
-
     padding:14px 8px;
-
     border-radius:10px;
-
     color:#172033;
-
     font-size:14px;
 }
 
 .payment-option:hover{
-
     border-color:#2563eb;
-
     background:#eff6ff;
 }
 
 .payment-option.active{
-
     border:2px solid #2563eb;
-
     background:#eff6ff;
 }
 
 .payment-details{
-
     display:none;
-
     margin-top:15px;
-
     padding:15px;
-
     background:#f8fafc;
-
     border-radius:10px;
 }
 
 .payment-details h4{
-
     margin-bottom:12px;
 }
 
 .payment-details p{
-
     line-height:1.7;
-
     color:#475467;
-
 }
 
 .payment-details input{
-
     width:100%;
-
     padding:12px;
-
     margin-top:8px;
-
     border:1px solid #ddd;
-
     border-radius:8px;
 }
 
-
-/* =========================
-   WALLET
-========================= */
+/* WALLET */
 
 .wallet-address{
-
     background:#111827;
-
     color:white;
-
     padding:13px;
-
     border-radius:8px;
-
     margin:12px 0;
-
     font-size:12px;
-
     direction:ltr;
-
     text-align:left;
-
     word-break:break-all;
 }
 
 .copy-button{
-
     width:100%;
-
     padding:11px;
-
     border:0;
-
     background:#e5e7eb;
-
     border-radius:8px;
 }
 
-
-/* =========================
-   WHATSAPP
-========================= */
+/* WHATSAPP */
 
 .whatsapp-box{
-
     margin-top:18px;
-
     padding:15px;
-
     background:#f0fdf4;
-
     border-radius:10px;
-
     text-align:center;
 }
 
 .whatsapp-box p{
-
     margin-bottom:12px;
-
     line-height:1.6;
 }
 
 .whatsapp-button{
-
     width:100%;
-
     padding:13px;
-
     border:0;
-
     border-radius:8px;
-
     background:#16a34a;
-
     color:white;
-
     font-weight:bold;
-
     font-size:15px;
 }
 
-
-/* =========================
-   BUTTONS
-========================= */
+/* BUTTONS */
 
 .primary{
-
     width:100%;
-
     background:#2563eb;
-
     color:white;
-
     border:0;
-
     padding:13px;
-
     border-radius:8px;
-
     font-size:16px;
+    margin-top:15px;
 }
 
 .primary:hover{
-
     background:#1d4ed8;
 }
 
 .secondary{
-
     width:100%;
-
     background:#e5e7eb;
-
     border:0;
-
     padding:12px;
-
     border-radius:8px;
-
     margin-top:10px;
 }
 
-
-/* =========================
-   MESSAGE
-========================= */
+/* MESSAGE */
 
 .message{
-
     text-align:center;
-
     margin-top:15px;
-
     font-weight:bold;
-
     line-height:1.6;
 }
 
-
-/* =========================
-   ORDERS
-========================= */
+/* ORDERS */
 
 .orders-panel{
-
     display:none;
-
     position:fixed;
-
     inset:0;
-
-    background:
-        rgba(0,0,0,.65);
-
+    background:rgba(0,0,0,.65);
     z-index:1000;
-
     padding:20px;
-
     overflow:auto;
 }
 
 .orders-box{
-
     background:white;
-
     max-width:650px;
-
     margin:40px auto;
-
     padding:25px;
-
     border-radius:16px;
-
     position:relative;
 }
 
 .order{
-
     border:1px solid #e5e7eb;
-
     border-radius:10px;
-
     padding:15px;
-
     margin-top:10px;
-
     line-height:1.8;
 }
 
 .order strong{
-
     color:#2563eb;
 }
 
 .empty{
-
     text-align:center;
-
     color:#777;
-
     padding:25px;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:700px){
 
     header{
-
         padding:13px 12px;
     }
 
     .logo{
-
         font-size:16px;
     }
 
     .nav button{
-
         font-size:11px;
-
         padding:7px 6px;
     }
 
     .hero{
-
         padding:55px 18px;
     }
 
     .hero h1{
-
         font-size:29px;
     }
 
     .hero p{
-
         font-size:15px;
     }
 
     .services{
-
-        grid-template-columns:
-            1fr 1fr;
-
+        grid-template-columns:1fr 1fr;
         gap:12px;
     }
 
     .service{
-
         padding:17px 12px;
     }
 
     .service h3{
-
         font-size:15px;
     }
 
     .service p{
-
         font-size:13px;
     }
 
     .icon{
-
         font-size:34px;
     }
 
     .info-section{
-
         grid-template-columns:1fr;
     }
-
 }
 
 @media(max-width:420px){
 
     .services{
-
         grid-template-columns:1fr;
     }
 
     .payment-methods{
-
         grid-template-columns:1fr;
     }
-
 }
 
-</style>
+</style></head><body><!-- HEADER --><header><div class="logo">
+    ⭐ Tunis Services
+</div>
 
-</head>
+<div class="nav">
 
-
-<body>
-
-
-<!-- =========================
-     HEADER
-========================= -->
-
-<header>
-
-    <div class="logo">
-        ⭐ Tunis Services
-    </div>
-
-    <div class="nav">
-
-        <button
-            onclick="scrollToServices()">
-            الخدمات
-        </button>
-
-        <button
-            onclick="openOrders()">
-            طلباتي
-        </button>
-
-        <button
-            class="login-btn"
-            onclick="openLogin()">
-            حسابي
-        </button>
-
-    </div>
-
-</header>
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section class="hero">
-
-    <h1>
-        خدمات رقمية بكل سهولة
-    </h1>
-
-    <p>
-        اختر الخدمة التي تحتاجها
-        وأنشئ طلبك في دقائق
-    </p>
-
-    <button
-        onclick="scrollToServices()">
-
-        اكتشف الخدمات
-
+    <button onclick="scrollToServices()">
+        الخدمات
     </button>
 
-</section>
+    <button onclick="openOrders()">
+        طلباتي
+    </button>
+
+    <button class="login-btn" onclick="openLogin()">
+        حسابي
+    </button>
+
+</div>
+
+</header><!-- HERO --><section class="hero"><h1>
+    خدمات رقمية بكل سهولة
+</h1>
+
+<p>
+    ألعاب • خدمات رقمية • تسويق • مواقع إلكترونية
+</p>
+
+<button onclick="scrollToServices()">
+    اكتشف الخدمات
+</button>
+
+</section><!-- MAIN --><div class="container" id="services"><h2 class="section-title">
+    خدماتنا
+</h2>
+
+
+<!-- SEARCH -->
+
+<div class="search-box">
+
+    <input
+        id="search"
+        type="text"
+        placeholder="🔎 ابحث عن خدمة..."
+        oninput="searchServices()">
+
+</div>
 
 
 <!-- =========================
-     MAIN
-========================= -->
+     GAMES
+========================== -->
 
-<div
-    class="container"
-    id="services">
+<div class="category">
+
+    <div class="category-title">
+        🎮 الألعاب
+    </div>
+
+    <div class="services">
 
 
-    <h2 class="section-title">
-        خدماتنا
+        <!-- FREE FIRE -->
+
+        <div
+            class="service"
+            data-name="free fire فري فاير جواهر">
+
+            <div class="icon">
+                🔥
+            </div>
+
+            <h3>
+                Free Fire
+            </h3>
+
+            <p>
+                شحن جواهر Free Fire
+            </p>
+
+            <div class="price-list">
+
+                <div>
+                    530 💎
+                    <strong>25 د.ت</strong>
+                </div>
+
+                <div>
+                    1080 💎
+                    <strong>50 د.ت</strong>
+                </div>
+
+                <div>
+                    2200 💎
+                    <strong>100 د.ت</strong>
+                </div>
+
+            </div>
+
+            <button onclick="openFreeFireOrder()">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+        <!-- FIFA -->
+
+        <div
+            class="service"
+            data-name="fifa fc mobile ea sports">
+
+            <div class="icon">
+                ⚽
+            </div>
+
+            <h3>
+                EA SPORTS FC Mobile
+            </h3>
+
+            <p>
+                شحن FC Points
+            </p>
+
+            <div class="price">
+                ابتداءً من 1.56 د.ت
+            </div>
+
+            <button onclick="openFifaOrder()">
+                اختر الباقة
+            </button>
+
+        </div>
+
+
+        <!-- PES -->
+
+        <div
+            class="service"
+            data-name="pes بيس">
+
+            <div class="icon">
+                ⚽
+            </div>
+
+            <h3>
+                PES
+            </h3>
+
+            <p>
+                خدمات وشحن PES
+            </p>
+
+            <div class="price">
+                قريبًا
+            </div>
+
+            <button onclick="comingSoon()">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+        <!-- FORTNITE -->
+
+        <div
+            class="service"
+            data-name="fortnite فورتنايت">
+
+            <div class="icon">
+                🎯
+            </div>
+
+            <h3>
+                Fortnite
+            </h3>
+
+            <p>
+                خدمات Fortnite
+            </p>
+
+            <div class="price">
+                قريبًا
+            </div>
+
+            <button onclick="comingSoon()">
+                اطلب الآن
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     DIGITAL SERVICES
+========================== -->
+
+<div class="category">
+
+    <div class="category-title">
+        📱 الخدمات الرقمية
+    </div>
+
+    <div class="services">
+
+
+        <div
+            class="service"
+            data-name="tiktok coins تيكتوك">
+
+            <div class="icon">
+                🎵
+            </div>
+
+            <h3>
+                TikTok Coins
+            </h3>
+
+            <p>
+                شحن TikTok Coins
+            </p>
+
+            <div class="price">
+                1000 Coins = 38 د.ت
+            </div>
+
+            <button onclick="openTikTokOrder()">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+        <div
+            class="service"
+            data-name="متابعين tiktok تيكتوك">
+
+            <div class="icon">
+                👥
+            </div>
+
+            <h3>
+                متابعين TikTok
+            </h3>
+
+            <p>
+                زيادة المتابعين
+            </p>
+
+            <div class="price">
+                متوفر
+            </div>
+
+            <button onclick="openGenericOrder('متابعين TikTok')">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+        <div
+            class="service"
+            data-name="متابعين facebook فايسبوك">
+
+            <div class="icon">
+                👥
+            </div>
+
+            <h3>
+                متابعين Facebook
+            </h3>
+
+            <p>
+                زيادة المتابعين
+            </p>
+
+            <div class="price">
+                متوفر
+            </div>
+
+            <button onclick="openGenericOrder('متابعين Facebook')">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+        <div
+            class="service"
+            data-name="متابعين instagram انستغرام">
+
+            <div class="icon">
+                👥
+            </div>
+
+            <h3>
+                متابعين Instagram
+            </h3>
+
+            <p>
+                زيادة المتابعين
+            </p>
+
+            <div class="price">
+                متوفر
+            </div>
+
+            <button onclick="openGenericOrder('متابعين Instagram')">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+        <div
+            class="service"
+            data-name="متابعين youtube يوتيوب">
+
+            <div class="icon">
+                👥
+            </div>
+
+            <h3>
+                متابعين YouTube
+            </h3>
+
+            <p>
+                زيادة المشتركين
+            </p>
+
+            <div class="price">
+                متوفر
+            </div>
+
+            <button onclick="openGenericOrder('متابعين YouTube')">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+        <div
+            class="service"
+            data-name="لايكات tiktok تيكتوك">
+
+            <div class="icon">
+                ❤️
+            </div>
+
+            <h3>
+                لايكات TikTok
+            </h3>
+
+            <p>
+                زيادة الإعجابات
+            </p>
+
+            <div class="price">
+                متوفر
+            </div>
+
+            <button onclick="openGenericOrder('لايكات TikTok')">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+        <div
+            class="service"
+            data-name="تعليقات tiktok تيكتوك">
+
+            <div class="icon">
+                💬
+            </div>
+
+            <h3>
+                تعليقات TikTok
+            </h3>
+
+            <p>
+                زيادة التعليقات
+            </p>
+
+            <div class="price">
+                متوفر
+            </div>
+
+            <button onclick="openGenericOrder('تعليقات TikTok')">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+        <div
+            class="service"
+            data-name="مشاهدات tiktok تيكتوك">
+
+            <div class="icon">
+                👁️
+            </div>
+
+            <h3>
+                مشاهدات TikTok
+            </h3>
+
+            <p>
+                زيادة المشاهدات
+            </p>
+
+            <div class="price">
+                متوفر
+            </div>
+
+            <button onclick="openGenericOrder('مشاهدات TikTok')">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+        <div
+            class="service"
+            data-name="لايكات facebook فايسبوك">
+
+            <div class="icon">
+                👍
+            </div>
+
+            <h3>
+                لايكات Facebook
+            </h3>
+
+            <p>
+                زيادة الإعجابات
+            </p>
+
+            <div class="price">
+                متوفر
+            </div>
+
+            <button onclick="openGenericOrder('لايكات Facebook')">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+        <div
+            class="service"
+            data-name="تعليقات facebook فايسبوك">
+
+            <div class="icon">
+                💬
+            </div>
+
+            <h3>
+                تعليقات Facebook
+            </h3>
+
+            <p>
+                زيادة التعليقات
+            </p>
+
+            <div class="price">
+                متوفر
+            </div>
+
+            <button onclick="openGenericOrder('تعليقات Facebook')">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+        <div
+            class="service"
+            data-name="مشاهدات facebook فايسبوك">
+
+            <div class="icon">
+                👁️
+            </div>
+
+            <h3>
+                مشاهدات Facebook
+            </h3>
+
+            <p>
+                زيادة المشاهدات
+            </p>
+
+            <div class="price">
+                متوفر
+            </div>
+
+            <button onclick="openGenericOrder('مشاهدات Facebook')">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+        <div
+            class="service"
+            data-name="لايكات instagram انستغرام">
+
+            <div class="icon">
+                ❤️
+            </div>
+
+            <h3>
+                لايكات Instagram
+            </h3>
+
+            <p>
+                زيادة الإعجابات
+            </p>
+
+            <div class="price">
+                متوفر
+            </div>
+
+            <button onclick="openGenericOrder('لايكات Instagram')">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+        <div
+            class="service"
+            data-name="تعليقات instagram انستغرام">
+
+            <div class="icon">
+                💬
+            </div>
+
+            <h3>
+                تعليقات Instagram
+            </h3>
+
+            <p>
+                زيادة التعليقات
+            </p>
+
+            <div class="price">
+                متوفر
+            </div>
+
+            <button onclick="openGenericOrder('تعليقات Instagram')">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+        <div
+            class="service"
+            data-name="مشاهدات instagram انستغرام">
+
+            <div class="icon">
+                👁️
+            </div>
+
+            <h3>
+                مشاهدات Instagram
+            </h3>
+
+            <p>
+                زيادة المشاهدات
+            </p>
+
+            <div class="price">
+                متوفر
+            </div>
+
+            <button onclick="openGenericOrder('مشاهدات Instagram')">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+        <div
+            class="service"
+            data-name="لايكات youtube يوتيوب">
+
+            <div class="icon">
+                👍
+            </div>
+
+            <h3>
+                لايكات YouTube
+            </h3>
+
+            <p>
+                زيادة الإعجابات
+            </p>
+
+            <div class="price">
+                متوفر
+            </div>
+
+            <button onclick="openGenericOrder('لايكات YouTube')">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+        <div
+            class="service"
+            data-name="تعليقات youtube يوتيوب">
+
+            <div class="icon">
+                💬
+            </div>
+
+            <h3>
+                تعليقات YouTube
+            </h3>
+
+            <p>
+                زيادة التعليقات
+            </p>
+
+            <div class="price">
+                متوفر
+            </div>
+
+            <button onclick="openGenericOrder('تعليقات YouTube')">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+        <div
+            class="service"
+            data-name="مشاهدات youtube يوتيوب">
+
+            <div class="icon">
+                👁️
+            </div>
+
+            <h3>
+                مشاهدات YouTube
+            </h3>
+
+            <p>
+                زيادة المشاهدات
+            </p>
+
+            <div class="price">
+                متوفر
+            </div>
+
+            <button onclick="openGenericOrder('مشاهدات YouTube')">
+                اطلب الآن
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     BUSINESS
+========================== -->
+
+<div class="category">
+
+    <div class="category-title">
+        💼 خدمات الأعمال والتسويق
+    </div>
+
+    <div class="services">
+
+        <div
+            class="service"
+            data-name="انشاء موقع الكتروني website">
+
+            <div class="icon">
+                🌐
+            </div>
+
+            <h3>
+                إنشاء موقع إلكتروني
+            </h3>
+
+            <p>
+                تصميم وإنشاء مواقع إلكترونية
+            </p>
+
+            <div class="price">
+                اطلب عرض سعر
+            </div>
+
+            <button onclick="openGenericOrder('إنشاء موقع إلكتروني')">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+        <div
+            class="service"
+            data-name="التسويق لمنتج marketing">
+
+            <div class="icon">
+                📢
+            </div>
+
+            <h3>
+                التسويق لمنتج
+            </h3>
+
+            <p>
+                التسويق والترويج للمنتجات
+            </p>
+
+            <div class="price">
+                اطلب عرض سعر
+            </div>
+
+            <button onclick="openGenericOrder('التسويق لمنتج')">
+                اطلب الآن
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- INFO -->
+
+<div class="info-section">
+
+    <div class="info-card">
+        <div class="big">⚡</div>
+        <h3>سرعة</h3>
+        <p>معالجة الطلبات بسرعة</p>
+    </div>
+
+    <div class="info-card">
+        <div class="big">🔒</div>
+        <h3>أمان</h3>
+        <p>حماية معلومات العملاء</p>
+    </div>
+
+    <div class="info-card">
+        <div class="big">📞</div>
+        <h3>دعم</h3>
+        <p>دعم العملاء عند الحاجة</p>
+    </div>
+
+</div>
+
+</div><!-- =========================
+     FREE FIRE MODAL
+========================= --><div class="modal" id="freeFireModal"><div class="modal-box">
+
+    <button class="close" onclick="closeFreeFire()">
+        ×
+    </button>
+
+    <h2>
+        🔥 شحن Free Fire
     </h2>
 
+    <div class="form-group">
 
-    <!-- SEARCH -->
+        <label>
+            اختر الباقة
+        </label>
 
-    <div class="search-box">
+        <select id="freeFirePackage" onchange="updateFreeFirePrice()">
+
+            <option value="530">
+                530 جوهرة
+            </option>
+
+            <option value="1080">
+                1080 جوهرة
+            </option>
+
+            <option value="2200">
+                2200 جوهرة
+            </option>
+
+        </select>
+
+    </div>
+
+    <div class="price-box">
+
+        السعر
+
+        <span id="freeFirePrice">
+            25.00 د.ت
+        </span>
+
+    </div>
+
+    <div class="form-group">
+
+        <label>
+            ID حساب Free Fire
+        </label>
 
         <input
-            id="search"
+            id="freeFireId"
             type="text"
-            placeholder="🔎 ابحث عن خدمة..."
-            oninput="searchServices()">
+            placeholder="أدخل ID اللاعب">
 
     </div>
 
 
-    <!-- =====================
-         GAMES
-    ====================== -->
+    <div class="payment-section">
 
-    <div class="category">
-
-        <div class="category-title">
-            🎮 الألعاب
+        <div class="payment-title">
+            💳 طريقة الدفع
         </div>
 
-
-        <div class="services">
-
-
-            <!-- FREE FIRE -->
-
-            <div
-                class="service"
-                data-name="free fire فري فاير">
-
-                <div class="icon">
-                    🔥
-                </div>
-
-                <h3>
-                    Free Fire
-                </h3>
-
-                <p>
-                    شحن وخدمات Free Fire
-                </p>
-
-                <div class="price">
-                    قريبًا
-                </div>
-
-                <button
-                    onclick="comingSoon()">
-                    اطلب الآن
-                </button>
-
-            </div>
-
-
-            <!-- FIFA -->
-
-            <div
-                class="service"
-                data-name="fifa فيفا">
-
-                <div class="icon">
-                    ⚽
-                </div>
-
-                <h3>
-                    FIFA
-                </h3>
-
-                <p>
-                    شحن وخدمات FIFA
-                </p>
-
-                <div class="price">
-                    قريبًا
-                </div>
-
-                <button
-                    onclick="comingSoon()">
-                    اطلب الآن
-                </button>
-
-            </div>
-
-
-            <!-- PES -->
-
-            <div
-                class="service"
-                data-name="pes بيس">
-
-                <div class="icon">
-                    ⚽
-                </div>
-
-                <h3>
-                    PES
-                </h3>
-
-                <p>
-                    شحن وخدمات PES
-                </p>
-
-                <div class="price">
-                    قريبًا
-                </div>
-
-                <button
-                    onclick="comingSoon()">
-                    اطلب الآن
-                </button>
-
-            </div>
-
-
-            <!-- FORTNITE -->
-
-            <div
-                class="service"
-                data-name="fortnite فورتنايت">
-
-                <div class="icon">
-                    🎯
-                </div>
-
-                <h3>
-                    Fortnite
-                </h3>
-
-                <p>
-                    شحن وخدمات Fortnite
-                </p>
-
-                <div class="price">
-                    قريبًا
-                </div>
-
-                <button
-                    onclick="comingSoon()">
-                    اطلب الآن
-                </button>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-
-    <!-- =====================
-         DIGITAL SERVICES
-    ====================== -->
-
-    <div class="category">
-
-        <div class="category-title">
-            📱 الخدمات الرقمية
-        </div>
-
-
-        <div class="services">
-
-
-            <!-- TIKTOK COINS -->
-
-            <div
-                class="service"
-                data-name="tiktok coins تيكتوك">
-
-                <div class="icon">
-                    🎵
-                </div>
-
-                <h3>
-                    TikTok Coins
-                </h3>
-
-                <p>
-                    شحن TikTok Coins
-                </p>
-
-                <div class="price">
-                    1000 Coins = 38 د.ت
-                </div>
-
-                <button
-                    onclick="openTikTokOrder()">
-
-                    اطلب الآن
-
-                </button>
-
-            </div>
-
-
-            <!-- TIKTOK FOLLOWERS -->
-
-            <div
-                class="service"
-                data-name="متابعين تيكتوك tiktok followers">
-
-                <div class="icon">
-                    👥
-                </div>
-
-                <h3>
-                    متابعين TikTok
-                </h3>
-
-                <p>
-                    خدمة المتابعين
-                </p>
-
-                <div class="price">
-                    متوفر
-                </div>
-
-                <button
-                    onclick="openGenericOrder('متابعين TikTok')">
-
-                    اطلب الآن
-
-                </button>
-
-            </div>
-
-
-            <!-- FACEBOOK FOLLOWERS -->
-
-            <div
-                class="service"
-                data-name="متابعين فايسبوك facebook followers">
-
-                <div class="icon">
-                    👥
-                </div>
-
-                <h3>
-                    متابعين Facebook
-                </h3>
-
-                <p>
-                    خدمة المتابعين
-                </p>
-
-                <div class="price">
-                    متوفر
-                </div>
-
-                <button
-                    onclick="openGenericOrder('متابعين Facebook')">
-
-                    اطلب الآن
-
-                </button>
-
-            </div>
-
-
-            <!-- INSTAGRAM FOLLOWERS -->
-
-            <div
-                class="service"
-                data-name="متابعين انستغرام instagram followers">
-
-                <div class="icon">
-                    👥
-                </div>
-
-                <h3>
-                    متابعين Instagram
-                </h3>
-
-                <p>
-                    خدمة المتابعين
-                </p>
-
-                <div class="price">
-                    متوفر
-                </div>
-
-                <button
-                    onclick="openGenericOrder('متابعين Instagram')">
-
-                    اطلب الآن
-
-                </button>
-
-            </div>
-
-
-            <!-- YOUTUBE FOLLOWERS -->
-
-            <div
-                class="service"
-                data-name="متابعين يوتيوب youtube followers">
-
-                <div class="icon">
-                    👥
-                </div>
-
-                <h3>
-                    متابعين YouTube
-                </h3>
-
-                <p>
-                    خدمة المشتركين
-                </p>
-
-                <div class="price">
-                    متوفر
-                </div>
-
-                <button
-                    onclick="openGenericOrder('متابعين YouTube')">
-
-                    اطلب الآن
-
-                </button>
-
-            </div>
-
-
-            <!-- TIKTOK LIKES -->
-
-            <div
-                class="service"
-                data-name="لايكات تيكتوك tiktok likes">
-
-                <div class="icon">
-                    ❤️
-                </div>
-
-                <h3>
-                    لايكات TikTok
-                </h3>
-
-                <p>
-                    زيادة الإعجابات
-                </p>
-
-                <div class="price">
-                    متوفر
-                </div>
-
-                <button
-                    onclick="openGenericOrder('لايكات TikTok')">
-
-                    اطلب الآن
-
-                </button>
-
-            </div>
-
-
-            <!-- TIKTOK COMMENTS -->
-
-            <div
-                class="service"
-                data-name="تعليقات تيكتوك tiktok comments">
-
-                <div class="icon">
-                    💬
-                </div>
-
-                <h3>
-                    تعليقات TikTok
-                </h3>
-
-                <p>
-                    زيادة التعليقات
-                </p>
-
-                <div class="price">
-                    متوفر
-                </div>
-
-                <button
-                    onclick="openGenericOrder('تعليقات TikTok')">
-
-                    اطلب الآن
-
-                </button>
-
-            </div>
-
-
-            <!-- TIKTOK VIEWS -->
-
-            <div
-                class="service"
-                data-name="مشاهدات تيكتوك tiktok views">
-
-                <div class="icon">
-                    👁️
-                </div>
-
-                <h3>
-                    مشاهدات TikTok
-                </h3>
-
-                <p>
-                    زيادة المشاهدات
-                </p>
-
-                <div class="price">
-                    متوفر
-                </div>
-
-                <button
-                    onclick="openGenericOrder('مشاهدات TikTok')">
-
-                    اطلب الآن
-
-                </button>
-
-            </div>
-
-
-            <!-- FACEBOOK LIKES -->
-
-            <div
-                class="service"
-                data-name="لايكات فايسبوك facebook likes">
-
-                <div class="icon">
-                    👍
-                </div>
-
-                <h3>
-                    لايكات Facebook
-                </h3>
-
-                <p>
-                    زيادة الإعجابات
-                </p>
-
-                <div class="price">
-                    متوفر
-                </div>
-
-                <button
-                    onclick="openGenericOrder('لايكات Facebook')">
-
-                    اطلب الآن
-
-                </button>
-
-            </div>
-
-
-            <!-- FACEBOOK COMMENTS -->
-
-            <div
-                class="service"
-                data-name="تعليقات فايسبوك facebook comments">
-
-                <div class="icon">
-                    💬
-                </div>
-
-                <h3>
-                    تعليقات Facebook
-                </h3>
-
-                <p>
-                    زيادة التعليقات
-                </p>
-
-                <div class="price">
-                    متوفر
-                </div>
-
-                <button
-                    onclick="openGenericOrder('تعليقات Facebook')">
-
-                    اطلب الآن
-
-                </button>
-
-            </div>
-
-
-            <!-- FACEBOOK VIEWS -->
-
-            <div
-                class="service"
-                data-name="مشاهدات فايسبوك facebook views">
-
-                <div class="icon">
-                    👁️
-                </div>
-
-                <h3>
-                    مشاهدات Facebook
-                </h3>
-
-                <p>
-                    زيادة المشاهدات
-                </p>
-
-                <div class="price">
-                    متوفر
-                </div>
-
-                <button
-                    onclick="openGenericOrder('مشاهدات Facebook')">
-
-                    اطلب الآن
-
-                </button>
-
-            </div>
-
-
-            <!-- INSTAGRAM LIKES -->
-
-            <div
-                class="service"
-                data-name="لايكات انستغرام instagram likes">
-
-                <div class="icon">
-                    ❤️
-                </div>
-
-                <h3>
-                    لايكات Instagram
-                </h3>
-
-                <p>
-                    زيادة الإعجابات
-                </p>
-
-                <div class="price">
-                    متوفر
-                </div>
-
-                <button
-                    onclick="openGenericOrder('لايكات Instagram')">
-
-                    اطلب الآن
-
-                </button>
-
-            </div>
-
-
-            <!-- INSTAGRAM COMMENTS -->
-
-            <div
-                class="service"
-                data-name="تعليقات انستغرام instagram comments">
-
-                <div class="icon">
-                    💬
-                </div>
-
-                <h3>
-                    تعليقات Instagram
-                </h3>
-
-                <p>
-                    زيادة التعليقات
-                </p>
-
-                <div class="price">
-                    متوفر
-                </div>
-
-                <button
-                    onclick="openGenericOrder('تعليقات Instagram')">
-
-                    اطلب الآن
-
-                </button>
-
-            </div>
-
-
-            <!-- INSTAGRAM VIEWS -->
-
-            <div
-                class="service"
-                data-name="مشاهدات انستغرام instagram views">
-
-                <div class="icon">
-                    👁️
-                </div>
-
-                <h3>
-                    مشاهدات Instagram
-                </h3>
-
-                <p>
-                    زيادة المشاهدات
-                </p>
-
-                <div class="price">
-                    متوفر
-                </div>
-
-                <button
-                    onclick="openGenericOrder('مشاهدات Instagram')">
-
-                    اطلب الآن
-
-                </button>
-
-            </div>
-
-
-            <!-- YOUTUBE LIKES -->
-
-            <div
-                class="service"
-                data-name="لايكات يوتيوب youtube likes">
-
-                <div class="icon">
-                    👍
-                </div>
-
-                <h3>
-                    لايكات YouTube
-                </h3>
-
-                <p>
-                    زيادة الإعجابات
-                </p>
-
-                <div class="price">
-                    متوفر
-                </div>
-
-                <button
-                    onclick="openGenericOrder('لايكات YouTube')">
-
-                    اطلب الآن
-
-                </button>
-
-            </div>
-
-
-            <!-- YOUTUBE COMMENTS -->
-
-            <div
-                class="service"
-                data-name="تعليقات يوتيوب youtube comments">
-
-                <div class="icon">
-                    💬
-                </div>
-
-                <h3>
-                    تعليقات YouTube
-                </h3>
-
-                <p>
-                    زيادة التعليقات
-                </p>
-
-                <div class="price">
-                    متوفر
-                </div>
-
-                <button
-                    onclick="openGenericOrder('تعليقات YouTube')">
-
-                    اطلب الآن
-
-                </button>
-
-            </div>
-
-
-            <!-- YOUTUBE VIEWS -->
-
-            <div
-                class="service"
-                data-name="مشاهدات يوتيوب youtube views">
-
-                <div class="icon">
-                    👁️
-                </div>
-
-                <h3>
-                    مشاهدات YouTube
-                </h3>
-
-                <p>
-                    زيادة المشاهدات
-                </p>
-
-                <div class="price">
-                    متوفر
-                </div>
-
-                <button
-                    onclick="openGenericOrder('مشاهدات YouTube')">
-
-                    اطلب الآن
-
-                </button>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-
-    <!-- =====================
-         BUSINESS
-    ====================== -->
-
-    <div class="category">
-
-        <div class="category-title">
-            💼 خدمات الأعمال والتسويق
-        </div>
-
-
-        <div class="services">
-
-
-            <!-- WEBSITE -->
-
-            <div
-                class="service"
-                data-name="انشاء موقع الكتروني website">
-
-                <div class="icon">
-                    🌐
-                </div>
-
-                <h3>
-                    إنشاء موقع إلكتروني
-                </h3>
-
-                <p>
-                    تصميم وإنشاء المواقع
-                </p>
-
-                <div class="price">
-                    اطلب عرض سعر
-                </div>
-
-                <button
-                    onclick="openGenericOrder('إنشاء موقع إلكتروني')">
-
-                    اطلب الآن
-
-                </button>
-
-            </div>
-
-
-            <!-- MARKETING -->
-
-            <div
-                class="service"
-                data-name="التسويق لمنتج marketing">
-
-                <div class="icon">
-                    📢
-                </div>
-
-                <h3>
-                    التسويق لمنتج
-                </h3>
-
-                <p>
-                    التسويق والترويج للمنتجات
-                </p>
-
-                <div class="price">
-                    اطلب عرض سعر
-                </div>
-
-                <button
-                    onclick="openGenericOrder('التسويق لمنتج')">
-
-                    اطلب الآن
-
-                </button>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-
-    <!-- =====================
-         INFO
-    ====================== -->
-
-    <div class="info-section">
-
-        <div class="info-card">
-
-            <div class="big">
-                ⚡
-            </div>
-
-            <h3>
-                سرعة
-            </h3>
-
-            <p>
-                معالجة الطلبات بسرعة
-            </p>
+        <div class="payment-methods">
+
+            <button
+                class="payment-option"
+                onclick="selectFFPayment('Ooredoo/Orange',this)">
+                📱
+                <br>
+                Ooredoo / Orange
+            </button>
+
+            <button
+                class="payment-option"
+                onclick="selectFFPayment('D17',this)">
+                💳
+                <br>
+                D17
+            </button>
+
+            <button
+                class="payment-option"
+                onclick="selectFFPayment('USDT',this)">
+                ₿
+                <br>
+                USDT
+            </button>
 
         </div>
 
 
-        <div class="info-card">
+        <div
+            id="ffOoredooOrange"
+            class="payment-details">
 
-            <div class="big">
-                🔒
-            </div>
-
-            <h3>
-                أمان
-            </h3>
-
-            <p>
-                حماية معلومات العملاء
-            </p>
-
-        </div>
-
-
-        <div class="info-card">
-
-            <div class="big">
-                📞
-            </div>
-
-            <h3>
-                دعم
-            </h3>
-
-            <p>
-                دعم العملاء عند الحاجة
-            </p>
-
-        </div>
-
-    </div>
-
-
-</div>
-
-
-<!-- =========================
-     TIKTOK ORDER MODAL
-========================= -->
-
-<div
-    class="modal"
-    id="tiktokModal">
-
-
-    <div class="modal-box">
-
-
-        <button
-            class="close"
-            onclick="closeTikTok()">
-            ×
-        </button>
-
-
-        <h2>
-            🎵 طلب TikTok Coins
-        </h2>
-
-
-        <div class="form-group">
-
-            <label>
-                عدد Coins
-            </label>
+            <h4>
+                📱 بطاقة Orange أو Ooredoo
+            </h4>
 
             <input
-                id="coinAmount"
+                id="ffCardNumber"
+                type="text"
+                placeholder="رقم البطاقة">
+
+            <input
+                id="ffCardValue"
                 type="number"
-                min="1000"
-                step="1000"
-                value="1000"
-                oninput="calculatePrice()">
+                placeholder="قيمة البطاقة">
 
         </div>
-
-
-        <div class="price-box">
-
-            السعر
-
-            <span id="coinPrice">
-                38.00 د.ت
-            </span>
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label>
-                رابط حساب TikTok
-            </label>
-
-            <input
-                id="tiktokLink"
-                type="text"
-                placeholder="https://www.tiktok.com/@username">
-
-        </div>
-
-
-        <!-- PAYMENT -->
-
-        <div class="payment-section">
-
-            <div class="payment-title">
-                💳 اختر طريقة الدفع
-            </div>
-
-
-            <div class="payment-methods">
-
-
-                <button
-                    type="button"
-                    class="payment-option"
-                    onclick="selectPayment('Ooredoo',this)">
-
-                    📱
-                    <br>
-
-                    <strong>
-                        بطاقة Ooredoo
-                    </strong>
-
-                </button>
-
-
-                <button
-                    type="button"
-                    class="payment-option"
-                    onclick="selectPayment('Orange',this)">
-
-                    📱
-                    <br>
-
-                    <strong>
-                        بطاقة Orange
-                    </strong>
-
-                </button>
-
-
-                <button
-                    type="button"
-                    class="payment-option"
-                    onclick="selectPayment('USDT BEP20',this)">
-
-                    ₿
-                    <br>
-
-                    <strong>
-                        USDT BEP20
-                    </strong>
-
-                </button>
-
-
-                <button
-                    type="button"
-                    class="payment-option"
-                    onclick="selectPayment('Mandat',this)">
-
-                    💰
-                    <br>
-
-                    <strong>
-                        Mandat
-                    </strong>
-
-                </button>
-
-
-            </div>
-
-
-            <!-- OOREDOO -->
-
-            <div
-                id="ooredooPayment"
-                class="payment-details">
-
-                <h4>
-                    📱 بطاقة شحن Ooredoo
-                </h4>
-
-                <input
-                    id="ooredooNumber"
-                    type="text"
-                    placeholder="رقم البطاقة">
-
-                <input
-                    id="ooredooValue"
-                    type="number"
-                    placeholder="قيمة البطاقة بالدينار">
-
-            </div>
-
-
-            <!-- ORANGE -->
-
-            <div
-                id="orangePayment"
-                class="payment-details">
-
-                <h4>
-                    📱 بطاقة شحن Orange
-                </h4>
-
-                <input
-                    id="orangeNumber"
-                    type="text"
-                    placeholder="رقم البطاقة">
-
-                <input
-                    id="orangeValue"
-                    type="number"
-                    placeholder="قيمة البطاقة بالدينار">
-
-            </div>
-
-
-            <!-- USDT -->
-
-            <div
-                id="usdtPayment"
-                class="payment-details">
-
-                <h4>
-                    ₿ الدفع بواسطة USDT BEP20
-                </h4>
-
-                <p>
-                    أرسل المبلغ المطلوب إلى العنوان التالي:
-                </p>
-
-                <div class="wallet-address">
-
-                    0xc464059da5e8543e479b68de3fcfaff8dee853ee
-
-                </div>
-
-
-                <button
-                    type="button"
-                    class="copy-button"
-                    onclick="copyWallet()">
-
-                    📋 نسخ عنوان المحفظة
-
-                </button>
-
-            </div>
-
-
-            <!-- MANDAT -->
-
-            <div
-                id="mandatPayment"
-                class="payment-details">
-
-                <h4>
-                    💰 الدفع بواسطة Mandat
-                </h4>
-
-                <p>
-                    اختر هذه الطريقة وسيتم التواصل معك
-                    لتزويدك بتفاصيل الدفع.
-                </p>
-
-            </div>
-
-
-            <!-- WHATSAPP -->
-
-            <div class="whatsapp-box">
-
-                <p>
-                    📸 بعد إتمام الدفع،
-                    أرسل Screenshot لإثبات الدفع
-                    عبر WhatsApp.
-                </p>
-
-
-                <button
-                    type="button"
-                    class="whatsapp-button"
-                    onclick="sendWhatsAppProof()">
-
-                    💬 إرسال إثبات الدفع عبر WhatsApp
-
-                </button>
-
-            </div>
-
-
-        </div>
-
-
-        <button
-            class="primary"
-            onclick="confirmTikTok()">
-
-            تأكيد الطلب
-
-        </button>
-
-
-        <button
-            class="secondary"
-            onclick="closeTikTok()">
-
-            إلغاء
-
-        </button>
 
 
         <div
-            id="tiktokMessage"
-            class="message">
+            id="ffD17"
+            class="payment-details">
+
+            <h4>
+                💳 D17
+            </h4>
+
+            <p>
+                قيمة الدفع حسب الباقة المختارة.
+            </p>
+
         </div>
 
 
+        <div
+            id="ffUSDT"
+            class="payment-details">
+
+            <h4>
+                ₿ USDT BEP20
+            </h4>
+
+            <p>
+                قيمة الدفع حسب الباقة المختارة.
+            </p>
+
+            <div class="wallet-address">
+                0xc464059da5e8543e479b68de3fcfaff8dee853ee
+            </div>
+
+            <button
+                class="copy-button"
+                onclick="copyWallet()">
+                📋 نسخ العنوان
+            </button>
+
+        </div>
+
+
+        <div class="whatsapp-box">
+
+            <p>
+                📸 بعد الدفع أرسل Screenshot
+                لإثبات الدفع عبر WhatsApp.
+            </p>
+
+            <button
+                class="whatsapp-button"
+                onclick="sendWhatsAppProof('Free Fire')">
+                💬 إرسال إثبات الدفع
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="primary"
+        onclick="confirmFreeFire()">
+        تأكيد الطلب
+    </button>
+
+    <button
+        class="secondary"
+        onclick="closeFreeFire()">
+        إلغاء
+    </button>
+
+    <div
+        id="freeFireMessage"
+        class="message">
     </div>
 
 </div>
 
+</div><!-- =========================
+     FIFA MODAL
+========================= --><div class="modal" id="fifaModal"><div class="modal-box">
 
-<!-- =========================
-     GENERIC ORDER MODAL
-========================= -->
+    <button class="close" onclick="closeFifa()">
+        ×
+    </button>
 
-<div
-    class="modal"
-    id="genericModal">
+    <h2>
+        ⚽ EA SPORTS FC Mobile
+    </h2>
+
+    <div class="form-group">
+
+        <label>
+            اختر باقة FC Points
+        </label>
+
+        <select
+            id="fifaPackage"
+            onchange="updateFifaPrice()">
+
+            <option value="40">
+                40 FC Points — 1.56 د.ت
+            </option>
+
+            <option value="100">
+                100 FC Points — 3.96 د.ت
+            </option>
+
+            <option value="520">
+                520 FC Points — 19.96 د.ت
+            </option>
+
+            <option value="1070">
+                1070 FC Points — 39.96 د.ت
+            </option>
+
+            <option value="2200">
+                2200 FC Points — 79.96 د.ت
+            </option>
+
+            <option value="5750">
+                5750 FC Points — 199.84 د.ت
+            </option>
+
+            <option value="12000">
+                12000 FC Points — 334.88 د.ت
+            </option>
+
+        </select>
+
+    </div>
 
 
-    <div class="modal-box">
+    <div class="price-box">
+
+        السعر
+
+        <span id="fifaPrice">
+            1.56 د.ت
+        </span>
+
+    </div>
 
 
-        <button
-            class="close"
-            onclick="closeGeneric()">
-            ×
-        </button>
+    <div class="form-group">
+
+        <label>
+            حساب / ID اللعبة
+        </label>
+
+        <input
+            id="fifaAccount"
+            type="text"
+            placeholder="أدخل حسابك أو ID">
+
+    </div>
 
 
-        <h2 id="genericTitle">
-            طلب خدمة
-        </h2>
+    <div class="payment-section">
 
+        <div class="payment-title">
+            💳 طريقة الدفع
+        </div>
 
-        <div class="form-group">
+        <div class="payment-methods">
 
-            <label>
-                الخدمة
-            </label>
+            <button
+                class="payment-option"
+                onclick="selectFifaPayment('Ooredoo/Orange',this)">
+                📱
+                <br>
+                Ooredoo / Orange
+            </button>
 
-            <input
-                id="genericService"
-                type="text"
-                readonly>
+            <button
+                class="payment-option"
+                onclick="selectFifaPayment('D17',this)">
+                💳
+                <br>
+                D17
+            </button>
+
+            <button
+                class="payment-option"
+                onclick="selectFifaPayment('USDT',this)">
+                ₿
+                <br>
+                USDT
+            </button>
 
         </div>
 
 
-        <div class="form-group">
+        <div
+            id="fifaOoredooOrange"
+            class="payment-details">
 
-            <label>
-                الكمية المطلوبة
-            </label>
+            <h4>
+                📱 بطاقة Orange أو Ooredoo
+            </h4>
 
             <input
-                id="genericAmount"
+                id="fifaCardNumber"
+                type="text"
+                placeholder="رقم البطاقة">
+
+            <input
+                id="fifaCardValue"
                 type="number"
-                min="1"
-                value="1000">
+                placeholder="قيمة البطاقة">
 
         </div>
-
-
-        <div class="form-group">
-
-            <label>
-                الرابط / الحساب
-            </label>
-
-            <input
-                id="genericLink"
-                type="text"
-                placeholder="ضع الرابط هنا">
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label>
-                ملاحظات
-            </label>
-
-            <input
-                id="genericNote"
-                type="text"
-                placeholder="ملاحظات إضافية">
-
-        </div>
-
-
-        <div class="payment-section">
-
-            <div class="payment-title">
-                💳 اختر طريقة الدفع
-            </div>
-
-
-            <div class="payment-methods">
-
-
-                <button
-                    type="button"
-                    class="payment-option"
-                    onclick="selectGenericPayment('Ooredoo',this)">
-
-                    📱
-                    <br>
-                    Ooredoo
-
-                </button>
-
-
-                <button
-                    type="button"
-                    class="payment-option"
-                    onclick="selectGenericPayment('Orange',this)">
-
-                    📱
-                    <br>
-                    Orange
-
-                </button>
-
-
-                <button
-                    type="button"
-                    class="payment-option"
-                    onclick="selectGenericPayment('USDT BEP20',this)">
-
-                    ₿
-                    <br>
-                    USDT BEP20
-
-                </button>
-
-
-                <button
-                    type="button"
-                    class="payment-option"
-                    onclick="selectGenericPayment('Mandat',this)">
-
-                    💰
-                    <br>
-                    Mandat
-
-                </button>
-
-
-            </div>
-
-
-            <div
-                id="genericOoredoo"
-                class="payment-details">
-
-                <h4>
-                    📱 بطاقة Ooredoo
-                </h4>
-
-                <input
-                    id="genericOoredooNumber"
-                    type="text"
-                    placeholder="رقم البطاقة">
-
-                <input
-                    id="genericOoredooValue"
-                    type="number"
-                    placeholder="قيمة البطاقة">
-
-            </div>
-
-
-            <div
-                id="genericOrange"
-                class="payment-details">
-
-                <h4>
-                    📱 بطاقة Orange
-                </h4>
-
-                <input
-                    id="genericOrangeNumber"
-                    type="text"
-                    placeholder="رقم البطاقة">
-
-                <input
-                    id="genericOrangeValue"
-                    type="number"
-                    placeholder="قيمة البطاقة">
-
-            </div>
-
-
-            <div
-                id="genericUSDT"
-                class="payment-details">
-
-                <h4>
-                    ₿ USDT BEP20
-                </h4>
-
-                <div class="wallet-address">
-
-                    0xc464059da5e8543e479b68de3fcfaff8dee853ee
-
-                </div>
-
-                <button
-                    type="button"
-                    class="copy-button"
-                    onclick="copyWallet()">
-
-                    📋 نسخ العنوان
-
-                </button>
-
-            </div>
-
-
-            <div
-                id="genericMandat"
-                class="payment-details">
-
-                <h4>
-                    💰 Mandat
-                </h4>
-
-                <p>
-                    سيتم التواصل معك بخصوص تفاصيل الدفع.
-                </p>
-
-            </div>
-
-
-            <div class="whatsapp-box">
-
-                <p>
-                    📸 أرسل Screenshot لإثبات الدفع
-                </p>
-
-                <button
-                    type="button"
-                    class="whatsapp-button"
-                    onclick="sendWhatsAppProof()">
-
-                    💬 إرسال عبر WhatsApp
-
-                </button>
-
-            </div>
-
-
-        </div>
-
-
-        <button
-            class="primary"
-            onclick="confirmGeneric()">
-
-            إرسال الطلب
-
-        </button>
-
-
-        <button
-            class="secondary"
-            onclick="closeGeneric()">
-
-            إلغاء
-
-        </button>
 
 
         <div
-            id="genericMessage"
-            class="message">
+            id="fifaD17"
+            class="payment-details">
+
+            <h4>
+                💳 D17
+            </h4>
+
+            <p>
+                قيمة الدفع حسب الباقة المختارة.
+            </p>
+
         </div>
 
 
+        <div
+            id="fifaUSDT"
+            class="payment-details">
+
+            <h4>
+                ₿ USDT BEP20
+            </h4>
+
+            <div class="wallet-address">
+                0xc464059da5e8543e479b68de3fcfaff8dee853ee
+            </div>
+
+            <button
+                class="copy-button"
+                onclick="copyWallet()">
+                📋 نسخ العنوان
+            </button>
+
+        </div>
+
+
+        <div class="whatsapp-box">
+
+            <p>
+                📸 أرسل Screenshot لإثبات الدفع.
+            </p>
+
+            <button
+                class="whatsapp-button"
+                onclick="sendWhatsAppProof('FC Mobile')">
+                💬 إرسال إثبات الدفع
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="primary"
+        onclick="confirmFifa()">
+        تأكيد الطلب
+    </button>
+
+    <button
+        class="secondary"
+        onclick="closeFifa()">
+        إلغاء
+    </button>
+
+    <div
+        id="fifaMessage"
+        class="message">
     </div>
 
 </div>
 
+</div><!-- =========================
+     TIKTOK MODAL
+========================= --><div class="modal" id="tiktokModal"><div class="modal-box">
 
-<!-- =========================
-     LOGIN
-========================= -->
+    <button class="close" onclick="closeTikTok()">
+        ×
+    </button>
 
-<div
-    class="modal"
-    id="loginModal">
+    <h2>
+        🎵 TikTok Coins
+    </h2>
 
+    <div class="form-group">
 
-    <div class="modal-box">
+        <label>
+            عدد Coins
+        </label>
 
+        <input
+            id="coinAmount"
+            type="number"
+            min="1000"
+            step="1000"
+            value="1000"
+            oninput="calculatePrice()">
 
-        <button
-            class="close"
-            onclick="closeLogin()">
-            ×
-        </button>
+    </div>
 
+    <div class="price-box">
 
-        <h2>
-            👤 حسابي
-        </h2>
+        السعر
 
+        <span id="coinPrice">
+            38.00 د.ت
+        </span>
 
-        <div class="form-group">
+    </div>
 
-            <label>
-                البريد الإلكتروني
-            </label>
+    <div class="form-group">
 
-            <input
-                id="email"
-                type="email"
-                placeholder="example@email.com">
+        <label>
+            رابط حساب TikTok
+        </label>
 
+        <input
+            id="tiktokLink"
+            type="text"
+            placeholder="https://www.tiktok.com/@username">
+
+    </div>
+
+    <div class="payment-section">
+
+        <div class="payment-title">
+            💳 طريقة الدفع
         </div>
 
+        <div class="payment-methods">
 
-        <div class="form-group">
+            <button
+                class="payment-option"
+                onclick="selectTikTokPayment('Ooredoo',this)">
+                📱
+                <br>
+                Ooredoo
+            </button>
 
-            <label>
-                كلمة المرور
-            </label>
+            <button
+                class="payment-option"
+                onclick="selectTikTokPayment('Orange',this)">
+                📱
+                <br>
+                Orange
+            </button>
 
-            <input
-                id="password"
-                type="password"
-                placeholder="كلمة المرور">
+            <button
+                class="payment-option"
+                onclick="selectTikTokPayment('USDT',this)">
+                ₿
+                <br>
+                USDT
+            </button>
+
+            <button
+                class="payment-option"
+                onclick="selectTikTokPayment('Mandat',this)">
+                💰
+                <br>
+                Mandat
+            </button>
 
         </div>
-
-
-        <button
-            class="primary"
-            onclick="loginDemo()">
-
-            تسجيل الدخول
-
-        </button>
-
 
         <div
-            id="loginMessage"
-            class="message">
+            id="tiktokOoredoo"
+            class="payment-details">
+
+            <h4>
+                📱 Ooredoo
+            </h4>
+
+            <input
+                id="tiktokOoredooNumber"
+                type="text"
+                placeholder="رقم البطاقة">
+
+            <input
+                id="tiktokOoredooValue"
+                type="number"
+                placeholder="قيمة البطاقة">
+
         </div>
 
+        <div
+            id="tiktokOrange"
+            class="payment-details">
 
-        <p style="
-            text-align:center;
-            margin-top:15px;
-            color:#777;
-            font-size:13px;
-            line-height:1.6;
-        ">
+            <h4>
+                📱 Orange
+            </h4>
 
-            الحسابات الحقيقية سيتم ربطها
-            بـ Supabase في المرحلة القادمة.
+            <input
+                id="tiktokOrangeNumber"
+                type="text"
+                placeholder="رقم البطاقة">
 
-        </p>
+            <input
+                id="tiktokOrangeValue"
+                type="number"
+                placeholder="قيمة البطاقة">
 
+        </div>
 
+        <div
+            id="tiktokUSDT"
+            class="payment-details">
+
+            <h4>
+                ₿ USDT BEP20
+            </h4>
+
+            <div class="wallet-address">
+                0xc464059da5e8543e479b68de3fcfaff8dee853ee
+            </div>
+
+            <button
+                class="copy-button"
+                onclick="copyWallet()">
+                📋 نسخ العنوان
+            </button>
+
+        </div>
+
+        <div
+            id="tiktokMandat"
+            class="payment-details">
+
+            <h4>
+                💰 Mandat
+            </h4>
+
+            <p>
+                سيتم التواصل معك بخصوص تفاصيل الدفع.
+            </p>
+
+        </div>
+
+        <div class="whatsapp-box">
+
+            <p>
+                📸 أرسل Screenshot لإثبات الدفع.
+            </p>
+
+            <button
+                class="whatsapp-button"
+                onclick="sendWhatsAppProof('TikTok Coins')">
+                💬 إرسال إثبات الدفع
+            </button>
+
+        </div>
+
+    </div>
+
+    <button
+        class="primary"
+        onclick="confirmTikTok()">
+        تأكيد الطلب
+    </button>
+
+    <button
+        class="secondary"
+        onclick="closeTikTok()">
+        إلغاء
+    </button>
+
+    <div
+        id="tiktokMessage"
+        class="message">
     </div>
 
 </div>
 
+</div><!-- =========================
+     GENERIC MODAL
+========================= --><div class="modal" id="genericModal"><div class="modal-box">
 
-<!-- =========================
-     ORDERS
-========================= -->
+    <button class="close" onclick="closeGeneric()">
+        ×
+    </button>
 
-<div
+    <h2 id="genericTitle">
+        طلب خدمة
+    </h2>
+
+    <div class="form-group">
+
+        <label>
+            الخدمة
+        </label>
+
+        <input
+            id="genericService"
+            type="text"
+            readonly>
+
+    </div>
+
+    <div class="form-group">
+
+        <label>
+            الكمية
+        </label>
+
+        <input
+            id="genericAmount"
+            type="number"
+            value="1000">
+
+    </div>
+
+    <div class="form-group">
+
+        <label>
+            الرابط / الحساب
+        </label>
+
+        <input
+            id="genericLink"
+            type="text"
+            placeholder="ضع الرابط هنا">
+
+    </div>
+
+    <div class="form-group">
+
+        <label>
+            ملاحظات
+        </label>
+
+        <input
+            id="genericNote"
+            type="text"
+            placeholder="ملاحظات إضافية">
+
+    </div>
+
+    <div class="payment-section">
+
+        <div class="payment-title">
+            💳 طريقة الدفع
+        </div>
+
+        <div class="payment-methods">
+
+            <button
+                class="payment-option"
+                onclick="selectGenericPayment('Ooredoo',this)">
+                📱
+                <br>
+                Ooredoo
+            </button>
+
+            <button
+                class="payment-option"
+                onclick="selectGenericPayment('Orange',this)">
+                📱
+                <br>
+                Orange
+            </button>
+
+            <button
+                class="payment-option"
+                onclick="selectGenericPayment('USDT',this)">
+                ₿
+                <br>
+                USDT
+            </button>
+
+            <button
+                class="payment-option"
+                onclick="selectGenericPayment('Mandat',this)">
+                💰
+                <br>
+                Mandat
+            </button>
+
+        </div>
+
+        <div
+            id="genericOoredoo"
+            class="payment-details">
+
+            <input
+                id="genericOoredooNumber"
+                type="text"
+                placeholder="رقم بطاقة Ooredoo">
+
+            <input
+                id="genericOoredooValue"
+                type="number"
+                placeholder="قيمة البطاقة">
+
+        </div>
+
+        <div
+            id="genericOrange"
+            class="payment-details">
+
+            <input
+                id="genericOrangeNumber"
+                type="text"
+                placeholder="رقم بطاقة Orange">
+
+            <input
+                id="genericOrangeValue"
+                type="number"
+                placeholder="قيمة البطاقة">
+
+        </div>
+
+        <div
+            id="genericUSDT"
+            class="payment-details">
+
+            <div class="wallet-address">
+                0xc464059da5e8543e479b68de3fcfaff8dee853ee
+            </div>
+
+            <button
+                class="copy-button"
+                onclick="copyWallet()">
+                📋 نسخ العنوان
+            </button>
+
+        </div>
+
+        <div
+            id="genericMandat"
+            class="payment-details">
+
+            <p>
+                سيتم التواصل معك بخصوص تفاصيل الدفع.
+            </p>
+
+        </div>
+
+        <div class="whatsapp-box">
+
+            <p>
+                📸 أرسل Screenshot لإثبات الدفع.
+            </p>
+
+            <button
+                class="whatsapp-button"
+                onclick="sendWhatsAppProof('طلب خدمة')">
+                💬 إرسال إثبات الدفع
+            </button>
+
+        </div>
+
+    </div>
+
+    <button
+        class="primary"
+        onclick="confirmGeneric()">
+        إرسال الطلب
+    </button>
+
+    <button
+        class="secondary"
+        onclick="closeGeneric()">
+        إلغاء
+    </button>
+
+    <div
+        id="genericMessage"
+        class="message">
+    </div>
+
+</div>
+
+</div><!-- LOGIN --><div class="modal" id="loginModal"><div class="modal-box">
+
+    <button class="close" onclick="closeLogin()">
+        ×
+    </button>
+
+    <h2>
+        👤 حسابي
+    </h2>
+
+    <div class="form-group">
+
+        <label>
+            البريد الإلكتروني
+        </label>
+
+        <input
+            id="email"
+            type="email"
+            placeholder="example@email.com">
+
+    </div>
+
+    <div class="form-group">
+
+        <label>
+            كلمة المرور
+        </label>
+
+        <input
+            id="password"
+            type="password"
+            placeholder="كلمة المرور">
+
+    </div>
+
+    <button
+        class="primary"
+        onclick="loginDemo()">
+        تسجيل الدخول
+    </button>
+
+    <div
+        id="loginMessage"
+        class="message">
+    </div>
+
+</div>
+
+</div><!-- ORDERS --><div
     class="orders-panel"
-    id="ordersPanel">
+    id="ordersPanel"><div class="orders-box">
 
+    <button
+        class="close"
+        onclick="closeOrders()">
+        ×
+    </button>
 
-    <div class="orders-box">
+    <h2>
+        📋 طلباتي
+    </h2>
 
-
-        <button
-            class="close"
-            onclick="closeOrders()">
-            ×
-        </button>
-
-
-        <h2>
-            📋 طلباتي
-        </h2>
-
-
-        <div id="ordersList">
-        </div>
-
-
-    </div>
+    <div id="ordersList"></div>
 
 </div>
 
+</div><!-- FOOTER --><footer><h3>
+    ⭐ Tunis Services
+</h3>
 
-<!-- =========================
-     FOOTER
-========================= -->
+<p>
+    خدمات رقمية بكل سهولة
+</p>
 
-<footer>
+<p>
+    © 2026 Tunis Services
+</p>
 
-    <h3>
-        ⭐ Tunis Services
-    </h3>
-
-    <p>
-        خدمات رقمية بكل سهولة
-    </p>
-
-    <p>
-        © 2026 Tunis Services
-    </p>
-
-</footer>
-
-
-<script>
-
+</footer><script>
 
 /* =========================
-   GENERAL
+   VARIABLES
 ========================= */
 
-let selectedPayment = "";
-
+let selectedFFPayment = "";
+let selectedFifaPayment = "";
+let selectedTikTokPayment = "";
 let selectedGenericPayment = "";
 
 
@@ -2486,28 +2268,19 @@ function searchServices(){
         .toLowerCase()
         .trim();
 
-
-    const cards =
-        document.querySelectorAll(".service");
-
-
-    cards.forEach(card => {
+    document
+    .querySelectorAll(".service")
+    .forEach(card => {
 
         const name =
             card
             .getAttribute("data-name")
             .toLowerCase();
 
-
-        if(name.includes(value)){
-
-            card.style.display="";
-
-        }else{
-
-            card.style.display="none";
-
-        }
+        card.style.display =
+            name.includes(value)
+            ? ""
+            : "none";
 
     });
 
@@ -2515,7 +2288,416 @@ function searchServices(){
 
 
 /* =========================
-   TIKTOK ORDER
+   FREE FIRE
+========================= */
+
+function openFreeFireOrder(){
+
+    document
+    .getElementById("freeFireModal")
+    .style.display="block";
+
+    updateFreeFirePrice();
+
+}
+
+function closeFreeFire(){
+
+    document
+    .getElementById("freeFireModal")
+    .style.display="none";
+
+}
+
+function updateFreeFirePrice(){
+
+    const packageValue =
+        document
+        .getElementById("freeFirePackage")
+        .value;
+
+    let price=25;
+
+    if(packageValue==="530"){
+        price=25;
+    }
+
+    if(packageValue==="1080"){
+        price=50;
+    }
+
+    if(packageValue==="2200"){
+        price=100;
+    }
+
+    document
+    .getElementById("freeFirePrice")
+    .innerText =
+        price.toFixed(2) + " د.ت";
+
+}
+
+
+function selectFFPayment(method,button){
+
+    selectedFFPayment=method;
+
+    document
+    .querySelectorAll(
+        "#freeFireModal .payment-option"
+    )
+    .forEach(btn =>
+        btn.classList.remove("active")
+    );
+
+    button.classList.add("active");
+
+    document
+    .getElementById("ffOoredooOrange")
+    .style.display="none";
+
+    document
+    .getElementById("ffD17")
+    .style.display="none";
+
+    document
+    .getElementById("ffUSDT")
+    .style.display="none";
+
+
+    if(method==="Ooredoo/Orange"){
+
+        document
+        .getElementById("ffOoredooOrange")
+        .style.display="block";
+
+    }
+
+    if(method==="D17"){
+
+        document
+        .getElementById("ffD17")
+        .style.display="block";
+
+    }
+
+    if(method==="USDT"){
+
+        document
+        .getElementById("ffUSDT")
+        .style.display="block";
+
+    }
+
+}
+
+
+function confirmFreeFire(){
+
+    const packageValue =
+        document
+        .getElementById("freeFirePackage")
+        .value;
+
+    const playerId =
+        document
+        .getElementById("freeFireId")
+        .value
+        .trim();
+
+    const message =
+        document
+        .getElementById("freeFireMessage");
+
+
+    if(playerId===""){
+
+        message.style.color="#dc2626";
+
+        message.innerText=
+            "أدخل ID حساب Free Fire.";
+
+        return;
+
+    }
+
+    if(selectedFFPayment===""){
+
+        message.style.color="#dc2626";
+
+        message.innerText=
+            "اختر طريقة الدفع.";
+
+        return;
+
+    }
+
+
+    let price=25;
+
+    if(packageValue==="1080"){
+        price=50;
+    }
+
+    if(packageValue==="2200"){
+        price=100;
+    }
+
+
+    let usdt=7;
+
+    if(packageValue==="1080"){
+        usdt=14;
+    }
+
+    if(packageValue==="2200"){
+        usdt=28;
+    }
+
+
+    let d17=20;
+
+    if(packageValue==="1080"){
+        d17=40;
+    }
+
+    if(packageValue==="2200"){
+        d17=80;
+    }
+
+
+    let displayPrice=price+" د.ت";
+
+    if(selectedFFPayment==="D17"){
+        displayPrice=d17+" د.ت";
+    }
+
+    if(selectedFFPayment==="USDT"){
+        displayPrice=usdt+" USDT";
+    }
+
+
+    saveOrder({
+
+        service:"Free Fire",
+
+        amount:
+            packageValue+" جوهرة",
+
+        price:displayPrice,
+
+        link:
+            "Player ID: "+playerId,
+
+        payment:
+            selectedFFPayment
+
+    });
+
+
+    message.style.color="#16a34a";
+
+    message.innerText=
+        "✅ تم تسجيل الطلب بنجاح.";
+
+}
+
+
+/* =========================
+   FIFA
+========================= */
+
+function openFifaOrder(){
+
+    document
+    .getElementById("fifaModal")
+    .style.display="block";
+
+    updateFifaPrice();
+
+}
+
+function closeFifa(){
+
+    document
+    .getElementById("fifaModal")
+    .style.display="none";
+
+}
+
+
+function updateFifaPrice(){
+
+    const value =
+        document
+        .getElementById("fifaPackage")
+        .value;
+
+    const prices={
+
+        "40":1.56,
+        "100":3.96,
+        "520":19.96,
+        "1070":39.96,
+        "2200":79.96,
+        "5750":199.84,
+        "12000":334.88
+
+    };
+
+
+    document
+    .getElementById("fifaPrice")
+    .innerText =
+        prices[value].toFixed(2)
+        + " د.ت";
+
+}
+
+
+function selectFifaPayment(method,button){
+
+    selectedFifaPayment=method;
+
+    document
+    .querySelectorAll(
+        "#fifaModal .payment-option"
+    )
+    .forEach(btn =>
+        btn.classList.remove("active")
+    );
+
+    button.classList.add("active");
+
+
+    document
+    .getElementById("fifaOoredooOrange")
+    .style.display="none";
+
+    document
+    .getElementById("fifaD17")
+    .style.display="none";
+
+    document
+    .getElementById("fifaUSDT")
+    .style.display="none";
+
+
+    if(method==="Ooredoo/Orange"){
+
+        document
+        .getElementById("fifaOoredooOrange")
+        .style.display="block";
+
+    }
+
+    if(method==="D17"){
+
+        document
+        .getElementById("fifaD17")
+        .style.display="block";
+
+    }
+
+    if(method==="USDT"){
+
+        document
+        .getElementById("fifaUSDT")
+        .style.display="block";
+
+    }
+
+}
+
+
+function confirmFifa(){
+
+    const packageValue =
+        document
+        .getElementById("fifaPackage")
+        .value;
+
+    const account =
+        document
+        .getElementById("fifaAccount")
+        .value
+        .trim();
+
+    const message =
+        document
+        .getElementById("fifaMessage");
+
+
+    if(account===""){
+
+        message.style.color="#dc2626";
+
+        message.innerText=
+            "أدخل حساب أو ID اللعبة.";
+
+        return;
+
+    }
+
+    if(selectedFifaPayment===""){
+
+        message.style.color="#dc2626";
+
+        message.innerText=
+            "اختر طريقة الدفع.";
+
+        return;
+
+    }
+
+
+    const prices={
+
+        "40":1.56,
+        "100":3.96,
+        "520":19.96,
+        "1070":39.96,
+        "2200":79.96,
+        "5750":199.84,
+        "12000":334.88
+
+    };
+
+
+    let price=
+        prices[packageValue].toFixed(2)
+        +" د.ت";
+
+
+    saveOrder({
+
+        service:"EA SPORTS FC Mobile",
+
+        amount:
+            packageValue+
+            " FC Points",
+
+        price:price,
+
+        link:
+            "Account/ID: "+account,
+
+        payment:
+            selectedFifaPayment
+
+    });
+
+
+    message.style.color="#16a34a";
+
+    message.innerText=
+        "✅ تم تسجيل الطلب بنجاح.";
+
+}
+
+
+/* =========================
+   TIKTOK
 ========================= */
 
 function openTikTokOrder(){
@@ -2524,11 +2706,9 @@ function openTikTokOrder(){
     .getElementById("tiktokModal")
     .style.display="block";
 
-
     calculatePrice();
 
 }
-
 
 function closeTikTok(){
 
@@ -2538,322 +2718,148 @@ function closeTikTok(){
 
 }
 
-
 function calculatePrice(){
 
-    let amount =
+    let amount=
         Number(
             document
             .getElementById("coinAmount")
             .value
         );
 
-
-    if(
-        !amount ||
-        amount < 1000
-    ){
-
+    if(!amount || amount<1000){
         amount=1000;
-
     }
 
-
-    const price =
-        (amount / 1000) * 38;
-
+    const price=
+        amount/1000*38;
 
     document
     .getElementById("coinPrice")
-    .innerText =
-        price.toFixed(2) + " د.ت";
+    .innerText=
+        price.toFixed(2)+" د.ت";
 
 }
 
 
-/* =========================
-   TIKTOK PAYMENT
-========================= */
+function selectTikTokPayment(method,button){
 
-function selectPayment(method,button){
-
-    selectedPayment=method;
-
+    selectedTikTokPayment=method;
 
     document
     .querySelectorAll(
         "#tiktokModal .payment-option"
     )
-    .forEach(btn => {
-
-        btn.classList.remove("active");
-
-    });
-
-
-    button.classList.add("active");
-
-
-    document
-    .getElementById("ooredooPayment")
-    .style.display="none";
-
-    document
-    .getElementById("orangePayment")
-    .style.display="none";
-
-    document
-    .getElementById("usdtPayment")
-    .style.display="none";
-
-    document
-    .getElementById("mandatPayment")
-    .style.display="none";
-
-
-    if(method==="Ooredoo"){
-
-        document
-        .getElementById("ooredooPayment")
-        .style.display="block";
-
-    }
-
-
-    if(method==="Orange"){
-
-        document
-        .getElementById("orangePayment")
-        .style.display="block";
-
-    }
-
-
-    if(method==="USDT BEP20"){
-
-        document
-        .getElementById("usdtPayment")
-        .style.display="block";
-
-    }
-
-
-    if(method==="Mandat"){
-
-        document
-        .getElementById("mandatPayment")
-        .style.display="block";
-
-    }
-
-}
-
-
-/* =========================
-   GENERIC PAYMENT
-========================= */
-
-function selectGenericPayment(
-    method,
-    button
-){
-
-    selectedGenericPayment=method;
-
-
-    document
-    .querySelectorAll(
-        "#genericModal .payment-option"
-    )
-    .forEach(btn => {
-
-        btn.classList.remove("active");
-
-    });
-
-
-    button.classList.add("active");
-
-
-    document
-    .getElementById("genericOoredoo")
-    .style.display="none";
-
-    document
-    .getElementById("genericOrange")
-    .style.display="none";
-
-    document
-    .getElementById("genericUSDT")
-    .style.display="none";
-
-    document
-    .getElementById("genericMandat")
-    .style.display="none";
-
-
-    if(method==="Ooredoo"){
-
-        document
-        .getElementById("genericOoredoo")
-        .style.display="block";
-
-    }
-
-
-    if(method==="Orange"){
-
-        document
-        .getElementById("genericOrange")
-        .style.display="block";
-
-    }
-
-
-    if(method==="USDT BEP20"){
-
-        document
-        .getElementById("genericUSDT")
-        .style.display="block";
-
-    }
-
-
-    if(method==="Mandat"){
-
-        document
-        .getElementById("genericMandat")
-        .style.display="block";
-
-    }
-
-}
-
-
-/* =========================
-   COPY USDT
-========================= */
-
-function copyWallet(){
-
-    const address =
-        "0xc464059da5e8543e479b68de3fcfaff8dee853ee";
-
-
-    if(
-        navigator.clipboard &&
-        navigator.clipboard.writeText
-    ){
-
-        navigator.clipboard
-        .writeText(address)
-        .then(() => {
-
-            alert(
-                "تم نسخ عنوان USDT BEP20"
-            );
-
-        });
-
-    }else{
-
-        alert(address);
-
-    }
-
-}
-
-
-/* =========================
-   WHATSAPP
-========================= */
-
-function sendWhatsAppProof(){
-
-    const message =
-        "مرحبًا، أريد إرسال إثبات دفع لطلب من Tunis Services.";
-
-
-    const url =
-        "https://wa.me/21628212767?text=" +
-        encodeURIComponent(message);
-
-
-    window.open(
-        url,
-        "_blank"
+    .forEach(btn =>
+        btn.classList.remove("active")
     );
 
+    button.classList.add("active");
+
+
+    document
+    .getElementById("tiktokOoredoo")
+    .style.display="none";
+
+    document
+    .getElementById("tiktokOrange")
+    .style.display="none";
+
+    document
+    .getElementById("tiktokUSDT")
+    .style.display="none";
+
+    document
+    .getElementById("tiktokMandat")
+    .style.display="none";
+
+
+    if(method==="Ooredoo"){
+        document
+        .getElementById("tiktokOoredoo")
+        .style.display="block";
+    }
+
+    if(method==="Orange"){
+        document
+        .getElementById("tiktokOrange")
+        .style.display="block";
+    }
+
+    if(method==="USDT"){
+        document
+        .getElementById("tiktokUSDT")
+        .style.display="block";
+    }
+
+    if(method==="Mandat"){
+        document
+        .getElementById("tiktokMandat")
+        .style.display="block";
+    }
+
 }
 
-
-/* =========================
-   CONFIRM TIKTOK
-========================= */
 
 function confirmTikTok(){
 
-    const amount =
+    const amount=
         Number(
             document
             .getElementById("coinAmount")
             .value
         );
 
-
-    const link =
+    const link=
         document
         .getElementById("tiktokLink")
         .value
         .trim();
 
-
-    const message =
+    const message=
         document
         .getElementById("tiktokMessage");
 
 
     if(
-        amount < 1000 ||
-        amount % 1000 !== 0
+        amount<1000 ||
+        amount%1000!==0
     ){
 
         message.style.color="#dc2626";
 
-        message.innerText =
+        message.innerText=
             "الكمية يجب أن تكون 1000 أو مضاعفاتها.";
 
         return;
 
     }
 
-
     if(link===""){
 
         message.style.color="#dc2626";
 
-        message.innerText =
-            "الرجاء إدخال رابط حساب TikTok.";
+        message.innerText=
+            "أدخل رابط حساب TikTok.";
 
         return;
 
     }
 
-
-    if(selectedPayment===""){
+    if(selectedTikTokPayment===""){
 
         message.style.color="#dc2626";
 
-        message.innerText =
-            "الرجاء اختيار طريقة الدفع.";
+        message.innerText=
+            "اختر طريقة الدفع.";
 
         return;
 
     }
 
 
-    const price =
-        (amount / 1000) * 38;
+    const price=
+        amount/1000*38;
 
 
     saveOrder({
@@ -2861,31 +2867,29 @@ function confirmTikTok(){
         service:"TikTok Coins",
 
         amount:
-            amount.toLocaleString() +
-            " Coins",
+            amount+" Coins",
 
         price:
-            price.toFixed(2) +
-            " د.ت",
+            price.toFixed(2)+" د.ت",
 
         link:link,
 
         payment:
-            selectedPayment
+            selectedTikTokPayment
 
     });
 
 
     message.style.color="#16a34a";
 
-    message.innerText =
-        "✅ تم تسجيل الطلب تجريبيًا بنجاح.";
+    message.innerText=
+        "✅ تم تسجيل الطلب بنجاح.";
 
 }
 
 
 /* =========================
-   GENERIC ORDER
+   GENERIC
 ========================= */
 
 function openGenericOrder(service){
@@ -2894,56 +2898,27 @@ function openGenericOrder(service){
     .getElementById("genericModal")
     .style.display="block";
 
-
     document
     .getElementById("genericTitle")
-    .innerText =
-        "طلب " + service;
-
+    .innerText=
+        "طلب "+service;
 
     document
     .getElementById("genericService")
-    .value =
+    .value=
         service;
 
-
-    document
-    .getElementById("genericMessage")
-    .innerText="";
-
-
     selectedGenericPayment="";
-
 
     document
     .querySelectorAll(
         "#genericModal .payment-option"
     )
-    .forEach(btn => {
-
-        btn.classList.remove("active");
-
-    });
-
-
-    document
-    .getElementById("genericOoredoo")
-    .style.display="none";
-
-    document
-    .getElementById("genericOrange")
-    .style.display="none";
-
-    document
-    .getElementById("genericUSDT")
-    .style.display="none";
-
-    document
-    .getElementById("genericMandat")
-    .style.display="none";
+    .forEach(btn =>
+        btn.classList.remove("active")
+    );
 
 }
-
 
 function closeGeneric(){
 
@@ -2954,35 +2929,90 @@ function closeGeneric(){
 }
 
 
+function selectGenericPayment(method,button){
+
+    selectedGenericPayment=method;
+
+    document
+    .querySelectorAll(
+        "#genericModal .payment-option"
+    )
+    .forEach(btn =>
+        btn.classList.remove("active")
+    );
+
+    button.classList.add("active");
+
+
+    document
+    .getElementById("genericOoredoo")
+    .style.display="none";
+
+    document
+    .getElementById("genericOrange")
+    .style.display="none";
+
+    document
+    .getElementById("genericUSDT")
+    .style.display="none";
+
+    document
+    .getElementById("genericMandat")
+    .style.display="none";
+
+
+    if(method==="Ooredoo"){
+        document
+        .getElementById("genericOoredoo")
+        .style.display="block";
+    }
+
+    if(method==="Orange"){
+        document
+        .getElementById("genericOrange")
+        .style.display="block";
+    }
+
+    if(method==="USDT"){
+        document
+        .getElementById("genericUSDT")
+        .style.display="block";
+    }
+
+    if(method==="Mandat"){
+        document
+        .getElementById("genericMandat")
+        .style.display="block";
+    }
+
+}
+
+
 function confirmGeneric(){
 
-    const service =
+    const service=
         document
         .getElementById("genericService")
         .value;
 
-
-    const amount =
+    const amount=
         document
         .getElementById("genericAmount")
         .value;
 
-
-    const link =
+    const link=
         document
         .getElementById("genericLink")
         .value
         .trim();
 
-
-    const note =
+    const note=
         document
         .getElementById("genericNote")
         .value
         .trim();
 
-
-    const message =
+    const message=
         document
         .getElementById("genericMessage");
 
@@ -2991,20 +3021,19 @@ function confirmGeneric(){
 
         message.style.color="#dc2626";
 
-        message.innerText =
-            "الرجاء إدخال الرابط أو الحساب.";
+        message.innerText=
+            "أدخل الرابط أو الحساب.";
 
         return;
 
     }
 
-
     if(selectedGenericPayment===""){
 
         message.style.color="#dc2626";
 
-        message.innerText =
-            "الرجاء اختيار طريقة الدفع.";
+        message.innerText=
+            "اختر طريقة الدفع.";
 
         return;
 
@@ -3031,38 +3060,32 @@ function confirmGeneric(){
 
     message.style.color="#16a34a";
 
-    message.innerText =
-        "✅ تم تسجيل الطلب تجريبيًا بنجاح.";
+    message.innerText=
+        "✅ تم تسجيل الطلب بنجاح.";
 
 }
 
 
 /* =========================
-   SAVE ORDER
+   SAVE ORDERS
 ========================= */
 
 function saveOrder(data){
 
-    let orders =
+    let orders=
         JSON.parse(
-            localStorage.getItem(
-                "tunisOrders"
-            )
+            localStorage.getItem("tunisOrders")
         ) || [];
 
 
-    data.id =
-        "TS-" +
-        Date.now();
+    data.id=
+        "TS-"+Date.now();
 
-
-    data.status =
+    data.status=
         "قيد المراجعة";
 
-
-    data.date =
-        new Date()
-        .toLocaleString("ar-TN");
+    data.date=
+        new Date().toLocaleString("ar-TN");
 
 
     orders.unshift(data);
@@ -3090,7 +3113,6 @@ function openOrders(){
 
 }
 
-
 function closeOrders(){
 
     document
@@ -3102,25 +3124,21 @@ function closeOrders(){
 
 function loadOrders(){
 
-    const container =
+    const container=
         document
         .getElementById("ordersList");
 
 
-    const orders =
+    const orders=
         JSON.parse(
-            localStorage.getItem(
-                "tunisOrders"
-            )
+            localStorage.getItem("tunisOrders")
         ) || [];
 
 
     if(orders.length===0){
 
-        container.innerHTML =
-            '<div class="empty">' +
-            'لا توجد طلبات حتى الآن.' +
-            '</div>';
+        container.innerHTML=
+            '<div class="empty">لا توجد طلبات حتى الآن.</div>';
 
         return;
 
@@ -3130,16 +3148,15 @@ function loadOrders(){
     container.innerHTML="";
 
 
-    orders.forEach(order => {
+    orders.forEach(order=>{
 
-        const div =
+        const div=
             document.createElement("div");
-
 
         div.className="order";
 
 
-        div.innerHTML = `
+        div.innerHTML=`
 
             <strong>
                 ${order.service}
@@ -3162,7 +3179,7 @@ function loadOrders(){
 
             <br>
 
-            طريقة الدفع:
+            الدفع:
             ${order.payment}
 
             <br>
@@ -3187,6 +3204,56 @@ function loadOrders(){
 
 
 /* =========================
+   COPY WALLET
+========================= */
+
+function copyWallet(){
+
+    const wallet=
+        "0xc464059da5e8543e479b68de3fcfaff8dee853ee";
+
+
+    if(navigator.clipboard){
+
+        navigator.clipboard
+        .writeText(wallet)
+        .then(()=>{
+            alert("تم نسخ عنوان USDT BEP20");
+        });
+
+    }else{
+
+        alert(wallet);
+
+    }
+
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+function sendWhatsAppProof(service){
+
+    const text=
+        "مرحبًا، أريد إرسال إثبات دفع لطلب "+service+" من Tunis Services.";
+
+
+    const url=
+        "https://wa.me/21628212767?text="+
+        encodeURIComponent(text);
+
+
+    window.open(
+        url,
+        "_blank"
+    );
+
+}
+
+
+/* =========================
    LOGIN
 ========================= */
 
@@ -3197,7 +3264,6 @@ function openLogin(){
     .style.display="block";
 
 }
-
 
 function closeLogin(){
 
@@ -3210,21 +3276,19 @@ function closeLogin(){
 
 function loginDemo(){
 
-    const email =
+    const email=
         document
         .getElementById("email")
         .value
         .trim();
 
-
-    const password =
+    const password=
         document
         .getElementById("password")
         .value
         .trim();
 
-
-    const message =
+    const message=
         document
         .getElementById("loginMessage");
 
@@ -3236,8 +3300,8 @@ function loginDemo(){
 
         message.style.color="#dc2626";
 
-        message.innerText =
-            "الرجاء إدخال البريد وكلمة المرور.";
+        message.innerText=
+            "أدخل البريد وكلمة المرور.";
 
         return;
 
@@ -3246,7 +3310,7 @@ function loginDemo(){
 
     message.style.color="#16a34a";
 
-    message.innerText =
+    message.innerText=
         "تم تسجيل الدخول تجريبيًا.";
 
 }
@@ -3266,7 +3330,7 @@ function comingSoon(){
 
 
 /* =========================
-   CLOSE BY OUTSIDE CLICK
+   OUTSIDE CLICK
 ========================= */
 
 window.addEventListener(
@@ -3274,50 +3338,45 @@ window.addEventListener(
     function(event){
 
         if(
-            event.target ===
-            document.getElementById(
-                "tiktokModal"
-            )
+            event.target===
+            document.getElementById("freeFireModal")
         ){
+            closeFreeFire();
+        }
 
+        if(
+            event.target===
+            document.getElementById("fifaModal")
+        ){
+            closeFifa();
+        }
+
+        if(
+            event.target===
+            document.getElementById("tiktokModal")
+        ){
             closeTikTok();
-
         }
 
-
         if(
-            event.target ===
-            document.getElementById(
-                "genericModal"
-            )
+            event.target===
+            document.getElementById("genericModal")
         ){
-
             closeGeneric();
-
         }
 
-
         if(
-            event.target ===
-            document.getElementById(
-                "loginModal"
-            )
+            event.target===
+            document.getElementById("loginModal")
         ){
-
             closeLogin();
-
         }
 
-
         if(
-            event.target ===
-            document.getElementById(
-                "ordersPanel"
-            )
+            event.target===
+            document.getElementById("ordersPanel")
         ){
-
             closeOrders();
-
         }
 
     }
@@ -3329,12 +3388,9 @@ window.addEventListener(
 ========================= */
 
 calculatePrice();
-
+updateFreeFirePrice();
+updateFifaPrice();
 loadOrders();
 
-</script>
-
-
-</body>
-
+</script></body>
       </html>
