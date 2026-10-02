@@ -131,4 +131,1163 @@ header{
     background:white;
     border-radius:15px;
     padding:25px;
-    text-align
+    text-align:center;
+    box-shadow:0 4px 18px rgba(0,0,0,.07);
+    transition:.2s;
+}
+
+.service:hover{
+    transform:translateY(-3px);
+}
+
+.icon{
+    font-size:43px;
+    margin-bottom:12px;
+}
+
+.service h3{
+    margin-bottom:10px;
+}
+
+.service p{
+    color:#667085;
+    margin-bottom:18px;
+    line-height:1.6;
+}
+
+.price{
+    font-weight:bold;
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.service button,
+.primary{
+    width:100%;
+    border:0;
+    background:#2563eb;
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    font-size:15px;
+}
+
+.service button:hover,
+.primary:hover{
+    background:#1d4ed8;
+}
+
+.info-section{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:50px;
+}
+
+.info-card{
+    background:white;
+    padding:25px;
+    border-radius:14px;
+    text-align:center;
+    box-shadow:0 3px 15px rgba(0,0,0,.06);
+}
+
+.info-card .big{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.info-card p{
+    color:#667085;
+    margin-top:8px;
+}
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    margin-top:60px;
+}
+
+footer p{
+    margin:6px;
+    color:#cbd5e1;
+}
+
+/* MODAL */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    z-index:1000;
+    padding:20px;
+    overflow:auto;
+}
+
+.modal-box{
+    background:white;
+    max-width:480px;
+    margin:50px auto;
+    padding:25px;
+    border-radius:16px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    left:15px;
+    top:12px;
+    border:0;
+    background:#f1f5f9;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    font-size:20px;
+}
+
+.modal h2{
+    margin-bottom:20px;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:7px;
+    font-weight:bold;
+}
+
+.form-group input{
+    width:100%;
+    padding:13px;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    outline:none;
+}
+
+.price-box{
+    background:#eff6ff;
+    padding:15px;
+    border-radius:10px;
+    margin:15px 0;
+    text-align:center;
+}
+
+.price-box span{
+    font-size:25px;
+    font-weight:bold;
+    color:#2563eb;
+}
+
+.secondary{
+    width:100%;
+    border:0;
+    background:#e5e7eb;
+    padding:12px;
+    border-radius:8px;
+    margin-top:10px;
+}
+
+.message{
+    margin-top:15px;
+    text-align:center;
+    font-weight:bold;
+}
+
+/* ACCOUNT */
+
+.account-panel{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    z-index:1000;
+    padding:20px;
+}
+
+.account-box{
+    background:white;
+    max-width:600px;
+    margin:50px auto;
+    padding:25px;
+    border-radius:16px;
+}
+
+.account-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.balance{
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+    color:white;
+    padding:22px;
+    border-radius:13px;
+    margin-bottom:20px;
+}
+
+.balance small{
+    opacity:.85;
+}
+
+.balance strong{
+    display:block;
+    font-size:30px;
+    margin-top:8px;
+}
+
+.orders{
+    margin-top:20px;
+}
+
+.order{
+    border:1px solid #e5e7eb;
+    border-radius:10px;
+    padding:15px;
+    margin-bottom:10px;
+}
+
+.order strong{
+    color:#2563eb;
+}
+
+.empty{
+    color:#777;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:700px){
+
+    header{
+        padding:13px 15px;
+    }
+
+    .logo{
+        font-size:17px;
+    }
+
+    .nav button{
+        padding:7px;
+        font-size:12px;
+    }
+
+    .hero{
+        padding:55px 18px;
+    }
+
+    .hero h1{
+        font-size:29px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .info-section{
+        grid-template-columns:1fr;
+    }
+
+    .container{
+        margin:30px auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        ⭐ Tunis Services
+    </div>
+
+    <div class="nav">
+        <button onclick="scrollToServices()">الخدمات</button>
+
+        <button onclick="openOrders()">
+            طلباتي
+        </button>
+
+        <button class="login-btn" onclick="openLogin()">
+            حسابي
+        </button>
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h1>
+        خدمات رقمية بكل سهولة
+    </h1>
+
+    <p>
+        اختر الخدمة، حدد الكمية، وأنشئ طلبك في دقائق
+    </p>
+
+    <button class="hero-btn" onclick="scrollToServices()">
+        اكتشف الخدمات
+    </button>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<div class="container" id="services">
+
+    <h2 class="section-title">
+        خدماتنا
+    </h2>
+
+    <div class="search-box">
+
+        <input
+            id="search"
+            type="text"
+            placeholder="🔎 ابحث عن خدمة..."
+            oninput="searchServices()"
+        >
+
+    </div>
+
+
+    <div class="services" id="servicesList">
+
+
+        <!-- TIKTOK -->
+
+        <div class="service" data-name="tiktok coins تيكتوك">
+
+            <div class="icon">
+                🎵
+            </div>
+
+            <h3>
+                TikTok Coins
+            </h3>
+
+            <p>
+                شحن TikTok Coins
+                بسرعة وسهولة
+            </p>
+
+            <div class="price">
+                1000 Coins = 38 د.ت
+            </div>
+
+            <button onclick="openTikTokOrder()">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+        <!-- GAMING -->
+
+        <div class="service" data-name="gaming games العاب">
+
+            <div class="icon">
+                🎮
+            </div>
+
+            <h3>
+                شحن الألعاب
+            </h3>
+
+            <p>
+                خدمات شحن الألعاب
+                والخدمات الرقمية
+            </p>
+
+            <div class="price">
+                قريبًا
+            </div>
+
+            <button onclick="comingSoon()">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+        <!-- DIGITAL -->
+
+        <div class="service" data-name="digital خدمات رقمية">
+
+            <div class="icon">
+                💳
+            </div>
+
+            <h3>
+                الخدمات الرقمية
+            </h3>
+
+            <p>
+                خدمات رقمية متنوعة
+            </p>
+
+            <div class="price">
+                قريبًا
+            </div>
+
+            <button onclick="comingSoon()">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+        <!-- FAST -->
+
+        <div class="service" data-name="fast سريع">
+
+            <div class="icon">
+                ⚡
+            </div>
+
+            <h3>
+                خدمات سريعة
+            </h3>
+
+            <p>
+                معالجة الطلبات
+                بأسرع وقت ممكن
+            </p>
+
+            <div class="price">
+                قريبًا
+            </div>
+
+            <button onclick="comingSoon()">
+                اطلب الآن
+            </button>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- INFO -->
+
+    <div class="info-section">
+
+        <div class="info-card">
+
+            <div class="big">
+                ⚡
+            </div>
+
+            <h3>
+                سرعة
+            </h3>
+
+            <p>
+                معالجة الطلبات بسرعة
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="big">
+                🔒
+            </div>
+
+            <h3>
+                أمان
+            </h3>
+
+            <p>
+                حماية معلومات العملاء
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="big">
+                📞
+            </div>
+
+            <h3>
+                دعم
+            </h3>
+
+            <p>
+                مساعدة العملاء عند الحاجة
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- TIKTOK ORDER MODAL -->
+
+<div class="modal" id="orderModal">
+
+    <div class="modal-box">
+
+        <button class="close" onclick="closeModal()">
+            ×
+        </button>
+
+        <h2>
+            🎵 طلب TikTok Coins
+        </h2>
+
+
+        <div class="form-group">
+
+            <label>
+                عدد Coins
+            </label>
+
+            <input
+                id="coinAmount"
+                type="number"
+                min="1000"
+                step="1000"
+                value="1000"
+                oninput="calculatePrice()"
+            >
+
+        </div>
+
+
+        <div class="price-box">
+
+            السعر
+
+            <span id="coinPrice">
+                38.00 د.ت
+            </span>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                رابط حساب TikTok
+            </label>
+
+            <input
+                id="tiktokLink"
+                type="text"
+                placeholder="https://www.tiktok.com/@username"
+            >
+
+        </div>
+
+
+        <button class="primary" onclick="confirmOrder()">
+            تأكيد الطلب
+        </button>
+
+
+        <button class="secondary" onclick="closeModal()">
+            إلغاء
+        </button>
+
+
+        <div
+            class="message"
+            id="orderMessage">
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- LOGIN MODAL -->
+
+<div class="modal" id="loginModal">
+
+    <div class="modal-box">
+
+        <button class="close" onclick="closeLogin()">
+            ×
+        </button>
+
+        <h2>
+            👤 حسابك
+        </h2>
+
+        <div class="form-group">
+
+            <label>
+                البريد الإلكتروني
+            </label>
+
+            <input
+                id="email"
+                type="email"
+                placeholder="example@email.com"
+            >
+
+        </div>
+
+        <div class="form-group">
+
+            <label>
+                كلمة المرور
+            </label>
+
+            <input
+                id="password"
+                type="password"
+                placeholder="كلمة المرور"
+            >
+
+        </div>
+
+        <button class="primary" onclick="demoLogin()">
+            تسجيل الدخول
+        </button>
+
+        <div
+            class="message"
+            id="loginMessage">
+        </div>
+
+        <p style="
+            text-align:center;
+            margin-top:18px;
+            color:#777;
+            font-size:13px;
+        ">
+            هذه نسخة تجريبية.
+            الحسابات الحقيقية سيتم ربطها بـ Supabase لاحقًا.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- ORDERS -->
+
+<div class="account-panel" id="ordersPanel">
+
+    <div class="account-box">
+
+        <div class="account-header">
+
+            <h2>
+                📋 طلباتي
+            </h2>
+
+            <button
+                class="close"
+                onclick="closeOrders()">
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="balance">
+
+            <small>
+                الرصيد التجريبي
+            </small>
+
+            <strong>
+                0.00 د.ت
+            </strong>
+
+        </div>
+
+
+        <div class="orders">
+
+            <h3 style="margin-bottom:12px;">
+                الطلبات الأخيرة
+            </h3>
+
+            <div id="ordersList"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>
+        ⭐ Tunis Services
+    </h3>
+
+    <p>
+        خدمات رقمية بكل سهولة
+    </p>
+
+    <p>
+        © 2026 Tunis Services
+    </p>
+
+</footer>
+
+
+<script>
+
+/* =========================
+   GENERAL
+========================= */
+
+function scrollToServices(){
+
+    document
+    .getElementById("services")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+function searchServices(){
+
+    const search =
+        document
+        .getElementById("search")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const cards =
+        document.querySelectorAll(".service");
+
+    cards.forEach(card => {
+
+        const name =
+            card
+            .getAttribute("data-name")
+            .toLowerCase();
+
+        if(name.includes(search)){
+            card.style.display="";
+        }else{
+            card.style.display="none";
+        }
+
+    });
+
+}
+
+
+/* =========================
+   TIKTOK ORDER
+========================= */
+
+function openTikTokOrder(){
+
+    document
+    .getElementById("orderModal")
+    .style.display="block";
+
+    calculatePrice();
+
+}
+
+
+function closeModal(){
+
+    document
+    .getElementById("orderModal")
+    .style.display="none";
+
+    document
+    .getElementById("orderMessage")
+    .innerText="";
+
+}
+
+
+function calculatePrice(){
+
+    const input =
+        document.getElementById("coinAmount");
+
+    let amount =
+        Number(input.value);
+
+    if(!amount || amount < 1000){
+        amount=1000;
+    }
+
+    const price =
+        (amount / 1000) * 38;
+
+    document
+    .getElementById("coinPrice")
+    .innerText =
+        price.toFixed(2) + " د.ت";
+
+}
+
+
+/* =========================
+   CONFIRM ORDER
+========================= */
+
+function confirmOrder(){
+
+    const amount =
+        Number(
+            document
+            .getElementById("coinAmount")
+            .value
+        );
+
+    const link =
+        document
+        .getElementById("tiktokLink")
+        .value
+        .trim();
+
+
+    const message =
+        document
+        .getElementById("orderMessage");
+
+
+    if(
+        !amount ||
+        amount < 1000 ||
+        amount % 1000 !== 0
+    ){
+
+        message.style.color="#dc2626";
+
+        message.innerText =
+            "الكمية يجب أن تكون 1000 أو مضاعفاتها.";
+
+        return;
+    }
+
+
+    if(link === ""){
+
+        message.style.color="#dc2626";
+
+        message.innerText =
+            "الرجاء إدخال رابط حساب TikTok.";
+
+        return;
+    }
+
+
+    const price =
+        (amount / 1000) * 38;
+
+
+    const order = {
+
+        id:
+            "TS" +
+            Date.now(),
+
+        service:
+            "TikTok Coins",
+
+        amount:
+            amount,
+
+        price:
+            price,
+
+        link:
+            link,
+
+        status:
+            "قيد المراجعة",
+
+        date:
+            new Date().toLocaleString("ar-TN")
+
+    };
+
+
+    let orders =
+        JSON.parse(
+            localStorage.getItem("tunisOrders")
+        ) || [];
+
+
+    orders.unshift(order);
+
+
+    localStorage.setItem(
+        "tunisOrders",
+        JSON.stringify(orders)
+    );
+
+
+    message.style.color="#16a34a";
+
+    message.innerText =
+        "✅ تم تسجيل طلبك تجريبيًا بنجاح.";
+
+
+    setTimeout(() => {
+
+        closeModal();
+
+        loadOrders();
+
+        openOrders();
+
+    },1200);
+
+}
+
+
+/* =========================
+   ORDERS
+========================= */
+
+function openOrders(){
+
+    loadOrders();
+
+    document
+    .getElementById("ordersPanel")
+    .style.display="block";
+
+}
+
+
+function closeOrders(){
+
+    document
+    .getElementById("ordersPanel")
+    .style.display="none";
+
+}
+
+
+function loadOrders(){
+
+    const container =
+        document
+        .getElementById("ordersList");
+
+    const orders =
+        JSON.parse(
+            localStorage.getItem("tunisOrders")
+        ) || [];
+
+
+    if(orders.length === 0){
+
+        container.innerHTML =
+            '<div class="empty">لا توجد طلبات حتى الآن.</div>';
+
+        return;
+
+    }
+
+
+    container.innerHTML="";
+
+
+    orders.forEach(order => {
+
+        const div =
+            document.createElement("div");
+
+        div.className="order";
+
+
+        div.innerHTML = `
+
+            <strong>
+                ${order.service}
+            </strong>
+
+            <br>
+
+            الكمية:
+            ${Number(order.amount).toLocaleString()}
+            Coins
+
+            <br>
+
+            السعر:
+            ${Number(order.price).toFixed(2)}
+            د.ت
+
+            <br>
+
+            الحالة:
+            ${order.status}
+
+            <br>
+
+            <small>
+                ${order.date}
+            </small>
+
+        `;
+
+
+        container.appendChild(div);
+
+    });
+
+}
+
+
+/* =========================
+   LOGIN
+========================= */
+
+function openLogin(){
+
+    document
+    .getElementById("loginModal")
+    .style.display="block";
+
+}
+
+
+function closeLogin(){
+
+    document
+    .getElementById("loginModal")
+    .style.display="none";
+
+}
+
+
+function demoLogin(){
+
+    const email =
+        document
+        .getElementById("email")
+        .value
+        .trim();
+
+    const password =
+        document
+        .getElementById("password")
+        .value
+        .trim();
+
+    const message =
+        document
+        .getElementById("loginMessage");
+
+
+    if(email === "" || password === ""){
+
+        message.style.color="#dc2626";
+
+        message.innerText =
+            "الرجاء إدخال البريد وكلمة المرور.";
+
+        return;
+
+    }
+
+
+    message.style.color="#16a34a";
+
+    message.innerText =
+        "تم تسجيل الدخول تجريبيًا.";
+
+}
+
+
+/* =========================
+   COMING SOON
+========================= */
+
+function comingSoon(){
+
+    alert(
+        "هذه الخدمة ستكون متاحة قريبًا."
+    );
+
+}
+
+
+/* =========================
+   CLOSE MODALS BY CLICKING OUTSIDE
+========================= */
+
+window.addEventListener(
+    "click",
+    function(event){
+
+        const orderModal =
+            document.getElementById("orderModal");
+
+        const loginModal =
+            document.getElementById("loginModal");
+
+        const ordersPanel =
+            document.getElementById("ordersPanel");
+
+
+        if(event.target === orderModal){
+            closeModal();
+        }
+
+
+        if(event.target === loginModal){
+            closeLogin();
+        }
+
+
+        if(event.target === ordersPanel){
+            closeOrders();
+        }
+
+    }
+);
+
+
+/* =========================
+   INITIALIZE
+========================= */
+
+calculatePrice();
+
+loadOrders();
+
+</script>
+
+</body>
+    </html>
