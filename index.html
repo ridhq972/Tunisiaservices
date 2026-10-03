@@ -1,1172 +1,2503 @@
-<!DOCTYPE html><html lang="ar" dir="rtl">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tunis Services</title><style>
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-font-family:Arial,Tahoma,sans-serif;
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#070b16">
+<title>Tunis Services | خدمات رقمية تونسية</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+  --bg:#070b16;
+  --bg2:#0b1120;
+  --card:#101827;
+  --card2:#131d2e;
+  --line:rgba(255,255,255,.08);
+  --text:#f4f7fb;
+  --muted:#94a3b8;
+  --primary:#6d5dfc;
+  --primary2:#8b7cff;
+  --cyan:#20d9ff;
+  --green:#20c997;
+  --orange:#ff9f43;
+  --danger:#ff5c7a;
+  --shadow:0 20px 60px rgba(0,0,0,.35);
 }
+
+*{box-sizing:border-box;margin:0;padding:0}
+
 html{scroll-behavior:smooth}
-body{background:#f5f7fb;color:#172033}
+
+body{
+  font-family:'Cairo',sans-serif;
+  background:
+    radial-gradient(circle at 80% 0%,rgba(109,93,252,.16),transparent 28%),
+    radial-gradient(circle at 10% 20%,rgba(32,217,255,.08),transparent 25%),
+    var(--bg);
+  color:var(--text);
+  min-height:100vh;
+}
+
 button,input,select,textarea{font-family:inherit}
 
+button{cursor:pointer;border:0}
+
+a{text-decoration:none;color:inherit}
+
+.container{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+/* ===== HEADER ===== */
+
 header{
-background:linear-gradient(135deg,#111827,#2563eb);
-color:white;padding:16px 20px;position:sticky;top:0;z-index:1000;
-box-shadow:0 3px 15px #0002;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(7,11,22,.82);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--line);
 }
+
 .nav{
-max-width:1200px;margin:auto;display:flex;align-items:center;
-justify-content:space-between;gap:15px;
+  height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
-.logo{font-size:25px;font-weight:bold}
-.logo span{color:#60a5fa}
-.nav-buttons{display:flex;gap:8px}
-.nav-buttons button{
-border:0;padding:10px 14px;border-radius:10px;
-background:#ffffff20;color:white;cursor:pointer;font-weight:bold;
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  font-size:21px;
+  font-weight:900;
 }
+
+.logoMark{
+  width:42px;
+  height:42px;
+  border-radius:13px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,var(--primary),var(--cyan));
+  box-shadow:0 8px 30px rgba(109,93,252,.3);
+  font-size:20px;
+}
+
+.navLinks{
+  display:flex;
+  gap:25px;
+  color:#cbd5e1;
+  font-size:14px;
+}
+
+.navLinks a:hover{color:#fff}
+
+.navActions{
+  display:flex;
+  gap:9px;
+}
+
+.iconBtn{
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  background:rgba(255,255,255,.05);
+  border:1px solid var(--line);
+  color:#fff;
+  font-size:18px;
+}
+
+.cartBtn{
+  position:relative;
+}
+
+.cartCount{
+  position:absolute;
+  top:-5px;
+  left:-5px;
+  min-width:19px;
+  height:19px;
+  border-radius:50%;
+  background:var(--primary);
+  font-size:11px;
+  display:grid;
+  place-items:center;
+}
+
+/* ===== HERO ===== */
 
 .hero{
-max-width:1200px;margin:25px auto;padding:60px 25px;border-radius:25px;
-color:white;text-align:center;
-background:linear-gradient(135deg,#1d4ed8,#7c3aed);
-box-shadow:0 10px 30px #0002;
-}
-.hero h1{font-size:40px;margin-bottom:15px}
-.hero p{font-size:18px;line-height:1.8}
-
-.search-box{max-width:700px;margin:25px auto;padding:0 15px}
-.search-box input{
-width:100%;padding:16px 20px;border:1px solid #ddd;
-border-radius:15px;font-size:16px;outline:none;background:white;
+  padding:80px 0 60px;
+  position:relative;
+  overflow:hidden;
 }
 
-.container{max-width:1200px;margin:auto;padding:10px 15px 60px}
-.category{margin-top:38px}
-.category-title{
-font-size:25px;margin-bottom:18px;border-right:5px solid #2563eb;
-padding-right:12px;
+.heroGrid{
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  align-items:center;
+  gap:50px;
 }
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 14px;
+  border-radius:30px;
+  background:rgba(109,93,252,.11);
+  border:1px solid rgba(109,93,252,.28);
+  color:#bdb6ff;
+  font-size:13px;
+  margin-bottom:20px;
+}
+
+.badgeDot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 12px var(--green);
+}
+
+.hero h1{
+  font-size:clamp(36px,5vw,68px);
+  line-height:1.1;
+  font-weight:900;
+  letter-spacing:-2px;
+  margin-bottom:22px;
+}
+
+.gradientText{
+  background:linear-gradient(90deg,#fff,var(--primary2),var(--cyan));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.hero p{
+  color:var(--muted);
+  font-size:17px;
+  line-height:2;
+  max-width:650px;
+}
+
+.heroBtns{
+  display:flex;
+  gap:12px;
+  margin-top:30px;
+  flex-wrap:wrap;
+}
+
+.primaryBtn{
+  padding:14px 23px;
+  border-radius:13px;
+  color:#fff;
+  background:linear-gradient(135deg,var(--primary),#5145df);
+  font-weight:800;
+  box-shadow:0 12px 35px rgba(109,93,252,.25);
+}
+
+.secondaryBtn{
+  padding:14px 23px;
+  border-radius:13px;
+  background:rgba(255,255,255,.05);
+  border:1px solid var(--line);
+  color:#fff;
+  font-weight:700;
+}
+
+.heroPanel{
+  background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.025));
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:25px;
+  box-shadow:var(--shadow);
+}
+
+.panelTop{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:25px;
+}
+
+.live{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  color:#a7f3d0;
+  font-size:12px;
+}
+
+.live i{
+  width:8px;
+  height:8px;
+  background:var(--green);
+  border-radius:50%;
+}
+
+.stat{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:16px;
+  border-radius:17px;
+  background:rgba(0,0,0,.18);
+  border:1px solid var(--line);
+  margin-bottom:11px;
+}
+
+.statIcon{
+  width:45px;
+  height:45px;
+  border-radius:13px;
+  display:grid;
+  place-items:center;
+  background:rgba(109,93,252,.14);
+  font-size:21px;
+}
+
+.stat b{display:block;font-size:16px}
+.stat span{font-size:12px;color:var(--muted)}
+
+/* ===== SEARCH ===== */
+
+.searchBox{
+  display:flex;
+  gap:10px;
+  margin:15px 0 35px;
+}
+
+.searchInput{
+  flex:1;
+  height:53px;
+  border-radius:15px;
+  background:var(--card);
+  border:1px solid var(--line);
+  color:#fff;
+  outline:none;
+  padding:0 18px;
+  font-size:14px;
+}
+
+.searchInput:focus{
+  border-color:rgba(109,93,252,.65);
+}
+
+.searchBtn{
+  width:55px;
+  border-radius:15px;
+  background:var(--primary);
+  color:#fff;
+  font-size:18px;
+}
+
+/* ===== CATEGORY ===== */
+
+.section{
+  padding:45px 0;
+}
+
+.sectionHead{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:25px;
+}
+
+.sectionTitle{
+  font-size:28px;
+  font-weight:900;
+}
+
+.sectionSub{
+  color:var(--muted);
+  font-size:13px;
+  margin-top:5px;
+}
+
+.categories{
+  display:flex;
+  gap:10px;
+  overflow:auto;
+  padding-bottom:8px;
+}
+
+.catBtn{
+  white-space:nowrap;
+  padding:10px 17px;
+  border-radius:12px;
+  background:var(--card);
+  color:#aeb9ca;
+  border:1px solid var(--line);
+}
+
+.catBtn.active,
+.catBtn:hover{
+  color:#fff;
+  background:rgba(109,93,252,.18);
+  border-color:rgba(109,93,252,.45);
+}
+
+/* ===== SERVICES ===== */
+
 .services{
-display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
 }
-.service{
-background:white;border-radius:18px;padding:22px;
-box-shadow:0 5px 20px #0000000d;border:1px solid #e8ebf2;
-transition:.2s;
-}
-.service:hover{transform:translateY(-4px);box-shadow:0 10px 25px #0002}
-.icon{font-size:40px;margin-bottom:10px}
-.service h3{margin-bottom:8px;font-size:19px}
-.service p{color:#687386;min-height:45px;line-height:1.6}
-.price{font-weight:bold;color:#2563eb;margin:15px 0;font-size:18px}
 
-.service button,.primary-btn{
-width:100%;border:0;border-radius:11px;padding:13px;
-background:#2563eb;color:white;font-weight:bold;cursor:pointer;font-size:15px;
+.serviceCard{
+  background:linear-gradient(145deg,var(--card2),var(--card));
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:20px;
+  transition:.25s;
+  position:relative;
+  overflow:hidden;
 }
-.service button:hover,.primary-btn:hover{background:#1d4ed8}
+
+.serviceCard:hover{
+  transform:translateY(-5px);
+  border-color:rgba(109,93,252,.45);
+  box-shadow:0 20px 45px rgba(0,0,0,.25);
+}
+
+.serviceIcon{
+  width:50px;
+  height:50px;
+  display:grid;
+  place-items:center;
+  border-radius:15px;
+  background:rgba(109,93,252,.13);
+  font-size:24px;
+  margin-bottom:16px;
+}
+
+.serviceCard h3{
+  font-size:16px;
+  margin-bottom:6px;
+}
+
+.serviceCard p{
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.8;
+  min-height:43px;
+}
+
+.price{
+  margin-top:16px;
+  font-size:18px;
+  font-weight:900;
+}
+
+.price small{
+  font-size:11px;
+  color:var(--muted);
+  font-weight:500;
+}
+
+.cardBottom{
+  margin-top:17px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+}
+
+.orderBtn{
+  flex:1;
+  padding:10px;
+  border-radius:11px;
+  background:linear-gradient(135deg,var(--primary),#5145df);
+  color:#fff;
+  font-weight:800;
+}
+
+.detailsBtn{
+  width:40px;
+  height:40px;
+  border-radius:11px;
+  background:rgba(255,255,255,.06);
+  color:#fff;
+}
+
+/* ===== INTERNET ===== */
+
+.internetBanner{
+  background:
+    linear-gradient(135deg,rgba(32,217,255,.11),rgba(109,93,252,.12)),
+    var(--card);
+  border:1px solid var(--line);
+  border-radius:25px;
+  padding:28px;
+  margin-top:20px;
+}
+
+.internetGrid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
+  margin-top:22px;
+}
+
+.package{
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:17px;
+  background:rgba(0,0,0,.14);
+  text-align:center;
+}
+
+.package b{
+  display:block;
+  font-size:21px;
+}
+
+.package span{
+  color:var(--muted);
+  font-size:11px;
+}
+
+.package strong{
+  display:block;
+  margin-top:8px;
+  color:#a9a0ff;
+}
+
+/* ===== FEATURES ===== */
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.feature{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:19px;
+  padding:22px;
+}
+
+.featureIcon{font-size:25px;margin-bottom:12px}
+.feature h3{font-size:15px;margin-bottom:7px}
+.feature p{font-size:12px;color:var(--muted);line-height:1.8}
+
+/* ===== MODAL ===== */
+
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.72);
+  backdrop-filter:blur(9px);
+  z-index:3000;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.overlay.show{display:flex}
 
 .modal{
-display:none;position:fixed;inset:0;background:#0008;z-index:2000;
-padding:15px;overflow:auto;
+  width:min(570px,100%);
+  max-height:92vh;
+  overflow:auto;
+  background:#0d1524;
+  border:1px solid var(--line);
+  border-radius:25px;
+  box-shadow:0 30px 100px rgba(0,0,0,.55);
+  padding:25px;
 }
-.modal-box{
-background:white;max-width:580px;margin:25px auto;border-radius:20px;
-padding:24px;position:relative;
+
+.modalHead{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  align-items:flex-start;
+  margin-bottom:22px;
 }
+
 .close{
-position:absolute;left:15px;top:12px;border:0;background:#f1f5f9;
-width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:22px;
-}
-.modal-title{font-size:24px;margin-bottom:20px;padding-left:45px}
-
-.field{margin-bottom:15px}
-.field label{display:block;margin-bottom:7px;font-weight:bold}
-.field input,.field select,.field textarea{
-width:100%;padding:13px;border:1px solid #d9dee8;border-radius:10px;
-outline:none;font-size:15px;background:white;
-}
-.field textarea{min-height:90px;resize:vertical}
-
-.price-box{
-background:#eff6ff;border:1px solid #bfdbfe;border-radius:12px;
-padding:15px;margin:15px 0;text-align:center;
-}
-.price-box strong{color:#1d4ed8;font-size:23px}
-
-.payment-title{font-size:18px;margin:20px 0 10px}
-.payment-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.payment-option{
-border:2px solid #e5e7eb;padding:13px;border-radius:12px;
-cursor:pointer;background:white;text-align:center;font-weight:bold;
-}
-.payment-option.active{border-color:#2563eb;background:#eff6ff;color:#1d4ed8}
-
-.payment-extra{
-margin-top:12px;background:#f8fafc;padding:14px;border-radius:12px;
-}
-.wallet{
-direction:ltr;word-break:break-all;background:#111827;color:#fff;
-padding:12px;border-radius:9px;font-size:13px;margin:8px 0;
-}
-.copy-btn{
-border:0;background:#2563eb;color:white;padding:8px 12px;
-border-radius:8px;cursor:pointer;
-}
-.whatsapp{
-display:block;text-align:center;text-decoration:none;background:#16a34a;
-color:white;padding:13px;border-radius:11px;margin-top:10px;font-weight:bold;
-}
-.notice{
-background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;
-padding:12px;border-radius:10px;line-height:1.6;margin-bottom:15px;
+  width:38px;
+  height:38px;
+  border-radius:10px;
+  background:rgba(255,255,255,.06);
+  color:#fff;
+  font-size:20px;
 }
 
-.order-card{
-background:white;padding:18px;border-radius:15px;margin-bottom:12px;
-border:1px solid #e5e7eb;box-shadow:0 3px 12px #0000000a;
+.formGroup{margin-bottom:15px}
+
+.formGroup label{
+  display:block;
+  color:#cbd5e1;
+  font-size:12px;
+  margin-bottom:7px;
 }
-.order-card h3{margin-bottom:8px}
-.order-card p{color:#5f6b7a;margin:5px 0}
-.status{
-display:inline-block;background:#fef3c7;color:#92400e;padding:5px 10px;
-border-radius:20px;font-size:13px;margin-top:8px;
+
+.formControl{
+  width:100%;
+  height:47px;
+  border-radius:11px;
+  border:1px solid var(--line);
+  background:#09111e;
+  color:#fff;
+  padding:0 13px;
+  outline:none;
 }
-.empty{text-align:center;background:white;padding:30px;border-radius:15px;color:#6b7280}
+
+textarea.formControl{
+  height:90px;
+  padding:12px;
+  resize:vertical;
+}
+
+.paymentGrid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:9px;
+}
+
+.payBtn{
+  padding:13px;
+  border-radius:11px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.035);
+  color:#dbe4ef;
+  text-align:right;
+}
+
+.payBtn.active{
+  border-color:var(--primary);
+  background:rgba(109,93,252,.13);
+}
+
+.paymentInfo{
+  margin-top:12px;
+  padding:13px;
+  border-radius:12px;
+  background:rgba(32,217,255,.06);
+  border:1px solid rgba(32,217,255,.13);
+  font-size:12px;
+  line-height:1.9;
+  color:#cbd5e1;
+}
+
+.totalBox{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:18px 0;
+  padding:17px;
+  border-radius:14px;
+  background:rgba(109,93,252,.09);
+  border:1px solid rgba(109,93,252,.2);
+}
+
+.totalBox strong{
+  font-size:23px;
+}
+
+.fullBtn{
+  width:100%;
+  height:50px;
+  border-radius:13px;
+  background:linear-gradient(135deg,var(--primary),#5145df);
+  color:#fff;
+  font-weight:900;
+}
+
+/* ===== ORDERS ===== */
+
+.ordersEmpty{
+  text-align:center;
+  padding:40px 10px;
+  color:var(--muted);
+}
+
+.orderItem{
+  padding:15px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  margin-bottom:10px;
+  background:rgba(255,255,255,.025);
+}
+
+.orderTop{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.orderStatus{
+  color:#a7f3d0;
+  font-size:11px;
+}
+
+.orderMeta{
+  color:var(--muted);
+  font-size:11px;
+  margin-top:7px;
+}
+
+/* ===== FOOTER ===== */
 
 footer{
-background:#111827;color:#d1d5db;text-align:center;padding:30px 15px;line-height:1.8;
+  border-top:1px solid var(--line);
+  margin-top:50px;
+  padding:45px 0;
+  color:var(--muted);
 }
-footer strong{color:white}
+
+.footerGrid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:30px;
+}
+
+.footerTitle{
+  color:#fff;
+  font-weight:800;
+  margin-bottom:12px;
+}
+
+.footerLinks{
+  display:grid;
+  gap:8px;
+  font-size:12px;
+}
+
+.footerBottom{
+  margin-top:35px;
+  padding-top:20px;
+  border-top:1px solid var(--line);
+  font-size:11px;
+  display:flex;
+  justify-content:space-between;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:950px){
+  .services{grid-template-columns:repeat(3,1fr)}
+  .heroGrid{grid-template-columns:1fr}
+  .internetGrid{grid-template-columns:repeat(3,1fr)}
+}
+
+@media(max-width:700px){
+  .navLinks{display:none}
+  .hero{padding:55px 0 35px}
+  .hero h1{font-size:40px}
+  .services{grid-template-columns:repeat(2,1fr)}
+  .features{grid-template-columns:1fr}
+  .internetGrid{grid-template-columns:repeat(2,1fr)}
+  .footerGrid{grid-template-columns:1fr}
+  .sectionTitle{font-size:23px}
+}
+
+@media(max-width:430px){
+  .container{width:94%}
+  .services{grid-template-columns:1fr}
+  .paymentGrid{grid-template-columns:1fr}
+  .hero h1{font-size:35px}
+}
+
+/* ===== TOAST ===== */
 
 .toast{
-position:fixed;bottom:20px;left:20px;right:20px;max-width:450px;
-margin:auto;background:#111827;color:white;padding:14px 18px;
-border-radius:12px;text-align:center;z-index:5000;display:none;
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  z-index:5000;
+  padding:14px 18px;
+  border-radius:13px;
+  background:#172235;
+  border:1px solid var(--line);
+  color:#fff;
+  box-shadow:var(--shadow);
+  transform:translateY(100px);
+  opacity:0;
+  transition:.3s;
+  font-size:13px;
 }
 
-@media(max-width:600px){
-.hero{margin:15px 10px;padding:45px 18px}
-.hero h1{font-size:30px}
-.hero p{font-size:16px}
-.nav{flex-direction:column}
-.nav-buttons{width:100%}
-.nav-buttons button{flex:1}
-.services{grid-template-columns:1fr}
-.payment-grid{grid-template-columns:1fr}
-.modal-box{margin:10px auto;padding:18px}
+.toast.show{
+  transform:translateY(0);
+  opacity:1;
 }
-</style></head><body><header>
-<div class="nav">
-<div class="logo">Tunis <span>Services</span></div>
-<div class="nav-buttons">
-<button onclick="scrollToServices()">الخدمات</button>
-<button onclick="openOrders()">طلباتي</button>
-</div>
-</div>
-</header><section class="hero">
-<h1>خدماتك الرقمية في مكان واحد</h1>
-<p>ألعاب • خدمات سوشيال ميديا • الإنترنت • خدمات الأعمال والتسويق</p>
-</section><div class="search-box">
-<input id="searchInput" type="text" placeholder="🔎 ابحث عن خدمة..." oninput="searchServices()">
-</div><main class="container" id="servicesArea"><!-- الألعاب --><section class="category">
-<h2 class="category-title">🎮 الألعاب</h2><div class="services"><div class="service" data-name="free fire فري فاير">
-<div class="icon">🔥</div>
-<h3>Free Fire</h3>
-<p>شحن جواهر Free Fire بسرعة.</p>
-<div class="price">ابتداءً من 7 USDT</div>
-<button onclick="openFreeFire()">طلب الشحن</button>
-</div><div class="service" data-name="fc mobile fifa ea sports">
-<div class="icon">⚽</div>
-<h3>EA SPORTS FC Mobile</h3>
-<p>شحن FC Points لحسابك.</p>
-<div class="price">ابتداءً من 1.36 د.ت</div>
-<button onclick="openFifa()">طلب الشحن</button>
-</div><div class="service" data-name="pes efootball">
-<div class="icon">⚽</div>
-<h3>PES / eFootball</h3>
-<p>شحن eFootball Coins.</p>
-<div class="price">ابتداءً من 28.80 د.ت</div>
-<button onclick="openPes()">طلب الشحن</button>
-</div><div class="service" data-name="fortnite">
-<div class="icon">🎯</div>
-<h3>Fortnite</h3>
-<p>شحن V-Bucks لحساب Fortnite.</p>
-<div class="price">ابتداءً من 29.44 د.ت</div>
-<button onclick="openFortnite()">طلب الشحن</button>
-</div></div>
-</section><!-- الإنترنت --><section class="category">
-<h2 class="category-title">📶 فورفي الإنترنت</h2><div class="services"><div class="service" data-name="ooredoo orange forfait internet internet">
-<div class="icon">📶</div>
-<h3>فورفي الإنترنت</h3>
-<p>اختَر Ooredoo أو Orange ثم اختر باقة الإنترنت.</p>
-<div class="price">ابتداءً من 25 د.ت</div>
-<button onclick="openInternet()">طلب الفورفي</button>
-</div></div>
-</section><!-- الخدمات الرقمية --><section class="category">
-<h2 class="category-title">📱 الخدمات الرقمية</h2><div class="services"><div class="service" data-name="tiktok followers متابعين">
-<div class="icon">🎵</div>
-<h3>TikTok Followers</h3>
-<p>زيادة متابعين TikTok.</p>
-<div class="price">حسب الكمية</div>
-<button onclick="openGenericOrder('TikTok Followers')">طلب الخدمة</button>
-</div><div class="service" data-name="facebook followers">
-<div class="icon">👍</div>
-<h3>Facebook Followers</h3>
-<p>خدمة متابعين Facebook.</p>
-<div class="price">حسب الكمية</div>
-<button onclick="openGenericOrder('Facebook Followers')">طلب الخدمة</button>
-</div><div class="service" data-name="instagram followers">
-<div class="icon">📸</div>
-<h3>Instagram Followers</h3>
-<p>خدمة متابعين Instagram.</p>
-<div class="price">حسب الكمية</div>
-<button onclick="openGenericOrder('Instagram Followers')">طلب الخدمة</button>
-</div><div class="service" data-name="youtube followers">
-<div class="icon">▶️</div>
-<h3>YouTube Followers</h3>
-<p>خدمة متابعين YouTube.</p>
-<div class="price">حسب الكمية</div>
-<button onclick="openGenericOrder('YouTube Followers')">طلب الخدمة</button>
-</div><div class="service" data-name="tiktok likes comments views">
-<div class="icon">❤️</div>
-<h3>TikTok Likes / Comments / Views</h3>
-<p>إعجابات وتعليقات ومشاهدات.</p>
-<div class="price">حسب الكمية</div>
-<button onclick="openGenericOrder('TikTok Likes / Comments / Views')">طلب الخدمة</button>
-</div><div class="service" data-name="facebook likes comments views">
-<div class="icon">👍</div>
-<h3>Facebook Likes / Comments / Views</h3>
-<p>إعجابات وتعليقات ومشاهدات.</p>
-<div class="price">حسب الكمية</div>
-<button onclick="openGenericOrder('Facebook Likes / Comments / Views')">طلب الخدمة</button>
-</div><div class="service" data-name="instagram likes comments views">
-<div class="icon">💗</div>
-<h3>Instagram Likes / Comments / Views</h3>
-<p>إعجابات وتعليقات ومشاهدات.</p>
-<div class="price">حسب الكمية</div>
-<button onclick="openGenericOrder('Instagram Likes / Comments / Views')">طلب الخدمة</button>
-</div><div class="service" data-name="youtube likes comments views">
-<div class="icon">▶️</div>
-<h3>YouTube Likes / Comments / Views</h3>
-<p>إعجابات وتعليقات ومشاهدات.</p>
-<div class="price">حسب الكمية</div>
-<button onclick="openGenericOrder('YouTube Likes / Comments / Views')">طلب الخدمة</button>
-</div><div class="service" data-name="tiktok coins">
-<div class="icon">🪙</div>
-<h3>TikTok Coins</h3>
-<p>1000 TikTok Coins.</p>
-<div class="price">38 د.ت</div>
-<button onclick="openTikTokCoins()">طلب الشراء</button>
-</div></div>
-</section><!-- الأعمال والتسويق --><section class="category">
-<h2 class="category-title">💼 خدمات الأعمال والتسويق</h2><div class="services"><div class="service" data-name="إنشاء موقع إلكتروني website">
-<div class="icon">🌐</div>
-<h3>إنشاء موقع إلكتروني</h3>
-<p>إنشاء موقع حسب احتياجاتك.</p>
-<div class="price">السعر بعد دراسة الطلب</div>
-<button onclick="openGenericOrder('إنشاء موقع إلكتروني')">طلب الخدمة</button>
-</div><div class="service" data-name="التسويق لمنتج marketing">
-<div class="icon">📢</div>
-<h3>التسويق لمنتج</h3>
-<p>خدمة تسويق للمنتجات والمشاريع.</p>
-<div class="price">السعر بعد دراسة الطلب</div>
-<button onclick="openGenericOrder('التسويق لمنتج')">طلب الخدمة</button>
-</div><div class="service" data-name="شراء من aliexpress">
-<div class="icon">🛒</div>
-<h3>شراء من AliExpress</h3>
-<p>أرسل رابط المنتج والكمية المطلوبة.</p>
-<div class="price">السعر بعد دراسة الطلب</div>
-<button onclick="openGenericOrder('شراء من AliExpress')">طلب الخدمة</button>
-</div><div class="service" data-name="شراء من amazon">
-<div class="icon">📦</div>
-<h3>شراء من Amazon</h3>
-<p>أرسل رابط المنتج والكمية المطلوبة.</p>
-<div class="price">السعر بعد دراسة الطلب</div>
-<button onclick="openGenericOrder('شراء من Amazon')">طلب الخدمة</button>
-</div></div>
-</section></main><!-- فورفي الإنترنت --><div class="modal" id="internetModal">
-<div class="modal-box"><button class="close" onclick="closeModal('internetModal')">×</button>
+</style>
+</head>
 
-<h2 class="modal-title">📶 فورفي الإنترنت</h2><div class="field">
+<body>
+
+<header>
+  <div class="container nav">
+
+    <a href="#" class="logo">
+      <span class="logoMark">TS</span>
+      <span>Tunis Services</span>
+    </a>
+
+    <nav class="navLinks">
+      <a href="#services">الخدمات</a>
+      <a href="#games">الألعاب</a>
+      <a href="#subscriptions">الاشتراكات</a>
+      <a href="#internet">الإنترنت</a>
+      <a href="#orders">طلباتي</a>
+    </nav>
+
+    <div class="navActions">
+      <button class="iconBtn" onclick="scrollToSection('orders')">📋</button>
+      <button class="iconBtn cartBtn" onclick="scrollToSection('services')">
+        🛒
+        <span class="cartCount" id="cartCount">0</span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="container heroGrid">
+
+    <div>
+      <div class="badge">
+        <span class="badgeDot"></span>
+        خدمات رقمية متاحة الآن
+      </div>
+
+      <h1>
+        كل خدماتك الرقمية
+        <br>
+        <span class="gradientText">في مكان واحد.</span>
+      </h1>
+
+      <p>
+        ألعاب، اشتراكات، خدمات رقمية، إنترنت، تسويق، مواقع إلكترونية
+        وخدمات أخرى — اطلب خدمتك بسهولة وادفع بالطريقة المناسبة لك.
+      </p>
+
+      <div class="heroBtns">
+        <button class="primaryBtn" onclick="scrollToSection('services')">
+          استكشف الخدمات
+        </button>
+
+        <button class="secondaryBtn" onclick="scrollToSection('subscriptions')">
+          مشاهدة الاشتراكات
+        </button>
+      </div>
+    </div>
+
+
+    <div class="heroPanel">
+
+      <div class="panelTop">
+        <b>لوحة Tunis Services</b>
+        <span class="live">
+          <i></i>
+          متصل
+        </span>
+      </div>
+
+      <div class="stat">
+        <div class="statIcon">🎮</div>
+        <div>
+          <b>Gaming</b>
+          <span>Free Fire • FC Mobile • eFootball • Fortnite</span>
+        </div>
+      </div>
+
+      <div class="stat">
+        <div class="statIcon">📺</div>
+        <div>
+          <b>Subscriptions</b>
+          <span>ChatGPT • Netflix • Gemini • Shahid • IPTV</span>
+        </div>
+      </div>
+
+      <div class="stat">
+        <div class="statIcon">📶</div>
+        <div>
+          <b>Internet</b>
+          <span>Ooredoo • Orange</span>
+        </div>
+      </div>
+
+      <div class="stat">
+        <div class="statIcon">💳</div>
+        <div>
+          <b>Digital Services</b>
+          <span>مواقع • تسويق • خدمات رقمية</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SEARCH -->
+
+<section class="container">
+  <div class="searchBox">
+    <input
+      id="searchInput"
+      class="searchInput"
+      placeholder="ابحث عن خدمة... مثال: Netflix، Free Fire، موقع..."
+      oninput="searchServices()"
+    >
+    <button class="searchBtn">⌕</button>
+  </div>
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section class="container">
+  <div class="categories">
+
+    <button class="catBtn active" onclick="filterCategory('all',this)">
+      الكل
+    </button>
+
+    <button class="catBtn" onclick="filterCategory('games',this)">
+      🎮 الألعاب
+    </button>
+
+    <button class="catBtn" onclick="filterCategory('subscriptions',this)">
+      📺 الاشتراكات
+    </button>
+
+    <button class="catBtn" onclick="filterCategory('social',this)">
+      📱 السوشيال
+    </button>
+
+    <button class="catBtn" onclick="filterCategory('business',this)">
+      💼 الأعمال
+    </button>
+
+    <button class="catBtn" onclick="filterCategory('internet',this)">
+      📶 الإنترنت
+    </button>
+
+  </div>
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="section" id="services">
+<div class="container">
+
+<div class="sectionHead">
+  <div>
+    <div class="sectionTitle">الخدمات</div>
+    <div class="sectionSub">اختر الخدمة التي تريدها وابدأ الطلب</div>
+  </div>
+</div>
+
+
+<div class="services" id="serviceGrid">
+
+
+<!-- FREE FIRE -->
+
+<div class="serviceCard serviceItem games"
+     data-name="Free Fire diamonds فري فاير جواهر">
+
+  <div class="serviceIcon">🔥</div>
+  <h3>Free Fire</h3>
+  <p>شحن جواهر Free Fire بسرعة.</p>
+
+  <div class="price">من 20 د.ت <small>حسب الباقة</small></div>
+
+  <div class="cardBottom">
+    <button class="orderBtn"
+      onclick="openOrder('Free Fire — 530 Diamonds','20')">
+      اطلب الآن
+    </button>
+    <button class="detailsBtn"
+      onclick="showInfo('Free Fire','530 / 1080 / 2200 Diamonds')">
+      ⓘ
+    </button>
+  </div>
+
+</div>
+
+
+<!-- FC MOBILE -->
+
+<div class="serviceCard serviceItem games"
+     data-name="FC Mobile FIFA EA Sports">
+
+  <div class="serviceIcon">⚽</div>
+  <h3>FC Mobile</h3>
+  <p>FC Points لعدة باقات.</p>
+
+  <div class="price">من 1.36 د.ت</div>
+
+  <div class="cardBottom">
+    <button class="orderBtn"
+      onclick="openOrder('FC Mobile — 40 FC Points','1.36')">
+      اطلب الآن
+    </button>
+    <button class="detailsBtn"
+      onclick="showInfo('FC Mobile','40 / 100 / 520 / 1070 / 2200 / 5750 / 12000 FC Points')">
+      ⓘ
+    </button>
+  </div>
+
+</div>
+
+
+<!-- EFOOTBALL -->
+
+<div class="serviceCard serviceItem games"
+     data-name="PES eFootball coins">
+
+  <div class="serviceIcon">⚽</div>
+  <h3>eFootball</h3>
+  <p>شحن eFootball Coins.</p>
+
+  <div class="price">من 28.80 د.ت</div>
+
+  <div class="cardBottom">
+    <button class="orderBtn"
+      onclick="openOrder('eFootball — 1040 Coins','28.80')">
+      اطلب الآن
+    </button>
+    <button class="detailsBtn"
+      onclick="showInfo('eFootball','1040 / 2130 / 3250 Coins')">
+      ⓘ
+    </button>
+  </div>
+
+</div>
+
+
+<!-- FORTNITE -->
+
+<div class="serviceCard serviceItem games"
+     data-name="Fortnite V Bucks">
+
+  <div class="serviceIcon">🛡️</div>
+  <h3>Fortnite</h3>
+  <p>شحن V-Bucks.</p>
+
+  <div class="price">من 29.44 د.ت</div>
+
+  <div class="cardBottom">
+    <button class="orderBtn"
+      onclick="openOrder('Fortnite — 800 V-Bucks','29.44')">
+      اطلب الآن
+    </button>
+    <button class="detailsBtn"
+      onclick="showInfo('Fortnite','800 / 2400 / 4500 V-Bucks')">
+      ⓘ
+    </button>
+  </div>
+
+</div>
+
+
+<!-- TIKTOK -->
+
+<div class="serviceCard serviceItem social"
+     data-name="TikTok followers likes views comments coins">
+
+  <div class="serviceIcon">🎵</div>
+  <h3>TikTok</h3>
+  <p>Followers • Likes • Views • Comments • Coins.</p>
+
+  <div class="price">حسب الطلب</div>
+
+  <div class="cardBottom">
+    <button class="orderBtn"
+      onclick="openOrder('TikTok — خدمة رقمية','0')">
+      اطلب الآن
+    </button>
+    <button class="detailsBtn"
+      onclick="showInfo('TikTok','Followers / Likes / Views / Comments / Coins')">
+      ⓘ
+    </button>
+  </div>
+
+</div>
+
+
+<!-- FACEBOOK -->
+
+<div class="serviceCard serviceItem social"
+     data-name="Facebook followers likes views comments">
+
+  <div class="serviceIcon">📘</div>
+  <h3>Facebook</h3>
+  <p>Followers • Likes • Views • Comments.</p>
+
+  <div class="price">حسب الطلب</div>
+
+  <div class="cardBottom">
+    <button class="orderBtn"
+      onclick="openOrder('Facebook — خدمة رقمية','0')">
+      اطلب الآن
+    </button>
+    <button class="detailsBtn"
+      onclick="showInfo('Facebook','Followers / Likes / Views / Comments')">
+      ⓘ
+    </button>
+  </div>
+
+</div>
+
+
+<!-- INSTAGRAM -->
+
+<div class="serviceCard serviceItem social"
+     data-name="Instagram followers likes views comments">
+
+  <div class="serviceIcon">📸</div>
+  <h3>Instagram</h3>
+  <p>Followers • Likes • Views • Comments.</p>
+
+  <div class="price">حسب الطلب</div>
+
+  <div class="cardBottom">
+    <button class="orderBtn"
+      onclick="openOrder('Instagram — خدمة رقمية','0')">
+      اطلب الآن
+    </button>
+    <button class="detailsBtn"
+      onclick="showInfo('Instagram','Followers / Likes / Views / Comments')">
+      ⓘ
+    </button>
+  </div>
+
+</div>
+
+
+<!-- YOUTUBE -->
+
+<div class="serviceCard serviceItem social"
+     data-name="YouTube followers likes views comments">
+
+  <div class="serviceIcon">▶️</div>
+  <h3>YouTube</h3>
+  <p>Followers • Likes • Views • Comments.</p>
+
+  <div class="price">حسب الطلب</div>
+
+  <div class="cardBottom">
+    <button class="orderBtn"
+      onclick="openOrder('YouTube — خدمة رقمية','0')">
+      اطلب الآن
+    </button>
+    <button class="detailsBtn"
+      onclick="showInfo('YouTube','Followers / Likes / Views / Comments')">
+      ⓘ
+    </button>
+  </div>
+
+</div>
+
+
+<!-- WEBSITE -->
+
+<div class="serviceCard serviceItem business"
+     data-name="website website creation إنشاء موقع">
+
+  <div class="serviceIcon">🌐</div>
+  <h3>إنشاء موقع إلكتروني</h3>
+  <p>موقع احترافي حسب احتياجاتك.</p>
+
+  <div class="price">حسب المشروع</div>
+
+  <div class="cardBottom">
+    <button class="orderBtn"
+      onclick="openOrder('إنشاء موقع إلكتروني','0')">
+      اطلب الآن
+    </button>
+    <button class="detailsBtn"
+      onclick="showInfo('إنشاء موقع','مواقع تعريفية، متاجر، خدمات رقمية وغيرها')">
+      ⓘ
+    </button>
+  </div>
+
+</div>
+
+
+<!-- MARKETING -->
+
+<div class="serviceCard serviceItem business"
+     data-name="marketing product marketing تسويق منتج">
+
+  <div class="serviceIcon">📣</div>
+  <h3>التسويق لمنتج</h3>
+  <p>خدمة تسويق رقمية حسب المشروع.</p>
+
+  <div class="price">حسب المشروع</div>
+
+  <div class="cardBottom">
+    <button class="orderBtn"
+      onclick="openOrder('التسويق لمنتج','0')">
+      اطلب الآن
+    </button>
+    <button class="detailsBtn"
+      onclick="showInfo('التسويق','أرسل تفاصيل المنتج والمنصة المطلوبة')">
+      ⓘ
+    </button>
+  </div>
+
+</div>
+
+
+<!-- ALIEXPRESS -->
+
+<div class="serviceCard serviceItem business"
+     data-name="AliExpress شراء">
+
+  <div class="serviceIcon">🛍️</div>
+  <h3>شراء من AliExpress</h3>
+  <p>أرسل رابط المنتج وسنراجع الطلب.</p>
+
+  <div class="price">حسب الطلب</div>
+
+  <div class="cardBottom">
+    <button class="orderBtn"
+      onclick="openOrder('شراء من AliExpress','0')">
+      اطلب الآن
+    </button>
+  </div>
+
+</div>
+
+
+<!-- AMAZON -->
+
+<div class="serviceCard serviceItem business"
+     data-name="Amazon شراء">
+
+  <div class="serviceIcon">📦</div>
+  <h3>شراء من Amazon</h3>
+  <p>أرسل رابط المنتج والتفاصيل.</p>
+
+  <div class="price">حسب الطلب</div>
+
+  <div class="cardBottom">
+    <button class="orderBtn"
+      onclick="openOrder('شراء من Amazon','0')">
+      اطلب الآن
+    </button>
+  </div>
+
+</div>
+
+
+<!-- VISA -->
+
+<div class="serviceCard serviceItem business"
+     data-name="Visa global card بطاقة فيزا عالمية">
+
+  <div class="serviceIcon">💳</div>
+  <h3>بطاقة Visa عالمية</h3>
+  <p>طلب مساعدة في إنشاء بطاقة وفق الأهلية والشروط.</p>
+
+  <div class="price">حسب الخدمة</div>
+
+  <div class="cardBottom">
+    <button class="orderBtn"
+      onclick="openOrder('طلب بطاقة Visa عالمية','0')">
+      اطلب الآن
+    </button>
+  </div>
+
+</div>
+
+
+<!-- TRADING -->
+
+<div class="serviceCard serviceItem business"
+     data-name="trading account حساب تداول">
+
+  <div class="serviceIcon">📈</div>
+  <h3>حساب تداول</h3>
+  <p>مساعدة في التسجيل وفق شروط المنصة والأهلية.</p>
+
+  <div class="price">حسب الخدمة</div>
+
+  <div class="cardBottom">
+    <button class="orderBtn"
+      onclick="openOrder('طلب مساعدة في حساب تداول','0')">
+      اطلب الآن
+    </button>
+  </div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- SUBSCRIPTIONS -->
+
+<section class="section" id="subscriptions">
+<div class="container">
+
+<div class="sectionHead">
+  <div>
+    <div class="sectionTitle">الاشتراكات</div>
+    <div class="sectionSub">
+      الأسعار المرجعية بالدولار × 4 د.ت
+    </div>
+  </div>
+</div>
+
+<div class="services">
+
+
+<!-- CHATGPT -->
+
+<div class="serviceCard serviceItem subscriptions"
+ data-name="ChatGPT Plus اشتراك">
+
+<div class="serviceIcon">🤖</div>
+<h3>ChatGPT Plus</h3>
+<p>اشتراك شهري رسمي — السعر المرجعي $20.</p>
+
+<div class="price">80 د.ت <small>/ شهر</small></div>
+
+<div class="cardBottom">
+<button class="orderBtn"
+ onclick="openOrder('ChatGPT Plus — شهر','80')">
+ اشتراك
+</button>
+</div>
+
+</div>
+
+
+<!-- NETFLIX BASIC -->
+
+<div class="serviceCard serviceItem subscriptions"
+ data-name="Netflix Basic">
+
+<div class="serviceIcon">🎬</div>
+<h3>Netflix Basic</h3>
+<p>720p — السعر المرجعي $3.99.</p>
+
+<div class="price">15.96 د.ت <small>/ شهر</small></div>
+
+<div class="cardBottom">
+<button class="orderBtn"
+ onclick="openOrder('Netflix Basic — شهر','15.96')">
+ اشتراك
+</button>
+</div>
+
+</div>
+
+
+<!-- NETFLIX STANDARD -->
+
+<div class="serviceCard serviceItem subscriptions"
+ data-name="Netflix Standard">
+
+<div class="serviceIcon">🎬</div>
+<h3>Netflix Standard</h3>
+<p>1080p — السعر المرجعي $7.99.</p>
+
+<div class="price">31.96 د.ت <small>/ شهر</small></div>
+
+<div class="cardBottom">
+<button class="orderBtn"
+ onclick="openOrder('Netflix Standard — شهر','31.96')">
+ اشتراك
+</button>
+</div>
+
+</div>
+
+
+<!-- NETFLIX PREMIUM -->
+
+<div class="serviceCard serviceItem subscriptions"
+ data-name="Netflix Premium">
+
+<div class="serviceIcon">🍿</div>
+<h3>Netflix Premium</h3>
+<p>4K + HDR — السعر المرجعي $9.99.</p>
+
+<div class="price">39.96 د.ت <small>/ شهر</small></div>
+
+<div class="cardBottom">
+<button class="orderBtn"
+ onclick="openOrder('Netflix Premium — شهر','39.96')">
+ اشتراك
+</button>
+</div>
+
+</div>
+
+
+<!-- GEMINI -->
+
+<div class="serviceCard serviceItem subscriptions"
+ data-name="Gemini Google AI Pro">
+
+<div class="serviceIcon">✨</div>
+<h3>Gemini / Google AI Pro</h3>
+<p>الخطة الرسمية — السعر المرجعي $19.99.</p>
+
+<div class="price">79.96 د.ت <small>/ شهر</small></div>
+
+<div class="cardBottom">
+<button class="orderBtn"
+ onclick="openOrder('Gemini / Google AI Pro — شهر','79.96')">
+ اشتراك
+</button>
+</div>
+
+</div>
+
+
+<!-- IPTV -->
+
+<div class="serviceCard serviceItem subscriptions"
+ data-name="IPTV اشتراك">
+
+<div class="serviceIcon">📺</div>
+<h3>IPTV</h3>
+<p>اختر الباقة المتوفرة قبل تأكيد الطلب.</p>
+
+<div class="price">حسب الباقة</div>
+
+<div class="cardBottom">
+<button class="orderBtn"
+ onclick="openOrder('IPTV — اشتراك','0')">
+ اشتراك
+</button>
+</div>
+
+</div>
+
+
+<!-- SHAHID -->
+
+<div class="serviceCard serviceItem subscriptions"
+ data-name="Shahid VIP شاهد">
+
+<div class="serviceIcon">🎭</div>
+<h3>Shahid VIP</h3>
+<p>السعر المرجعي الرسمي $13.99.</p>
+
+<div class="price">55.96 د.ت <small>/ شهر</small></div>
+
+<div class="cardBottom">
+<button class="orderBtn"
+ onclick="openOrder('Shahid VIP — شهر','55.96')">
+ اشتراك
+</button>
+</div>
+
+</div>
+
+
+<!-- SHAHID BIGTIME -->
+
+<div class="serviceCard serviceItem subscriptions"
+ data-name="Shahid BigTime">
+
+<div class="serviceIcon">⭐</div>
+<h3>Shahid VIP BigTime</h3>
+<p>السعر المرجعي الرسمي $16.99.</p>
+
+<div class="price">67.96 د.ت <small>/ شهر</small></div>
+
+<div class="cardBottom">
+<button class="orderBtn"
+ onclick="openOrder('Shahid VIP BigTime — شهر','67.96')">
+ اشتراك
+</button>
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- INTERNET -->
+
+<section class="section" id="internet">
+<div class="container">
+
+<div class="internetBanner">
+
+<div class="sectionTitle">📶 فورفي الإنترنت</div>
+
+<div class="sectionSub">
+Ooredoo و Orange — الأسعار بالدينار التونسي
+</div>
+
+<div class="internetGrid">
+
+<div class="package">
+<b>25 GO</b>
+<span>Internet</span>
+<strong>25 د.ت</strong>
+</div>
+
+<div class="package">
+<b>30 GO</b>
+<span>Internet</span>
+<strong>32 د.ت</strong>
+</div>
+
+<div class="package">
+<b>55 GO</b>
+<span>Internet</span>
+<strong>50 د.ت</strong>
+</div>
+
+<div class="package">
+<b>100 GO</b>
+<span>Internet</span>
+<strong>65 د.ت</strong>
+</div>
+
+<div class="package">
+<b>200 GO</b>
+<span>Internet</span>
+<strong>90 د.ت</strong>
+</div>
+
+</div>
+
+<div style="margin-top:20px">
+<button class="primaryBtn"
+ onclick="openInternet()">
+ اطلب فورفي الإنترنت
+</button>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="section">
+<div class="container">
+
+<div class="sectionHead">
+<div>
+<div class="sectionTitle">لماذا Tunis Services؟</div>
+<div class="sectionSub">تجربة طلب بسيطة ومنظمة</div>
+</div>
+</div>
+
+<div class="features">
+
+<div class="feature">
+<div class="featureIcon">⚡</div>
+<h3>طلب سريع</h3>
+<p>
+اختر الخدمة، أدخل المعلومات المطلوبة واختر وسيلة الدفع.
+</p>
+</div>
+
+<div class="feature">
+<div class="featureIcon">🔒</div>
+<h3>حماية البيانات</h3>
+<p>
+لا نحفظ بيانات البطاقات أو كلمات المرور في المتصفح.
+</p>
+</div>
+
+<div class="feature">
+<div class="featureIcon">💬</div>
+<h3>تأكيد عبر WhatsApp</h3>
+<p>
+بعد الطلب يمكنك إرسال إثبات الدفع مباشرة عبر WhatsApp.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ORDERS -->
+
+<section class="section" id="orders">
+<div class="container">
+
+<div class="sectionHead">
+<div>
+<div class="sectionTitle">طلباتي</div>
+<div class="sectionSub">الطلبات المحفوظة على هذا الجهاز</div>
+</div>
+
+<button class="secondaryBtn" onclick="clearOrders()">
+مسح
+</button>
+</div>
+
+<div id="ordersList"></div>
+
+</div>
+</section>
+
+</main>
+
+
+<!-- ORDER MODAL -->
+
+<div class="overlay" id="orderModal">
+
+<div class="modal">
+
+<div class="modalHead">
+<div>
+<h2 id="modalTitle">طلب الخدمة</h2>
+<p style="color:var(--muted);font-size:12px;margin-top:5px">
+أدخل المعلومات المطلوبة
+</p>
+</div>
+
+<button class="close" onclick="closeModal('orderModal')">
+×
+</button>
+</div>
+
+
+<div class="formGroup">
+<label>رابط الحساب / الخدمة أو ID</label>
+<input
+id="orderLink"
+class="formControl"
+placeholder="ضع الرابط أو ID هنا">
+</div>
+
+
+<div class="formGroup">
+<label>البريد الإلكتروني — عند الحاجة</label>
+<input
+id="orderEmail"
+type="email"
+class="formControl"
+placeholder="example@email.com">
+</div>
+
+
+<div class="formGroup">
+<label>ملاحظات إضافية</label>
+<textarea
+id="orderNotes"
+class="formControl"
+placeholder="أي تفاصيل إضافية للطلب..."></textarea>
+</div>
+
+
+<div class="formGroup">
+
+<label>طريقة الدفع</label>
+
+<div class="paymentGrid">
+
+<button class="payBtn active"
+onclick="selectPayment(this,'Orange / Ooredoo')">
+📱 Orange / Ooredoo
+</button>
+
+<button class="payBtn"
+onclick="selectPayment(this,'D17')">
+💰 D17
+</button>
+
+<button class="payBtn"
+onclick="selectPayment(this,'USDT BEP20')">
+₮ USDT BEP20
+</button>
+
+<button class="payBtn"
+onclick="selectPayment(this,'Mandat')">
+📄 Mandat
+</button>
+
+</div>
+
+<div class="paymentInfo" id="paymentInfo">
+أرسل بيانات بطاقة Orange أو Ooredoo حسب التعليمات.
+</div>
+
+</div>
+
+
+<div class="totalBox">
+<span>المجموع</span>
+<strong id="modalPrice">0 د.ت</strong>
+</div>
+
+
+<button class="fullBtn" onclick="submitOrder()">
+تأكيد الطلب وإرسال إثبات الدفع
+</button>
+
+</div>
+</div>
+
+
+<!-- INTERNET MODAL -->
+
+<div class="overlay" id="internetModal">
+
+<div class="modal">
+
+<div class="modalHead">
+<div>
+<h2>📶 طلب فورفي الإنترنت</h2>
+<p style="color:var(--muted);font-size:12px;margin-top:5px">
+Ooredoo أو Orange
+</p>
+</div>
+
+<button class="close" onclick="closeModal('internetModal')">
+×
+</button>
+</div>
+
+
+<div class="formGroup">
 <label>المشغل</label>
-<select id="internetOperator" onchange="updateInternetPrice()">
-<option value="Ooredoo">Ooredoo</option>
-<option value="Orange">Orange</option>
+
+<select id="internetOperator" class="formControl">
+<option>Ooredoo</option>
+<option>Orange</option>
 </select>
-</div><div class="field">
+</div>
+
+
+<div class="formGroup">
 <label>رقم الهاتف</label>
-<input id="internetPhone" type="tel" placeholder="أدخل رقم Ooredoo أو Orange">
-</div><div class="field">
+
+<input
+id="internetPhone"
+class="formControl"
+inputmode="tel"
+placeholder="مثال: 2X XXX XXX">
+</div>
+
+
+<div class="formGroup">
 <label>الباقة</label>
-<select id="internetPackage" onchange="updateInternetPrice()">
+
+<select
+id="internetPackage"
+class="formControl"
+onchange="updateInternetPrice()">
+
 <option value="25">25 GO — 25 د.ت</option>
 <option value="30">30 GO — 32 د.ت</option>
 <option value="55">55 GO — 50 د.ت</option>
 <option value="100">100 GO — 65 د.ت</option>
 <option value="200">200 GO — 90 د.ت</option>
+
 </select>
-</div><div class="price-box">
-السعر:
-<strong id="internetPrice">25 د.ت</strong>
-</div><div class="payment-title">طريقة الدفع</div><div class="payment-grid"><div class="payment-option active"
-onclick="selectPayment(this,'internetPayment','Orange / Ooredoo')">
+</div>
+
+
+<div class="formGroup">
+<label>طريقة الدفع</label>
+
+<div class="paymentGrid">
+
+<button class="payBtn active"
+onclick="selectInternetPayment(this,'Orange / Ooredoo')">
 📱 Orange / Ooredoo
-</div><div class="payment-option"
-onclick="selectPayment(this,'internetPayment','D17')">
-💳 D17
-</div><div class="payment-option"
-onclick="selectPayment(this,'internetPayment','USDT BEP20')">
-₿ USDT BEP20
-</div><div class="payment-option"
-onclick="selectPayment(this,'internetPayment','Mandat')">
-💵 Mandat
-</div></div><input type="hidden" id="internetPayment" value="Orange / Ooredoo"><div id="internetPaymentInfo" class="payment-extra"></div><button class="primary-btn" onclick="submitInternetOrder()">
-تأكيد طلب الفورفي
-</button><a class="whatsapp" id="internetWhatsApp" target="_blank">
-📲 إرسال إثبات الدفع عبر WhatsApp
-</a></div>
-</div><!-- Free Fire --><div class="modal" id="freeFireModal">
-<div class="modal-box"><button class="close" onclick="closeModal('freeFireModal')">×</button>
+</button>
 
-<h2 class="modal-title">🔥 شحن Free Fire</h2><div class="field">
-<label>Player ID</label>
-<input id="ffId" type="text" placeholder="أدخل Player ID">
-</div><div class="field">
-<label>الباقة</label>
-<select id="ffPackage" onchange="updateFFPrice()">
-<option value="530">530 Diamonds</option>
-<option value="1080">1080 Diamonds</option>
-<option value="2200">2200 Diamonds</option>
-</select>
-</div><div class="price-box">السعر: <strong id="ffPrice">25 د.ت</strong></div><div class="payment-title">طريقة الدفع</div><div class="payment-grid">
-<div class="payment-option active" onclick="selectPayment(this,'ffPayment','Orange / Ooredoo')">📱 Orange / Ooredoo</div>
-<div class="payment-option" onclick="selectPayment(this,'ffPayment','D17')">💳 D17</div>
-<div class="payment-option" onclick="selectPayment(this,'ffPayment','USDT BEP20')">₿ USDT BEP20</div>
-</div><input type="hidden" id="ffPayment" value="Orange / Ooredoo">
-<div id="ffPaymentInfo" class="payment-extra"></div><button class="primary-btn" onclick="submitGameOrder('Free Fire')">تأكيد الطلب</button>
-<a class="whatsapp" id="ffWhatsApp" target="_blank">📲 إرسال إثبات الدفع عبر WhatsApp</a>
+<button class="payBtn"
+onclick="selectInternetPayment(this,'D17')">
+💰 D17
+</button>
+
+<button class="payBtn"
+onclick="selectInternetPayment(this,'USDT BEP20')">
+₮ USDT BEP20
+</button>
+
+<button class="payBtn"
+onclick="selectInternetPayment(this,'Mandat')">
+📄 Mandat
+</button>
 
 </div>
-</div><!-- FC Mobile --><div class="modal" id="fifaModal">
-<div class="modal-box"><button class="close" onclick="closeModal('fifaModal')">×</button>
 
-<h2 class="modal-title">⚽ EA SPORTS FC Mobile</h2><div class="field">
-<label>Player ID / Account ID</label>
-<input id="fifaId" type="text" placeholder="أدخل ID الحساب">
-</div><div class="field">
-<label>الباقة</label>
-<select id="fifaPackage" onchange="updateFifaPrice()">
-<option value="40">40 FC Points</option>
-<option value="100">100 FC Points</option>
-<option value="520">520 FC Points</option>
-<option value="1070">1070 FC Points</option>
-<option value="2200">2200 FC Points</option>
-<option value="5750">5750 FC Points</option>
-<option value="12000">12000 FC Points</option>
-</select>
-</div><div class="price-box">السعر: <strong id="fifaPrice">1.36 د.ت</strong></div><div class="notice">لا ترسل كلمة مرور حسابك.</div><div class="payment-title">طريقة الدفع</div><div class="payment-grid">
-<div class="payment-option active" onclick="selectPayment(this,'fifaPayment','Orange / Ooredoo')">📱 Orange / Ooredoo</div>
-<div class="payment-option" onclick="selectPayment(this,'fifaPayment','D17')">💳 D17</div>
-<div class="payment-option" onclick="selectPayment(this,'fifaPayment','USDT BEP20')">₿ USDT BEP20</div>
-<div class="payment-option" onclick="selectPayment(this,'fifaPayment','Mandat')">💵 Mandat</div>
-</div><input type="hidden" id="fifaPayment" value="Orange / Ooredoo">
-<div id="fifaPaymentInfo" class="payment-extra"></div><button class="primary-btn" onclick="submitGameOrder('EA SPORTS FC Mobile')">تأكيد الطلب</button>
-<a class="whatsapp" id="fifaWhatsApp" target="_blank">📲 إرسال إثبات الدفع عبر WhatsApp</a>
+<div class="paymentInfo" id="internetPaymentInfo">
+اختر طريقة الدفع واتبع التعليمات.
+</div>
 
 </div>
-</div><!-- PES --><div class="modal" id="pesModal">
-<div class="modal-box"><button class="close" onclick="closeModal('pesModal')">×</button>
 
-<h2 class="modal-title">⚽ PES / eFootball</h2><div class="field">
-<label>Game ID</label>
-<input id="pesId" type="text" placeholder="أدخل Game ID">
-</div><div class="field">
-<label>الباقة</label>
-<select id="pesPackage" onchange="updatePesPrice()">
-<option value="1040">1040 Coins</option>
-<option value="2130">2130 Coins</option>
-<option value="3250">3250 Coins</option>
-</select>
-</div><div class="price-box">السعر: <strong id="pesPrice">28.80 د.ت</strong></div><div class="payment-title">طريقة الدفع</div><div class="payment-grid">
-<div class="payment-option active" onclick="selectPayment(this,'pesPayment','Orange / Ooredoo')">📱 Orange / Ooredoo</div>
-<div class="payment-option" onclick="selectPayment(this,'pesPayment','D17')">💳 D17</div>
-<div class="payment-option" onclick="selectPayment(this,'pesPayment','USDT BEP20')">₿ USDT BEP20</div>
-<div class="payment-option" onclick="selectPayment(this,'pesPayment','Mandat')">💵 Mandat</div>
-</div><input type="hidden" id="pesPayment" value="Orange / Ooredoo">
-<div id="pesPaymentInfo" class="payment-extra"></div><button class="primary-btn" onclick="submitGameOrder('PES / eFootball')">تأكيد الطلب</button>
-<a class="whatsapp" id="pesWhatsApp" target="_blank">📲 إرسال إثبات الدفع عبر WhatsApp</a>
+
+<div class="totalBox">
+<span>المجموع</span>
+<strong id="internetTotal">25 د.ت</strong>
+</div>
+
+
+<button class="fullBtn" onclick="submitInternetOrder()">
+تأكيد طلب الإنترنت
+</button>
 
 </div>
-</div><!-- Fortnite --><div class="modal" id="fortniteModal">
-<div class="modal-box"><button class="close" onclick="closeModal('fortniteModal')">×</button>
+</div>
 
-<h2 class="modal-title">🎯 Fortnite</h2><div class="field">
-<label>Epic Games ID / Account</label>
-<input id="fortniteId" type="text" placeholder="أدخل Epic Games ID">
-</div><div class="field">
-<label>المنصة</label>
-<select id="fortnitePlatform">
-<option>PC</option>
-<option>Mobile</option>
-<option>Xbox</option>
-<option>PlayStation</option>
-<option>Other</option>
-</select>
-</div><div class="field">
-<label>الباقة</label>
-<select id="fortnitePackage" onchange="updateFortnitePrice()">
-<option value="800">800 V-Bucks</option>
-<option value="2400">2400 V-Bucks</option>
-<option value="4500">4500 V-Bucks</option>
-</select>
-</div><div class="price-box">السعر: <strong id="fortnitePrice">29.44 د.ت</strong></div><div class="payment-title">طريقة الدفع</div><div class="payment-grid">
-<div class="payment-option active" onclick="selectPayment(this,'fortnitePayment','Orange / Ooredoo')">📱 Orange / Ooredoo</div>
-<div class="payment-option" onclick="selectPayment(this,'fortnitePayment','D17')">💳 D17</div>
-<div class="payment-option" onclick="selectPayment(this,'fortnitePayment','USDT BEP20')">₿ USDT BEP20</div>
-<div class="payment-option" onclick="selectPayment(this,'fortnitePayment','Mandat')">💵 Mandat</div>
-</div><input type="hidden" id="fortnitePayment" value="Orange / Ooredoo">
-<div id="fortnitePaymentInfo" class="payment-extra"></div><button class="primary-btn" onclick="submitGameOrder('Fortnite')">تأكيد الطلب</button>
-<a class="whatsapp" id="fortniteWhatsApp" target="_blank">📲 إرسال إثبات الدفع عبر WhatsApp</a>
+
+<!-- INFO MODAL -->
+
+<div class="overlay" id="infoModal">
+
+<div class="modal">
+
+<div class="modalHead">
+<div>
+<h2 id="infoTitle">الخدمة</h2>
+</div>
+
+<button class="close" onclick="closeModal('infoModal')">
+×
+</button>
+</div>
+
+<p
+id="infoText"
+style="color:#cbd5e1;line-height:2;font-size:14px">
+</p>
+
+<button
+class="fullBtn"
+style="margin-top:20px"
+onclick="closeModal('infoModal')">
+حسنًا
+</button>
 
 </div>
-</div><!-- TikTok Coins --><div class="modal" id="tiktokCoinsModal">
-<div class="modal-box"><button class="close" onclick="closeModal('tiktokCoinsModal')">×</button>
+</div>
 
-<h2 class="modal-title">🪙 TikTok Coins</h2><div class="field">
-<label>TikTok Username / ID</label>
-<input id="coinsId" type="text" placeholder="@username">
-</div><div class="field">
-<label>الكمية</label>
-<select id="coinsPackage" onchange="updateCoinsPrice()">
-<option value="1000">1000 Coins</option>
-<option value="2000">2000 Coins</option>
-<option value="5000">5000 Coins</option>
-<option value="10000">10000 Coins</option>
-</select>
-</div><div class="price-box">السعر: <strong id="coinsPrice">38 د.ت</strong></div><div class="payment-title">طريقة الدفع</div><div class="payment-grid">
-<div class="payment-option active" onclick="selectPayment(this,'coinsPayment','Orange / Ooredoo')">📱 Orange / Ooredoo</div>
-<div class="payment-option" onclick="selectPayment(this,'coinsPayment','USDT BEP20')">₿ USDT BEP20</div>
-<div class="payment-option" onclick="selectPayment(this,'coinsPayment','Mandat')">💵 Mandat</div>
-</div><input type="hidden" id="coinsPayment" value="Orange / Ooredoo">
-<div id="coinsPaymentInfo" class="payment-extra"></div><button class="primary-btn" onclick="submitCoinsOrder()">تأكيد الطلب</button>
-<a class="whatsapp" id="coinsWhatsApp" target="_blank">📲 إرسال إثبات الدفع عبر WhatsApp</a>
+
+<!-- TOAST -->
+
+<div class="toast" id="toast"></div>
+
+
+<footer>
+
+<div class="container">
+
+<div class="footerGrid">
+
+<div>
+<div class="logo">
+<span class="logoMark">TS</span>
+<span>Tunis Services</span>
+</div>
+
+<p style="margin-top:14px;font-size:12px;line-height:2">
+منصة خدمات رقمية تونسية تجمع الألعاب،
+الاشتراكات والخدمات الإلكترونية في مكان واحد.
+</p>
+</div>
+
+
+<div>
+<div class="footerTitle">الخدمات</div>
+
+<div class="footerLinks">
+<a href="#games">الألعاب</a>
+<a href="#subscriptions">الاشتراكات</a>
+<a href="#internet">الإنترنت</a>
+<a href="#services">الخدمات الرقمية</a>
+</div>
 
 </div>
-</div><!-- Generic --><div class="modal" id="genericModal">
-<div class="modal-box"><button class="close" onclick="closeModal('genericModal')">×</button>
 
-<h2 class="modal-title" id="genericTitle">طلب خدمة</h2><div class="field">
-<label>الخدمة</label>
-<input id="genericService" type="text" readonly>
-</div><div class="field">
-<label>رابط الحساب / المنتج / الصفحة</label>
-<input id="genericLink" type="text" placeholder="ضع الرابط هنا">
-</div><div class="field">
-<label>الكمية</label>
-<input id="genericQuantity" type="text" placeholder="مثال: 1000">
-</div><div class="field">
-<label>التفاصيل</label>
-<textarea id="genericNotes" placeholder="اكتب تفاصيل الطلب هنا..."></textarea>
-</div><div class="notice">
-بالنسبة لخدمات إنشاء المواقع والتسويق وAliExpress وAmazon يتم تحديد السعر النهائي بعد مراجعة الطلب.
-</div><div class="field">
-<label>السعر المتفق عليه</label>
-<input id="genericPrice" type="text" placeholder="يُحدد بعد مراجعة الطلب">
-</div><div class="payment-title">طريقة الدفع</div><div class="payment-grid">
-<div class="payment-option active" onclick="selectPayment(this,'genericPayment','Orange / Ooredoo')">📱 Orange / Ooredoo</div>
-<div class="payment-option" onclick="selectPayment(this,'genericPayment','USDT BEP20')">₿ USDT BEP20</div>
-<div class="payment-option" onclick="selectPayment(this,'genericPayment','Mandat')">💵 Mandat</div>
-<div class="payment-option" onclick="selectPayment(this,'genericPayment','D17')">💳 D17</div>
-</div><input type="hidden" id="genericPayment" value="Orange / Ooredoo">
-<div id="genericPaymentInfo" class="payment-extra"></div><button class="primary-btn" onclick="submitGenericOrder()">إرسال الطلب</button>
-<a class="whatsapp" id="genericWhatsApp" target="_blank">📲 إرسال إثبات الدفع عبر WhatsApp</a>
+
+<div>
+<div class="footerTitle">الدعم</div>
+
+<div class="footerLinks">
+<a href="https://wa.me/21628212767" target="_blank">
+WhatsApp
+</a>
+
+<a href="#orders">طلباتي</a>
+
+<a href="#services">
+الخدمات
+</a>
+</div>
 
 </div>
-</div><!-- Orders --><div class="modal" id="ordersModal">
-<div class="modal-box"><button class="close" onclick="closeModal('ordersModal')">×</button>
 
-<h2 class="modal-title">📋 طلباتي</h2>
-<div id="ordersList"></div></div>
-</div><div class="toast" id="toast"></div><footer>
-<strong>Tunis Services</strong><br>
-خدمات رقمية وألعاب وإنترنت وخدمات أعمال وتسويق.<br>
-WhatsApp: 28212767
-</footer><script>
+</div>
 
-const WALLET="0xc464059da5e8543e479b68de3fcfaff8dee853ee";
-const WHATSAPP="21628212767";
-const ordersKey="tunisOrders";
 
-const freeFirePrices={
-"530":25,
-"1080":50,
-"2200":100
+<div class="footerBottom">
+<span>© 2026 Tunis Services</span>
+<span>1 USD = 4 TND</span>
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+
+/* =========================
+   CONFIG
+========================= */
+
+const WHATSAPP = "21628212767";
+
+const USDT_ADDRESS =
+"0xc464059da5e8543e479b68de3fcfaff8dee853ee";
+
+const USD_TND = 4;
+
+
+/* =========================
+   STATE
+========================= */
+
+let selectedService = "";
+let selectedPrice = 0;
+let selectedPayment = "Orange / Ooredoo";
+
+let internetPayment = "Orange / Ooredoo";
+
+const internetPrices = {
+  25:25,
+  30:32,
+  55:50,
+  100:65,
+  200:90
 };
 
-const freeFireUsdt={
-"530":7,
-"1080":14,
-"2200":28
-};
 
-const fifaPrices={
-"40":1.36,
-"100":3.36,
-"520":16.76,
-"1070":33.52,
-"2200":67,
-"5750":167.44,
-"12000":334.88
-};
+/* =========================
+   HELPERS
+========================= */
 
-const pesPrices={
-"1040":28.80,
-"2130":58.92,
-"3250":88.40
-};
+function money(value){
 
-const fortnitePrices={
-"800":29.44,
-"2400":75.32,
-"4500":121.16
-};
+  const n = Number(value || 0);
 
-const internetPrices={
-"25":25,
-"30":32,
-"55":50,
-"100":65,
-"200":90
-};
+  if(n === 0) return "حسب الطلب";
+
+  return n.toFixed(2).replace(".00","") + " د.ت";
+}
+
 
 function showToast(message){
-const toast=document.getElementById("toast");
-toast.textContent=message;
-toast.style.display="block";
-setTimeout(function(){
-toast.style.display="none";
-},3000);
+
+  const toast = document.getElementById("toast");
+
+  toast.textContent = message;
+
+  toast.classList.add("show");
+
+  setTimeout(()=>{
+    toast.classList.remove("show");
+  },2800);
 }
 
-function openModal(id){
-document.getElementById(id).style.display="block";
-document.body.style.overflow="hidden";
+
+function scrollToSection(id){
+
+  document.getElementById(id)?.scrollIntoView({
+    behavior:"smooth"
+  });
+
 }
 
-function closeModal(id){
-document.getElementById(id).style.display="none";
-document.body.style.overflow="";
+
+/* =========================
+   FILTER
+========================= */
+
+function filterCategory(category,button){
+
+  document.querySelectorAll(".catBtn")
+    .forEach(btn=>btn.classList.remove("active"));
+
+  button.classList.add("active");
+
+  document.querySelectorAll(".serviceItem")
+    .forEach(card=>{
+
+      if(category === "all"){
+        card.style.display="";
+        return;
+      }
+
+      card.style.display =
+        card.classList.contains(category)
+        ? ""
+        : "none";
+
+    });
+
 }
 
-window.addEventListener("click",function(event){
-if(event.target.classList.contains("modal")){
-event.target.style.display="none";
-document.body.style.overflow="";
-}
-});
-
-function scrollToServices(){
-document.getElementById("servicesArea").scrollIntoView({behavior:"smooth"});
-}
 
 function searchServices(){
 
-const query=document.getElementById("searchInput").value.toLowerCase().trim();
+  const query =
+    document.getElementById("searchInput")
+      .value
+      .toLowerCase()
+      .trim();
 
-document.querySelectorAll(".service").forEach(function(card){
+  document.querySelectorAll(".serviceItem")
+    .forEach(card=>{
 
-const name=card.dataset.name.toLowerCase();
+      const name =
+        (card.dataset.name || "").toLowerCase();
 
-card.style.display=name.includes(query)?"":"none";
+      card.style.display =
+        name.includes(query)
+        ? ""
+        : "none";
+
+    });
+
+}
+
+
+/* =========================
+   ORDER MODAL
+========================= */
+
+function openOrder(service,price){
+
+  selectedService = service;
+  selectedPrice = Number(price || 0);
+
+  document.getElementById("modalTitle")
+    .textContent = service;
+
+  document.getElementById("modalPrice")
+    .textContent = money(selectedPrice);
+
+  document.getElementById("orderLink").value="";
+  document.getElementById("orderEmail").value="";
+  document.getElementById("orderNotes").value="";
+
+  document.getElementById("orderModal")
+    .classList.add("show");
+
+}
+
+
+function closeModal(id){
+
+  document.getElementById(id)
+    .classList.remove("show");
+
+}
+
+
+document.querySelectorAll(".overlay")
+.forEach(overlay=>{
+
+  overlay.addEventListener("click",e=>{
+
+    if(e.target === overlay){
+      overlay.classList.remove("show");
+    }
+
+  });
 
 });
 
+
+/* =========================
+   PAYMENT
+========================= */
+
+function selectPayment(button,payment){
+
+  selectedPayment = payment;
+
+  document.querySelectorAll("#orderModal .payBtn")
+    .forEach(btn=>btn.classList.remove("active"));
+
+  button.classList.add("active");
+
+  const info =
+    document.getElementById("paymentInfo");
+
+  if(payment === "USDT BEP20"){
+
+    info.innerHTML =
+      "أرسل المبلغ عبر شبكة BEP20 إلى:<br><b style='word-break:break-all;color:#fff'>"
+      + USDT_ADDRESS +
+      "</b>";
+
+  }else if(payment === "D17"){
+
+    info.textContent =
+      "سيتم إرسال تفاصيل الدفع بعد تأكيد الطلب.";
+
+  }else if(payment === "Mandat"){
+
+    info.textContent =
+      "سيتم إرسال معلومات الـ Mandat بعد تأكيد الطلب.";
+
+  }else{
+
+    info.textContent =
+      "أرسل بيانات بطاقة Orange أو Ooredoo حسب تعليمات الدفع.";
+
+  }
+
 }
 
-/* الإنترنت */
+
+/* =========================
+   SUBMIT ORDER
+========================= */
+
+function submitOrder(){
+
+  const link =
+    document.getElementById("orderLink").value.trim();
+
+  const email =
+    document.getElementById("orderEmail").value.trim();
+
+  const notes =
+    document.getElementById("orderNotes").value.trim();
+
+
+  if(!link && !email && !notes){
+
+    showToast("أدخل على الأقل رابط الحساب أو تفاصيل الطلب.");
+
+    return;
+
+  }
+
+
+  const order = {
+
+    id:"TS-"+Date.now(),
+
+    service:selectedService,
+
+    price:selectedPrice,
+
+    payment:selectedPayment,
+
+    link:link,
+
+    email:email,
+
+    notes:notes,
+
+    date:new Date().toLocaleString("ar-TN"),
+
+    status:"في انتظار إثبات الدفع"
+
+  };
+
+
+  saveOrder(order);
+
+  closeModal("orderModal");
+
+  document.getElementById("cartCount")
+    .textContent =
+    getOrders().length;
+
+
+  let message =
+`طلب جديد — Tunis Services
+
+الخدمة: ${selectedService}
+المبلغ: ${money(selectedPrice)}
+الدفع: ${selectedPayment}
+
+الرابط/ID:
+${link || "غير موجود"}
+
+البريد:
+${email || "غير موجود"}
+
+ملاحظات:
+${notes || "لا توجد"}
+
+رقم الطلب:
+${order.id}
+
+أريد إرسال إثبات الدفع.`;
+
+  openWhatsApp(message);
+
+  showToast("تم إنشاء الطلب.");
+
+}
+
+
+/* =========================
+   INTERNET
+========================= */
 
 function openInternet(){
-openModal("internetModal");
-updateInternetPrice();
+
+  document.getElementById("internetModal")
+    .classList.add("show");
+
+  updateInternetPrice();
+
 }
+
 
 function updateInternetPrice(){
 
-const value=document.getElementById("internetPackage").value;
+  const pack =
+    document.getElementById("internetPackage").value;
 
-document.getElementById("internetPrice").textContent=
-internetPrices[value].toFixed(2)+" د.ت";
+  const price = internetPrices[pack];
 
-updatePaymentInfo("internetPayment","internetPaymentInfo");
+  document.getElementById("internetTotal")
+    .textContent = money(price);
 
 }
+
+
+function selectInternetPayment(button,payment){
+
+  internetPayment = payment;
+
+  document.querySelectorAll("#internetModal .payBtn")
+    .forEach(btn=>btn.classList.remove("active"));
+
+  button.classList.add("active");
+
+  const info =
+    document.getElementById("internetPaymentInfo");
+
+  if(payment === "USDT BEP20"){
+
+    info.innerHTML =
+      "أرسل المبلغ عبر شبكة BEP20 إلى:<br><b style='word-break:break-all;color:#fff'>"
+      + USDT_ADDRESS +
+      "</b>";
+
+  }else if(payment === "D17"){
+
+    info.textContent =
+      "سيتم إرسال تفاصيل D17 بعد إنشاء الطلب.";
+
+  }else if(payment === "Mandat"){
+
+    info.textContent =
+      "سيتم إرسال تفاصيل Mandat بعد إنشاء الطلب.";
+
+  }else{
+
+    info.textContent =
+      "اختر بطاقة Orange أو Ooredoo واتبع تعليمات الدفع.";
+
+  }
+
+}
+
 
 function submitInternetOrder(){
 
-const operator=document.getElementById("internetOperator").value;
+  const operator =
+    document.getElementById("internetOperator").value;
 
-const phone=document.getElementById("internetPhone").value.trim();
+  const phone =
+    document.getElementById("internetPhone").value.trim();
 
-const packageValue=document.getElementById("internetPackage").value;
+  const pack =
+    document.getElementById("internetPackage").value;
 
-const packageName=
-document.getElementById("internetPackage")
-.options[
-document.getElementById("internetPackage").selectedIndex
-].text;
+  const price =
+    internetPrices[pack];
 
-const price=internetPrices[packageValue].toFixed(2)+" د.ت";
 
-const payment=document.getElementById("internetPayment").value;
+  if(!phone){
 
-if(!phone){
-showToast("أدخل رقم الهاتف أولًا");
-return;
-}
+    showToast("أدخل رقم الهاتف.");
 
-const order=createOrder(
-"فورفي الإنترنت - "+operator,
-"رقم الهاتف: "+phone+" | "+packageName,
-price,
-payment
-);
+    return;
 
-const message=
-"السلام عليكم، أريد طلب فورفي الإنترنت\n\n"+
-"رقم الطلب: "+order.id+"\n"+
-"المشغل: "+operator+"\n"+
-"رقم الهاتف: "+phone+"\n"+
-"الباقة: "+packageName+"\n"+
-"السعر: "+price+"\n"+
-"طريقة الدفع: "+payment+"\n\n"+
-"سأرسل إثبات الدفع.";
+  }
 
-const wa=whatsappLink(message);
 
-document.getElementById("internetWhatsApp").href=wa;
+  const order = {
 
-showToast("تم إنشاء الطلب "+order.id);
+    id:"TS-"+Date.now(),
 
-setTimeout(function(){
-window.open(wa,"_blank");
-},300);
+    service:"فورفي الإنترنت",
 
-}
+    operator:operator,
 
-/* Free Fire */
+    phone:phone,
 
-function openFreeFire(){
-openModal("freeFireModal");
-updateFFPrice();
-}
+    package:pack+" GO",
 
-function updateFFPrice(){
+    price:price,
 
-const value=document.getElementById("ffPackage").value;
-const payment=document.getElementById("ffPayment").value;
+    payment:internetPayment,
 
-if(payment.includes("USDT")){
-document.getElementById("ffPrice").textContent=
-freeFireUsdt[value]+" USDT";
-}else{
-document.getElementById("ffPrice").textContent=
-freeFirePrices[value]+" د.ت";
-}
+    date:new Date().toLocaleString("ar-TN"),
 
-updatePaymentInfo("ffPayment","ffPaymentInfo");
-}
+    status:"في انتظار إثبات الدفع"
 
-/* FIFA */
+  };
 
-function openFifa(){
-openModal("fifaModal");
-updateFifaPrice();
-}
 
-function updateFifaPrice(){
+  saveOrder(order);
 
-const value=document.getElementById("fifaPackage").value;
+  closeModal("internetModal");
 
-document.getElementById("fifaPrice").textContent=
-fifaPrices[value].toFixed(2)+" د.ت";
 
-updatePaymentInfo("fifaPayment","fifaPaymentInfo");
-}
+  const message =
+`طلب فورفي الإنترنت — Tunis Services
 
-/* PES */
+المشغل: ${operator}
+الباقة: ${pack} GO
+المبلغ: ${money(price)}
+رقم الهاتف: ${phone}
+طريقة الدفع: ${internetPayment}
 
-function openPes(){
-openModal("pesModal");
-updatePesPrice();
-}
+رقم الطلب:
+${order.id}
 
-function updatePesPrice(){
+أريد إرسال إثبات الدفع.`;
 
-const value=document.getElementById("pesPackage").value;
+  openWhatsApp(message);
 
-document.getElementById("pesPrice").textContent=
-pesPrices[value].toFixed(2)+" د.ت";
+  document.getElementById("cartCount")
+    .textContent =
+    getOrders().length;
 
-updatePaymentInfo("pesPayment","pesPaymentInfo");
-}
-
-/* Fortnite */
-
-function openFortnite(){
-openModal("fortniteModal");
-updateFortnitePrice();
-}
-
-function updateFortnitePrice(){
-
-const value=document.getElementById("fortnitePackage").value;
-
-document.getElementById("fortnitePrice").textContent=
-fortnitePrices[value].toFixed(2)+" د.ت";
-
-updatePaymentInfo("fortnitePayment","fortnitePaymentInfo");
-}
-
-/* TikTok Coins */
-
-function openTikTokCoins(){
-openModal("tiktokCoinsModal");
-updateCoinsPrice();
-}
-
-function updateCoinsPrice(){
-
-const value=Number(document.getElementById("coinsPackage").value);
-
-const price=(value/1000)*38;
-
-document.getElementById("coinsPrice").textContent=
-price.toFixed(2)+" د.ت";
-
-updatePaymentInfo("coinsPayment","coinsPaymentInfo");
-}
-
-/* الدفع */
-
-function selectPayment(element,inputId,paymentName){
-
-const parent=element.parentElement;
-
-parent.querySelectorAll(".payment-option").forEach(function(item){
-item.classList.remove("active");
-});
-
-element.classList.add("active");
-
-document.getElementById(inputId).value=paymentName;
-
-let infoId="";
-
-if(inputId==="ffPayment")infoId="ffPaymentInfo";
-if(inputId==="fifaPayment")infoId="fifaPaymentInfo";
-if(inputId==="pesPayment")infoId="pesPaymentInfo";
-if(inputId==="fortnitePayment")infoId="fortnitePaymentInfo";
-if(inputId==="coinsPayment")infoId="coinsPaymentInfo";
-if(inputId==="genericPayment")infoId="genericPaymentInfo";
-if(inputId==="internetPayment")infoId="internetPaymentInfo";
-
-if(infoId){
-updatePaymentInfo(inputId,infoId);
-}
-
-if(inputId==="ffPayment"){
-updateFFPrice();
-}
+  showToast("تم إنشاء طلب الإنترنت.");
 
 }
 
-function updatePaymentInfo(inputId,infoId){
 
-const payment=document.getElementById(inputId).value;
-const box=document.getElementById(infoId);
+/* =========================
+   STORAGE
+========================= */
 
-if(payment.includes("USDT")){
+function getOrders(){
 
-box.innerHTML=`
-<b>عنوان USDT BEP20:</b>
-<div class="wallet">${WALLET}</div>
-<button class="copy-btn" onclick="copyWallet()">نسخ العنوان</button>
-`;
+  try{
 
-}else if(payment.includes("Orange")||payment.includes("Ooredoo")){
+    return JSON.parse(
+      localStorage.getItem("tunisOrders") || "[]"
+    );
 
-box.innerHTML=`
-<div class="field">
-<label>رقم بطاقة التعبئة</label>
-<input type="text" placeholder="أدخل رقم البطاقة">
-</div>
+  }catch(e){
 
-<div class="field">
-<label>قيمة البطاقة</label>
-<input type="text" placeholder="مثال: 25 د.ت">
-</div>
-`;
+    return [];
 
-}else if(payment.includes("D17")){
-
-box.innerHTML=`
-<div class="field">
-<label>رقم عملية D17</label>
-<input type="text" placeholder="أدخل رقم العملية">
-</div>
-`;
-
-}else{
-
-box.innerHTML=`
-<div class="notice">
-سيتم إرسال تفاصيل الدفع عبر WhatsApp بعد مراجعة الطلب.
-</div>
-`;
+  }
 
 }
 
-}
-
-function copyWallet(){
-
-if(navigator.clipboard){
-
-navigator.clipboard.writeText(WALLET).then(function(){
-showToast("تم نسخ عنوان USDT");
-});
-
-}else{
-showToast("انسخ العنوان يدويًا");
-}
-
-}
-
-/* الطلبات */
 
 function saveOrder(order){
 
-let orders=[];
+  const orders = getOrders();
 
-try{
-orders=JSON.parse(localStorage.getItem(ordersKey)||"[]");
-}catch(error){
-orders=[];
-}
+  orders.unshift(order);
 
-orders.unshift(order);
+  localStorage.setItem(
+    "tunisOrders",
+    JSON.stringify(orders)
+  );
 
-localStorage.setItem(ordersKey,JSON.stringify(orders));
-
-}
-
-function createOrder(service,details,price,payment){
-
-const order={
-id:"TS-"+Date.now(),
-service:service,
-details:details,
-price:price,
-payment:payment,
-status:"قيد المراجعة",
-date:new Date().toLocaleString("ar-TN")
-};
-
-saveOrder(order);
-
-return order;
-}
-
-function whatsappLink(message){
-
-return "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(message);
+  renderOrders();
 
 }
 
-/* ألعاب */
 
-function submitGameOrder(service){
+function renderOrders(){
 
-let id="";
-let packageName="";
-let price="";
-let payment="";
-let modalId="";
+  const container =
+    document.getElementById("ordersList");
 
-if(service==="Free Fire"){
+  const orders = getOrders();
 
-id=document.getElementById("ffId").value.trim();
+  document.getElementById("cartCount")
+    .textContent = orders.length;
 
-packageName=document.getElementById("ffPackage")
-.options[document.getElementById("ffPackage").selectedIndex].text;
 
-price=document.getElementById("ffPrice").textContent;
-payment=document.getElementById("ffPayment").value;
-modalId="ffWhatsApp";
+  if(!orders.length){
 
-}
+    container.innerHTML = `
+      <div class="ordersEmpty">
+        لا توجد طلبات على هذا الجهاز.
+      </div>
+    `;
 
-if(service==="EA SPORTS FC Mobile"){
+    return;
 
-id=document.getElementById("fifaId").value.trim();
+  }
 
-packageName=document.getElementById("fifaPackage")
-.options[document.getElementById("fifaPackage").selectedIndex].text;
 
-price=document.getElementById("fifaPrice").textContent;
-payment=document.getElementById("fifaPayment").value;
-modalId="fifaWhatsApp";
+  container.innerHTML =
+    orders.map(order=>{
 
-}
+      let extra="";
 
-if(service==="PES / eFootball"){
+      if(order.operator){
 
-id=document.getElementById("pesId").value.trim();
+        extra =
+        `<div class="orderMeta">
+          ${order.operator} • ${order.package} • ${order.phone}
+        </div>`;
 
-packageName=document.getElementById("pesPackage")
-.options[document.getElementById("pesPackage").selectedIndex].text;
+      }
 
-price=document.getElementById("pesPrice").textContent;
-payment=document.getElementById("pesPayment").value;
-modalId="pesWhatsApp";
 
-}
+      return `
 
-if(service==="Fortnite"){
+      <div class="orderItem">
 
-id=document.getElementById("fortniteId").value.trim();
+        <div class="orderTop">
 
-packageName=document.getElementById("fortnitePackage")
-.options[document.getElementById("fortnitePackage").selectedIndex].text;
+          <b>${escapeHTML(order.service)}</b>
 
-price=document.getElementById("fortnitePrice").textContent;
-payment=document.getElementById("fortnitePayment").value;
-modalId="fortniteWhatsApp";
+          <span class="orderStatus">
+            ${escapeHTML(order.status)}
+          </span>
 
-}
+        </div>
 
-if(!id){
-showToast("أدخل ID الحساب أولًا");
-return;
-}
+        <div class="orderMeta">
+          ${money(order.price)}
+          • ${escapeHTML(order.payment || "")}
+          • ${escapeHTML(order.id)}
+        </div>
 
-const order=createOrder(
-service,
-"ID: "+id+" | "+packageName,
-price,
-payment
-);
+        ${extra}
 
-const message=
-"السلام عليكم، أريد تأكيد طلبي\n\n"+
-"رقم الطلب: "+order.id+"\n"+
-"الخدمة: "+service+"\n"+
-"التفاصيل: "+order.details+"\n"+
-"السعر: "+price+"\n"+
-"طريقة الدفع: "+payment+"\n\n"+
-"سأرسل إثبات الدفع.";
+        <div class="orderMeta">
+          ${escapeHTML(order.date)}
+        </div>
 
-const link=whatsappLink(message);
+      </div>
 
-document.getElementById(modalId).href=link;
+      `;
 
-showToast("تم إنشاء الطلب "+order.id);
-
-setTimeout(function(){
-window.open(link,"_blank");
-},300);
+    }).join("");
 
 }
 
-/* TikTok Coins */
 
-function submitCoinsOrder(){
+function clearOrders(){
 
-const id=document.getElementById("coinsId").value.trim();
+  if(!confirm("هل تريد مسح الطلبات المحفوظة على هذا الجهاز؟"))
+    return;
 
-if(!id){
-showToast("أدخل TikTok Username أو ID");
-return;
-}
+  localStorage.removeItem("tunisOrders");
 
-const packageValue=Number(document.getElementById("coinsPackage").value);
+  renderOrders();
 
-const price=((packageValue/1000)*38).toFixed(2)+" د.ت";
-
-const packageName=
-document.getElementById("coinsPackage")
-.options[document.getElementById("coinsPackage").selectedIndex].text;
-
-const payment=document.getElementById("coinsPayment").value;
-
-const order=createOrder(
-"TikTok Coins",
-"Username/ID: "+id+" | "+packageName,
-price,
-payment
-);
-
-const message=
-"السلام عليكم، أريد تأكيد طلب TikTok Coins\n\n"+
-"رقم الطلب: "+order.id+"\n"+
-"الحساب: "+id+"\n"+
-"الباقة: "+packageName+"\n"+
-"السعر: "+price+"\n"+
-"طريقة الدفع: "+payment+"\n\n"+
-"سأرسل إثبات الدفع.";
-
-const link=whatsappLink(message);
-
-document.getElementById("coinsWhatsApp").href=link;
-
-showToast("تم إنشاء الطلب "+order.id);
-
-setTimeout(function(){
-window.open(link,"_blank");
-},300);
+  showToast("تم مسح الطلبات.");
 
 }
 
-/* الخدمات العامة */
 
-function openGenericOrder(service){
+/* =========================
+   WHATSAPP
+========================= */
 
-document.getElementById("genericTitle").textContent="طلب: "+service;
-document.getElementById("genericService").value=service;
-document.getElementById("genericLink").value="";
-document.getElementById("genericQuantity").value="";
-document.getElementById("genericNotes").value="";
-document.getElementById("genericPrice").value="";
+function openWhatsApp(message){
 
-openModal("genericModal");
+  const url =
+    "https://wa.me/" +
+    WHATSAPP +
+    "?text=" +
+    encodeURIComponent(message);
 
-updatePaymentInfo("genericPayment","genericPaymentInfo");
-
-}
-
-function submitGenericOrder(){
-
-const service=document.getElementById("genericService").value;
-const link=document.getElementById("genericLink").value.trim();
-const quantity=document.getElementById("genericQuantity").value.trim();
-const notes=document.getElementById("genericNotes").value.trim();
-const price=document.getElementById("genericPrice").value.trim()||"بعد المراجعة";
-const payment=document.getElementById("genericPayment").value;
-
-if(!notes&&!link){
-showToast("أدخل رابطًا أو تفاصيل الطلب");
-return;
-}
-
-const details=
-"الرابط: "+(link||"غير موجود")+
-" | الكمية: "+(quantity||"غير محددة")+
-" | التفاصيل: "+(notes||"لا توجد");
-
-const order=createOrder(
-service,
-details,
-price,
-payment
-);
-
-const message=
-"السلام عليكم، أريد طلب خدمة\n\n"+
-"رقم الطلب: "+order.id+"\n"+
-"الخدمة: "+service+"\n"+
-"الرابط: "+(link||"غير موجود")+"\n"+
-"الكمية: "+(quantity||"غير محددة")+"\n"+
-"التفاصيل: "+(notes||"لا توجد")+"\n"+
-"السعر: "+price+"\n"+
-"طريقة الدفع: "+payment+"\n\n"+
-"سأرسل إثبات الدفع.";
-
-const wa=whatsappLink(message);
-
-document.getElementById("genericWhatsApp").href=wa;
-
-showToast("تم إنشاء الطلب "+order.id);
-
-setTimeout(function(){
-window.open(wa,"_blank");
-},300);
+  window.open(url,"_blank");
 
 }
 
-/* طلباتي */
 
-function openOrders(){
+/* =========================
+   INFO
+========================= */
 
-const box=document.getElementById("ordersList");
+function showInfo(title,text){
 
-let orders=[];
+  document.getElementById("infoTitle")
+    .textContent = title;
 
-try{
-orders=JSON.parse(localStorage.getItem(ordersKey)||"[]");
-}catch(error){
-orders=[];
-}
+  document.getElementById("infoText")
+    .textContent = text;
 
-if(orders.length===0){
-
-box.innerHTML=`
-<div class="empty">
-لا توجد طلبات محفوظة على هذا الجهاز.
-</div>
-`;
-
-}else{
-
-box.innerHTML=orders.map(function(order){
-
-return`
-<div class="order-card">
-<h3>${escapeHtml(order.service)}</h3>
-<p><b>رقم الطلب:</b> ${escapeHtml(order.id)}</p>
-<p><b>التفاصيل:</b> ${escapeHtml(order.details)}</p>
-<p><b>السعر:</b> ${escapeHtml(order.price)}</p>
-<p><b>الدفع:</b> ${escapeHtml(order.payment)}</p>
-<p><b>التاريخ:</b> ${escapeHtml(order.date)}</p>
-<span class="status">${escapeHtml(order.status)}</span>
-</div>
-`;
-
-}).join("");
+  document.getElementById("infoModal")
+    .classList.add("show");
 
 }
 
-openModal("ordersModal");
+
+/* =========================
+   SECURITY
+========================= */
+
+function escapeHTML(value){
+
+  return String(value ?? "")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
 
 }
 
-function escapeHtml(value){
 
-return String(value)
-.replace(/&/g,"&amp;")
-.replace(/</g,"&lt;")
-.replace(/>/g,"&gt;")
-.replace(/"/g,"&quot;")
-.replace(/'/g,"&#039;");
+/* =========================
+   START
+========================= */
 
-}
+renderOrders();
 
-document.addEventListener("DOMContentLoaded",function(){
+</script>
 
-updatePaymentInfo("ffPayment","ffPaymentInfo");
-updatePaymentInfo("fifaPayment","fifaPaymentInfo");
-updatePaymentInfo("pesPayment","pesPaymentInfo");
-updatePaymentInfo("fortnitePayment","fortnitePaymentInfo");
-updatePaymentInfo("coinsPayment","coinsPaymentInfo");
-updatePaymentInfo("genericPayment","genericPaymentInfo");
-updatePaymentInfo("internetPayment","internetPaymentInfo");
-
-});
-
-</script></body>
+</body>
     </html>
